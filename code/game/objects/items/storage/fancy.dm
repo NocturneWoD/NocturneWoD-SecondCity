@@ -183,7 +183,7 @@
 /obj/item/storage/fancy/cigarettes
 	name = "\improper Space Cigarettes packet"
 	desc = "The most popular brand of cigarettes, sponsors of the Space Olympics. On the back it advertises to be the only brand that can be smoked in the vacuum of space."
-	icon = 'modular_darkpack/master_files/icons/obj/cigarettes.dmi' // DARKPACK EDIT CHANGE
+	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig"
 	inhand_icon_state = "cigpacket"
 	worn_icon_state = "cigpack"

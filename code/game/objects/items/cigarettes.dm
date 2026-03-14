@@ -195,7 +195,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/cigarette
 	name = "cigarette"
 	desc = "A roll of tobacco and nicotine. It is not food."
-	icon = 'modular_darkpack/master_files/icons/obj/cigarettes.dmi' // DARKPACK EDIT CHANGE
+	icon = 'icons/obj/cigarettes.dmi'
 	ONFLOOR_ICON_HELPER('modular_darkpack/master_files/icons/obj/cigarettes_onfloor.dmi') // DARKPACK EDIT ADD
 	worn_icon = 'icons/mob/clothing/mask.dmi'
 	icon_state = "cigoff"
