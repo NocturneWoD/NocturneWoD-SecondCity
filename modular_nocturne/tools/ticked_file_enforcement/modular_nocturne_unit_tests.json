@@ -1,0 +1,7 @@
+{
+	"file": "modular_nocturne/modules/unit_tests/_nocturne_unit_tests.dm",
+	"scannable_directory": "modular_nocturne/modules/unit_tests/",
+	"subdirectories": false,
+	"excluded_files": [],
+	"forbidden_includes": []
+}
