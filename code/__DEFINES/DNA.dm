@@ -71,6 +71,20 @@
 #define FEATURE_MUSH_CAP "caps"
 #define FEATURE_POD_HAIR "pod_hair"
 
+// NOCTURNE EDIT START - markings
+#define FEATURE_EARS_COLORS "ears_colors"
+#define FEATURE_MARKINGS_COLORS "markings_colors"
+#define FEATURE_FRILLS_COLORS "frills_colors"
+#define FEATURE_HORNS_COLORS "horns_colors"
+#define FEATURE_MOTH_MARKS_COLORS "moth_markings_colors"
+#define FEATURE_SNOUT_COLORS "snout_colors"
+#define FEATURE_WINGS_COLORS "wings_colors"
+#define FEATURE_TAIL_OTHER "tail_other"
+#define FEATURE_TAIL_COLORS "tail_colors"
+#define FEATURE_FLUFF "fluff"
+#define FEATURE_FLUFF_COLORS "fluff_colors"
+// NOCTURNE EDIT END
+
 // Other
 #define FEATURE_WINGS "wings"
 #define FEATURE_WINGS_OPEN "wingsopen"

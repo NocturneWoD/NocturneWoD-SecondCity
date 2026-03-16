@@ -874,8 +874,22 @@ GLOBAL_LIST_INIT(layers_to_offset, list(
 #define EXTERNAL_FRONT (1 << 0)
 /// Draws overlay on the BODY_ADJ_LAYER
 #define EXTERNAL_ADJACENT (1 << 1)
+
+// NOCTURNE EDIT START
+#define EXTERNAL_ADJACENT_2 (1 << 2)
+#define EXTERNAL_ADJACENT_3 (1 << 3)
+// NOCTURNE EDIT END
+
 /// Draws overlay on the BODY_BEHIND_LAYER
-#define EXTERNAL_BEHIND (1 << 2)
+#define EXTERNAL_BEHIND (1 << 4) // NOCTURNE EDIT - ORIGINAL: #define EXTERNAL_BEHIND (1 << 2)
+
+// NOCTURNE EDIT START
+//Hand markings
+#define EXTERNAL_HAND (1 << 5)
+//Misc
+#define EXTERNAL_BODY_FRONT_UNDER_CLOTHES (1 << 6)
+// NOCTURNE EDIT END
+
 /// Draws organ on all EXTERNAL layers
 #define ALL_EXTERNAL_OVERLAYS EXTERNAL_FRONT | EXTERNAL_ADJACENT | EXTERNAL_BEHIND
 
