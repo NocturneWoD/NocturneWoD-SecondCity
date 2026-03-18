@@ -7765,6 +7765,7 @@
 #include "modular_nocturne\master_files\code\modules\mob\living\carbon\human\_species.dm"
 #include "modular_nocturne\master_files\code\modules\surgery\organs\_organ.dm"
 #include "modular_nocturne\modules\customization\code\markings\_body_marking.dm"
+#include "modular_nocturne\modules\customization\code\markings\markings\tattoos.dm"
 #include "modular_nocturne\modules\customization\code\preferences\markings.dm"
 #include "modular_nocturne\modules\customization\code\preferences\tri_color.dm"
 // END_INCLUDE
