@@ -485,6 +485,12 @@ export function MainPage(props: MainPageProps) {
     ...data.character_preferences.non_contextual,
   };
 
+  // NOCTURNE EDIT START
+  const MarkingPreferences = {
+    ...data.character_preferences.markings,
+  };
+  // NOCTURNE EDIT END
+
   if (randomBodyEnabled) {
     nonContextualPreferences.random_splats = // DARKPACK EDIT CHANGE - SPLATS
       data.character_preferences.randomization.splats; // DARKPACK EDIT CHANGE - SPLATS
@@ -497,6 +503,7 @@ export function MainPage(props: MainPageProps) {
   // DARKPACK EDIT ADDITION BEGIN: SWAPPABLE PREF MENUS
   enum PrefPage {
     Visual, // The visual parts
+    Markings, // NOCTURNE EDIT ADD
     Profile, // Flavor Text, Age, Records, PDA ringtone, etc
   }
 
@@ -517,6 +524,21 @@ export function MainPage(props: MainPageProps) {
         />
       );
       break;
+      // NOCTURNE EDIT START
+      case PrefPage.Markings:
+        prefPageContents = (
+          <PreferenceList
+            randomizations={getRandomization(
+              MarkingPreferences,
+              serverData,
+              randomBodyEnabled,
+            )}
+            preferences={MarkingPreferences}
+            maxHeight="auto"
+          />
+        );
+        break;
+      // NOCTURNE EDIT END
     case PrefPage.Profile:
       prefPageContents = (
         <PreferenceList
@@ -745,6 +767,17 @@ export function MainPage(props: MainPageProps) {
                   Character Visuals
                 </PageButton>
               </Stack.Item>
+              {/* NOCTURNE EDIT START */}
+              <Stack.Item grow={2}>
+                <PageButton
+                  currentPage={currentPrefPage}
+                  page={PrefPage.Markings}
+                  setPage={setCurrentPrefPage}
+                >
+                  Character Markings
+                </PageButton>
+              </Stack.Item>
+              {/* NOCTURNE EDIT END */}
               <Stack.Item grow={2}>
                 <PageButton
                   currentPage={currentPrefPage}

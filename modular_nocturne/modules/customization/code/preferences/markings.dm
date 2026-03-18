@@ -92,7 +92,7 @@
 
 /datum/preference/choiced/markings/markings_head3
 	savefile_key = "markings_head3"
-	main_feature_name = "Bodymarkings Head 2"
+	main_feature_name = "Bodymarkings Head 3"
 	body_zone = HEAD
 	markingval = MARKING_HEAD3
 
@@ -145,7 +145,7 @@
 
 /datum/preference/choiced/markings/markings_chest3
 	savefile_key = "markings_chest3"
-	main_feature_name = "Bodymarkings Chest"
+	main_feature_name = "Bodymarkings Chest3 "
 	body_zone = CHEST
 	markingval = MARKING_CHEST3
 
@@ -404,7 +404,6 @@
 	if (!..(preferences))
 		return FALSE
 	return preferences.read_preference(/datum/preference/choiced/markings/markings_l_leg) != SPRITE_ACCESSORY_NONE
-
 
 /datum/preference/choiced/markings/markings_l_leg3
 	savefile_key = "markings_l_leg3"

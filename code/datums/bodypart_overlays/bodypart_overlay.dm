@@ -4,7 +4,19 @@
 	/// Sometimes we need multiple layers, for like the back, middle and front of the person (EXTERNAL_FRONT, EXTERNAL_ADJACENT, EXTERNAL_BEHIND)
 	var/layers
 	/// List of all possible layers. Used for looping through in drawing
-	var/static/list/all_layers = list(EXTERNAL_FRONT, EXTERNAL_ADJACENT, EXTERNAL_BEHIND)
+	// var/static/list/all_layers = list(EXTERNAL_FRONT, EXTERNAL_ADJACENT, EXTERNAL_BEHIND) // NOCTURNE REMOVAL
+	// NOCTURNE EDIT START
+	var/static/list/all_layers = list(
+		EXTERNAL_FRONT,
+		EXTERNAL_ADJACENT,
+		EXTERNAL_ADJACENT_2,
+		EXTERNAL_ADJACENT_3,
+		EXTERNAL_BEHIND,
+		EXTERNAL_HAND,
+		EXTERNAL_BODY_FRONT_UNDER_CLOTHES,
+	)
+	// NOCTURNE EDIT END
+
 	/// Key of the icon states of all the sprite_datums for easy caching
 	var/cache_key = ""
 	/// Whether the overlay blocks emissive light
@@ -69,6 +81,16 @@
 			return "ADJ"
 		if(-BODY_FRONT_LAYER)
 			return "FRONT"
+		// NOCTURNE EDIT START
+		if(-BODY_ADJ_LAYER_2)
+			return "ADJ_2"
+		if(-BODY_ADJ_LAYER_3)
+			return "ADJ_3"
+		if(-BODY_HAND_LAYER)
+			return "HAND"
+		if (-BODY_FRONT_UNDER_CLOTHES_LAYER)
+			return "FRONT_UNDER"
+		// NOCTURNE EDIT END
 
 ///Converts a bitflag to the right layer. I'd love to make this a static index list, but byond made an attempt on my life when i did
 /datum/bodypart_overlay/proc/bitflag_to_layer(layer)
@@ -79,6 +101,16 @@
 			return -BODY_ADJ_LAYER
 		if(EXTERNAL_FRONT)
 			return -BODY_FRONT_LAYER
+		// NOCTURNE EDIT START
+		if(EXTERNAL_ADJACENT_2)
+			return -BODY_ADJ_LAYER_2
+		if(EXTERNAL_ADJACENT_3)
+			return -BODY_ADJ_LAYER_3
+		if(EXTERNAL_HAND)
+			return -BODY_HAND_LAYER
+		if(EXTERNAL_BODY_FRONT_UNDER_CLOTHES)
+			return -BODY_FRONT_UNDER_CLOTHES_LAYER
+		// NOCTURNE EDIT END
 
 ///Check whether we can draw the overlays. You generally don't want lizard snouts to draw over an EVA suit
 /datum/bodypart_overlay/proc/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
