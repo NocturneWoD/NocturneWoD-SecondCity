@@ -32,11 +32,12 @@
 	. = ..()
 
 	if(target.dna.features["markings_list"])
-		if(islist(target.dna.features["markings_list"]) && islist(target.dna.features["markings_list_colors"]) && islist(target.dna.features["markings_list_zones"]))
+		if(islist(target.dna.features["markings_list"]) && islist(target.dna.features["markings_list_colors"]))
 			var/list/markingslist = target.dna.features["markings_list"]
-			for(var/i in 1 to markingslist.len)
-				if(markingslist[i] && markingslist[i] != SPRITE_ACCESSORY_NONE)
-					add_doppler_markings(target, target.dna.features["markings_list"][i], target.dna.features["markings_list_colors"][i], target.dna.features["markings_list_zones"][i])
+			for(var/zone in GLOB.marking_zones)
+				for(var/i in 1 to LAZYLEN(markingslist[zone]))
+					if(markingslist[zone][i] && markingslist[zone][i] != SPRITE_ACCESSORY_NONE)
+						add_doppler_markings(target, target.dna.features["markings_list"][zone][i], target.dna.features["markings_list_colors"][zone][i], GLOB.marking_zone_to_bitflag[zone])
 
 //cover_flags2body_zones is funky with hand bitflags for some reason. this is more efficient for what we want to do anyway
 /datum/species/proc/marking_zones(zone)

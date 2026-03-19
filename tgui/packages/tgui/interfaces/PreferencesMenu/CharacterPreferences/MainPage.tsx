@@ -486,12 +486,6 @@ export function MainPage(props: MainPageProps) {
     ...data.character_preferences.non_contextual,
   };
 
-  // NOCTURNE EDIT START
-  const MarkingPreferences = {
-    ...data.character_preferences.markings,
-  };
-  // NOCTURNE EDIT END
-
   if (randomBodyEnabled) {
     nonContextualPreferences.random_splats = // DARKPACK EDIT CHANGE - SPLATS
       data.character_preferences.randomization.splats; // DARKPACK EDIT CHANGE - SPLATS

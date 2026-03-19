@@ -1,26 +1,31 @@
 import { filter } from 'es-toolkit/compat';
 import { useState } from 'react';
-
-import { classes } from 'tgui-core/react';
-import { Autofocus, Section, Button, Box, ColorBox, Flex, Floating, Input, Stack, TrackOutsideClicks } from 'tgui-core/components';
-import { useBackend, useLocalState, useSharedState } from 'tgui/backend';
 import {
-    Marking,
-    MarkingZone,
-    type PreferencesMenuData,
-  } from '../../types';
+  Section,
+  Button,
+  Box,
+  ColorBox,
+  Floating,
+  Input,
+  Stack,
+} from 'tgui-core/components';
+import { useBackend } from 'tgui/backend';
+import {
+  Marking,
+  MarkingChoice,
+  MarkingZone,
+  type PreferencesMenuData,
+} from '../../types';
 import { createSearch } from 'tgui-core/string';
-
-const MARKING_CELL_SIZE = 48;
-const MARKING_SIDEBAR_ROWS = 12;
 
 const MARKING_SELECTION_CELL_SIZE = 48;
 const MARKING_SELECTION_WIDTH = 5.4;
 const MARKING_SELECTION_MULTIPLIER = 5.2;
 
 type MarkingSelectionProps = {
-  name: string;
-  selected: string;
+  key: string;
+  zone: MarkingZone;
+  selected_marking: Marking;
   onSelect: (value: string) => void;
 };
 
@@ -40,10 +45,7 @@ function MarkingSelection(props: MarkingSelectionProps) {
     >
       <Stack fill vertical g={0}>
         <Stack.Item>
-          <Section
-            fill
-            title={`Select ${props.name.toLowerCase()}`}
-          >
+          <Section fill title={`Select marking`}>
             <Input
               autoFocus
               fluid
@@ -54,7 +56,36 @@ function MarkingSelection(props: MarkingSelectionProps) {
         </Stack.Item>
         <Stack.Item grow>
           <Section fill scrollable noTopPadding>
-
+            <Stack wrap>
+              {searchMarkings(searchText, props.zone.markings_choices).map(
+                (marking_choice, index) => {
+                  return (
+                    <Button
+                      key={index}
+                      onClick={() => {
+                        props.onSelect(marking_choice.name);
+                      }}
+                      selected={
+                        marking_choice.name === props.selected_marking.name
+                      }
+                      tooltip={marking_choice.name}
+                      tooltipPosition="right"
+                      style={{
+                        height: `${MARKING_SELECTION_CELL_SIZE}px`,
+                        width: `${MARKING_SELECTION_CELL_SIZE}px`,
+                      }}
+                    >
+                      <Box
+                        style={{
+                          transform:
+                            'translateX(-50%) translateY(-50%) scale(0.8)',
+                        }}
+                      />
+                    </Button>
+                  );
+                },
+              )}
+            </Stack>
           </Section>
         </Stack.Item>
       </Stack>
@@ -62,12 +93,12 @@ function MarkingSelection(props: MarkingSelectionProps) {
   );
 }
 
-function searchInCatalog(searchText = '', catalog: Record<string, string>) {
-  let items = Object.entries(catalog);
+function searchMarkings(searchText = '', markings: MarkingChoice[]) {
+  let items = markings;
   if (searchText) {
     items = filter(
       items,
-      createSearch(searchText, ([name, _icon]) => name),
+      createSearch(searchText, (marking: MarkingChoice) => marking.name),
     );
   }
   return items;
@@ -82,10 +113,26 @@ type MarkingButtonProps = {
 const MarkingButton = (props: MarkingButtonProps) => {
   const { act, data } = useBackend<PreferencesMenuData>();
   return (
-    <Button
-      width="100%"
-      content={props.selected_marking.name}
-    />
+    <Floating
+      stopChildPropagation
+      placement="right-start"
+      content={
+        <MarkingSelection
+          key={props.key}
+          zone={props.zone}
+          selected_marking={props.selected_marking}
+          onSelect={(value: string) => {
+            act('change_marking', {
+              body_zone: props.zone.body_zone,
+              marking_index: props.selected_marking.marking_index,
+              new_marking: value,
+            });
+          }}
+        />
+      }
+    >
+      <Button width="100%">{props.selected_marking.name}</Button>
+    </Floating>
   );
 };
 
@@ -106,7 +153,8 @@ const MarkingInput = (props: MarkingInputProps) => {
               body_zone: props.zone.body_zone,
               marking_index: props.marking.marking_index,
             })
-          }>
+          }
+        >
           <ColorBox
             style={{
               border: '2px solid white',
@@ -168,8 +216,14 @@ const ZoneItem = (props: ZoneItemProps) => {
     <Stack.Item>
       <Section
         title={
-          props.zone.name + ' (' + props.zone.markings.length + '/' + maxmarkings + ')'
-        }>
+          props.zone.name +
+          ' (' +
+          props.zone.markings.length +
+          '/' +
+          maxmarkings +
+          ')'
+        }
+      >
         <Stack vertical>
           <Stack.Item>
             {props.zone.markings.map((marking) => (
@@ -206,7 +260,6 @@ const ZoneItem = (props: ZoneItemProps) => {
   );
 };
 
-
 type MarkingsPageProps = {
   maxHeight: string;
 };
@@ -240,13 +293,14 @@ export const MarkingsPage = (props: MarkingsPageProps) => {
       <Stack width="100%" height="100%">
         {stacks.map((stack, index) => (
           <Stack.Item grow key={index}>
-            <Section overflowX="hidden" fill backgroundColor='rgba(0, 0, 0, 0.0)'>
+            <Section
+              overflowX="hidden"
+              fill
+              backgroundColor="rgba(0, 0, 0, 0.0)"
+            >
               <Stack vertical>
                 {stack.map((zone) => (
-                  <ZoneItem
-                    key={zone.body_zone}
-                    zone={zone}
-                  />
+                  <ZoneItem key={zone.body_zone} zone={zone} />
                 ))}
               </Stack>
             </Section>

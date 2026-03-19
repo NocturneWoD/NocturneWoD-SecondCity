@@ -42,10 +42,10 @@
 
 		var/list/this_zone_markings = list()
 		for(var/marking_name in preferences.body_markings[zone])
-			this_zone_marking_choices -= marking_name
+		for(var/marking_index in 1 to LAZYLEN(preferences.body_markings[zone]))
 			var/list/this_marking = list()
 
-			var/marking_index = preferences.body_markings[zone].Find(marking_name)
+			var/marking_name = preferences.body_markings[zone][marking_index]
 			this_marking["name"] = marking_name
 			this_marking["marking_index"] = marking_index
 			this_marking["color"] = sanitize_hexcolor(preferences.body_markings_colors[zone][marking_index], DEFAULT_HEX_COLOR_LEN, include_crunch = TRUE, default = "#FFFFFF")
@@ -64,8 +64,8 @@
 	return data
 
 /datum/preference_middleware/markings/apply_to_human(mob/living/carbon/human/target, datum/preferences/preferences)
-	// target.dna.features["markings_list"] = LAZYCOPY(preferences.body_markings)
-	// target.dna.features["markings_list_colors"] = LAZYCOPY(preferences.body_markings_colors)
+	target.dna.features["markings_list"] = LAZYCOPY(preferences.body_markings)
+	target.dna.features["markings_list_colors"] = LAZYCOPY(preferences.body_markings_colors)
 	return
 
 /datum/preference_middleware/markings/proc/add_marking(list/params, mob/user)
@@ -75,7 +75,7 @@
 	LAZYINITLIST(preferences.body_markings_colors[zone])
 
 	var/list/available_markings = get_markings_by_zone(zone)
-	for(var/marking_name in preferences.body_markings[zone])
+	for(var/marking_name in preferences.body_markings[zone]) // so you dont get the same markings over and over
 		available_markings -= marking_name
 
 	if(!length(available_markings))
