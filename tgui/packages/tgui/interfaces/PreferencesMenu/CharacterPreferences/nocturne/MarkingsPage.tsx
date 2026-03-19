@@ -9,6 +9,7 @@ import {
   Input,
   Stack,
 } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
 import { useBackend } from 'tgui/backend';
 import {
   Marking,
@@ -76,10 +77,11 @@ function MarkingSelection(props: MarkingSelectionProps) {
                       }}
                     >
                       <Box
-                        style={{
-                          transform:
-                            'translateX(-50%) translateY(-50%) scale(0.8)',
-                        }}
+                        className={classes([
+                          'markings32x32',
+                          marking_choice.icon,
+                          'centered-image',
+                        ])}
                       />
                     </Button>
                   );

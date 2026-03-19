@@ -25,7 +25,7 @@
 		else
 			overlay.use_gender = accessory.gender_specific
 
-		overlay.draw_color = colorvalue || accessory.color_src
+		overlay.draw_color = colorvalue || accessory.default_color
 		people_part.add_bodypart_overlay(overlay)
 
 /datum/species/add_body_markings(mob/living/carbon/human/target)

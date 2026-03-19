@@ -156,7 +156,7 @@ export type Marking = {
 
 export type MarkingChoice = {
   name: string;
-  // icon: string;
+  icon: string;
 };
 
 export type MarkingZone = {

@@ -37,6 +37,7 @@
 			var/list/this_marking_choice = list()
 
 			this_marking_choice["name"] = marking_name
+			this_marking_choice["icon"] = sanitize_css_class_name("marking_[zone]_[marking_name]")
 
 			this_zone_marking_choices += list(this_marking_choice)
 
@@ -162,7 +163,7 @@
 		return TRUE
 	return FALSE
 
-/*
+
 /datum/preference_middleware/markings/get_ui_assets()
 	return list(
 		get_asset_datum(/datum/asset/spritesheet/markings),
@@ -179,64 +180,61 @@
 
 	var/mob/living/carbon/human/dummy/consistent/dummy = new()
 
-	// clean up the dummy... just in case
-	dummy.clear_markings(update = FALSE)
+	// clean up the dummy just in case
+	dummy.dna.species.remove_body_markings(dummy)
 
-	//prepare markings previews
-	for(var/zone in GLOB.marking_zones)
-		for(var/marking_name in GLOB.body_markings_by_zone[zone])
-			var/datum/sprite_accessory/body_markings/body_marking = GLOB.body_markings_by_zone[zone][marking_name]
-			if(!body_marking)
-				// should not happen but if it does...
+	// prepare markings previews
+	var/datum/bodypart_overlay/simple/body_marking/body_markings/markings = new /datum/bodypart_overlay/simple/body_marking/body_markings()
+	var/list/all_markings = assoc_to_keys_features(SSaccessories.body_markings)
+
+	for(var/marking_name in all_markings)
+		var/datum/sprite_accessory/body_marking/accessory = markings.get_accessory(marking_name)
+
+		if(isnull(accessory))
+			// should not happen but if it does...
+			for(var/zone in GLOB.marking_zones)
 				to_insert[sanitize_css_class_name("marking_[zone]_[marking_name]")] = icon_fucked
-				continue
+			continue
 
-			// prepares the dummy for preview
-			body_marking.prepare_dummy(dummy)
+		for(var/zone in GLOB.marking_zones)
+			var/zone_bitflag = GLOB.marking_zone_to_bitflag[zone]
 
-			// create the marking on the given bodypart
-			var/obj/item/bodypart/bodypart = dummy.get_bodypart(check_zone(zone))
-			if(!bodypart)
-				// should not happen but if it does...
-				to_insert[sanitize_css_class_name("marking_[zone]_[marking_name]")] = icon_fucked
-				continue
+			if(accessory.body_zones & zone_bitflag)
+				// create the marking on the given bodypart
+				var/obj/item/bodypart/bodypart = dummy.get_bodypart(check_zone(zone))
+				if(!bodypart)
+					// should not happen but if it does...
+					to_insert[sanitize_css_class_name("marking_[zone]_[marking_name]")] = icon_fucked
+					continue
 
-			//clear up the bodypart for the next marking to be applied
-			for(var/datum/bodypart_overlay/mutant/marking/marking_overlay in bodypart.bodypart_overlays)
-				bodypart.remove_bodypart_overlay(marking_overlay)
-				qdel(marking_overlay)
+				// body_marking.prepare_dummy(dummy) // could do some marking specific shit for the dummy here
 
-			var/marking_key = "marking_[zone]_5"
-			var/marking_color_key = marking_key + "_color"
-			dummy.dna.features[marking_key] = marking_name
-			dummy.dna.features[marking_color_key] = body_marking.get_default_color()
+				dummy.dna.species.add_doppler_markings(dummy, marking_name, accessory.default_color || COLOR_GRAY, zone_bitflag)
 
-			var/datum/bodypart_overlay/marking_overlay = new /datum/bodypart_overlay/mutant/marking(zone, marking_key, marking_color_key)
-			marking_overlay.set_appearance(body_marking.type)
-			bodypart.add_bodypart_overlay(marking_overlay)
+				var/image/bodypart_image = new()
+				bodypart_image.add_overlay(bodypart.get_limb_icon())
+				var/icon/bodypart_icon = getFlatIcon(bodypart_image)
+				switch(zone)
+					if(BODY_ZONE_HEAD)
+						bodypart_icon.Crop(10, 19, 22, 31)
+					if(BODY_ZONE_CHEST)
+						bodypart_icon.Crop(9, 9, 23, 23)
+					if(BODY_ZONE_L_ARM, BODY_ZONE_PRECISE_L_HAND)
+						bodypart_icon.Crop(17, 10, 28, 21)
+					if(BODY_ZONE_R_ARM, BODY_ZONE_PRECISE_R_HAND)
+						bodypart_icon.Crop(4, 10, 15, 21)
+					if(BODY_ZONE_L_LEG, BODY_ZONE_PRECISE_L_FOOT)
+						bodypart_icon.Crop(9, 1, 23, 15)
+					if(BODY_ZONE_R_LEG, BODY_ZONE_PRECISE_R_FOOT)
+						bodypart_icon.Crop(9, 1, 23, 15)
+				bodypart_icon.Scale(32, 32)
 
-			var/image/bodypart_image = new()
-			bodypart_image.add_overlay(bodypart.get_limb_icon())
-			var/icon/bodypart_icon = getFlatIcon(bodypart_image)
-			switch(zone)
-				if(BODY_ZONE_HEAD)
-					bodypart_icon.Crop(10, 19, 22, 31)
-				if(BODY_ZONE_CHEST)
-					bodypart_icon.Crop(9, 9, 23, 23)
-				if(BODY_ZONE_L_ARM, BODY_ZONE_PRECISE_L_HAND)
-					bodypart_icon.Crop(17, 10, 28, 21)
-				if(BODY_ZONE_R_ARM, BODY_ZONE_PRECISE_R_HAND)
-					bodypart_icon.Crop(4, 10, 15, 21)
-				if(BODY_ZONE_L_LEG, BODY_ZONE_PRECISE_L_FOOT)
-					bodypart_icon.Crop(9, 1, 23, 15)
-				if(BODY_ZONE_R_LEG, BODY_ZONE_PRECISE_R_FOOT)
-					bodypart_icon.Crop(9, 1, 23, 15)
-			bodypart_icon.Scale(32, 32)
+				to_insert[sanitize_css_class_name("marking_[zone]_[marking_name]")] = bodypart_icon
 
-			to_insert[sanitize_css_class_name("marking_[zone]_[marking_name]")] = bodypart_icon
+				// clear up the bodypart for the next marking to be applied
+				dummy.dna.species.remove_body_markings(dummy)
 
 	SSatoms.prepare_deletion(dummy) //FUCK YOU STUPID DUMB DUMB DUMMY
 
 	for(var/spritesheet_key in to_insert)
 		Insert(spritesheet_key, to_insert[spritesheet_key])
-*/
