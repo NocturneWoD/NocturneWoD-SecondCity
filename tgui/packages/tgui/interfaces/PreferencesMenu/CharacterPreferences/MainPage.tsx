@@ -34,6 +34,7 @@ import { useRandomToggleState } from '../useRandomToggleState';
 import { useServerPrefs } from '../useServerPrefs';
 import { DeleteCharacterPopup } from './DeleteCharacterPopup';
 import { MultiNameInput, NameInput } from './names';
+import { MarkingsPage } from './nocturne/MarkingsPage'; // DARKPACK EDIT ADDITION
 
 const CLOTHING_CELL_SIZE = 48;
 const CLOTHING_SIDEBAR_ROWS = 12; // DARKPACK EDIT, ORIGINAL: 9;
@@ -527,13 +528,7 @@ export function MainPage(props: MainPageProps) {
       // NOCTURNE EDIT START
       case PrefPage.Markings:
         prefPageContents = (
-          <PreferenceList
-            randomizations={getRandomization(
-              MarkingPreferences,
-              serverData,
-              randomBodyEnabled,
-            )}
-            preferences={MarkingPreferences}
+          <MarkingsPage
             maxHeight="auto"
           />
         );

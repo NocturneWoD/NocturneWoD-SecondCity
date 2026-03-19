@@ -1,6 +1,8 @@
 // length of the dna feature marking list
 #define MARKING_LIST_LEN 24
 
+#define MAXIMUM_MARKINGS_PER_LIMB 3
+
 // dna feature marking list item locations
 #define MARKING_HEAD 1
 #define MARKING_HEAD2 2

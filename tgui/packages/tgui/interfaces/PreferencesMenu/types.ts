@@ -146,6 +146,28 @@ export type Personality = {
   groups: string[] | null;
 };
 
+// NOCTURNE EDIT START
+export type Marking = {
+  name: string;
+  // icon: string;
+  color: string;
+  marking_index: string;
+};
+
+export type MarkingChoice = {
+  name: string;
+  // icon: string;
+};
+
+export type MarkingZone = {
+  body_zone: string;
+  name: string;
+  markings_choices: MarkingChoice[];
+  markings: Marking[];
+  cant_add_markings: boolean;
+};
+// NOCTURNE EDIT END
+
 export enum RandomSetting {
   AntagOnly = 1,
   Disabled = 2,
@@ -259,6 +281,11 @@ export type PreferencesMenuData = {
     }
   >;
   // DARKPACK EDIT ADD END
+
+  // NOCTURNE EDIT START
+  marking_parts: MarkingZone[];
+  maximum_markings_per_limb: number;
+  // NOCTURNE EDIT END
 
   antag_bans?: string[];
   antag_days_left?: Record<string, number>;

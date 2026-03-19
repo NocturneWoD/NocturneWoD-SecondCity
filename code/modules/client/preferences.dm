@@ -583,6 +583,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 		preference.apply_to_human(character, read_preference(preference.type))
 
+		// NOCTURNE EDIT START - middleware apply human prefs
+		for (var/datum/preference_middleware/preference_middleware as anything in middleware)
+			preference_middleware.apply_to_human(character, src)
+		// NOCTURNE EDIT END
+
 	character.dna.real_name = character.real_name
 
 	if(icon_updates)
