@@ -88,3 +88,26 @@ export const random_splats: Feature<RandomSetting> = { // DARKPACK EDIT CHANGE -
     );
   },
 };
+
+// NOCTURNE EDIT START
+export const random_species: Feature<RandomSetting> = {
+  name: 'Random species',
+  component: (props) => {
+    const { act, data } = useBackend<PreferencesMenuData>();
+
+    const species = data.character_preferences.randomization.species;
+
+    return (
+      <RandomizationButton
+        setValue={(newValue) =>
+          act('set_random_preference', {
+            preference: 'species',
+            value: newValue,
+          })
+        }
+        value={species || RandomSetting.Disabled}
+      />
+    );
+  },
+};
+// NOCTURNE EDIT END
