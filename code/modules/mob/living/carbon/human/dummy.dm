@@ -115,6 +115,17 @@ INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 	target.dna.features[FEATURE_ETHEREAL_COLOR] = COLOR_WHITE
 	for(var/feature_key in SSaccessories.feature_list)
 		target.dna.features[feature_key] = get_consistent_feature_entry(SSaccessories.feature_list[feature_key])
+	// NOCTURNE EDIT START
+	target.dna.features[FEATURE_EARS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_MARKINGS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_FRILLS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_HORNS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_SNOUT_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_WINGS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_TAIL_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_FLUFF_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_MOTH_MARKS_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	// NOCTURNE EDIT END
 	target.dna.initialize_dna(newblood_type = get_blood_type(BLOOD_TYPE_O_MINUS), create_mutation_blocks = FALSE, randomize_features = FALSE)
 	// UF and UI are nondeterministic, even though the features are the same some blocks will randomize slightly
 	// In practice this doesn't matter, but this is for the sake of 100%(ish) consistency

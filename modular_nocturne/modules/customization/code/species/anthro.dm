@@ -4,9 +4,22 @@
 /datum/species/human/anthro
 	name = "Anthro"
 	id = SPECIES_ANTHRO
-	examine_limb_id = SPECIES_HUMAN
+	examine_limb_id = SPECIES_ANTHRO
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
+	)
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/anthro,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/anthro,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/anthro,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/anthro,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/anthro,
+	)
+	digitigrade_customization = DIGITIGRADE_OPTIONAL
+	digi_leg_overrides = list(
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/anthro,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
 	)
 
 /datum/species/human/anthro/get_species_description()

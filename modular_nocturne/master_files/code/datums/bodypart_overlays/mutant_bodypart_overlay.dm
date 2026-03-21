@@ -1,4 +1,4 @@
-// Almost everything here was made by GoldenAlpharex at Nova, hooray to them for doing the work for me
+// FUCK YOU GOLDEN
 
 /// The greatest amount of colors that can be in a matrixed bodypart_overlay.
 #define MAX_MATRIXED_COLORS 3
@@ -13,6 +13,8 @@
 	/// A simple cache of what the last icon_states built were.
 	/// It's really only there to help with debugging what's happening.
 	var/list/last_built_icon_states
+	/// Annoying annoying annoyed annoyance - this is to avoid a massive headache trying to work around tails
+	var/feature_key_sprite = null
 
 /datum/bodypart_overlay/mutant/get_overlay(layer, obj/item/bodypart/limb)
 	layer = bitflag_to_layer(layer)

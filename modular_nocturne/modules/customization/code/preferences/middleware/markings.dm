@@ -169,6 +169,9 @@
 		get_asset_datum(/datum/asset/spritesheet/markings),
 	)
 
+// NOCTURNE TODO: maybe turn this into spritesheet_batched at some point? could also rewrite it to do simple
+// icon overlay stuff instead of making an entire dummy
+// i partially wrote some of this shit back in 2023 for a server bob joga was trying to start; it's probably out of date
 /datum/asset/spritesheet/markings
 	name = "markings"
 	early = TRUE
