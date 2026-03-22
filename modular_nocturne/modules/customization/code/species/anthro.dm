@@ -22,6 +22,15 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
 	)
 
+/datum/species/human/anthro/get_features()
+	var/list/features = ..()
+
+	features += /datum/preference/choiced/species_feature/lizard_snout
+
+	GLOB.features_by_species[type] = features
+
+	return features
+
 /datum/species/human/anthro/get_species_description()
 	return "A blank slate for you to make whatever silly creature your little heart desires!"
 
@@ -43,7 +52,6 @@
 
 /*
 /datum/species/human/genemod/prepare_human_for_preview(mob/living/carbon/human/human_for_preview)
-	human_for_preview.dna.ear_type = DOG
 	human_for_preview.dna.features[FEATURE_EARS] = "Fold"
 	human_for_preview.dna.features[FEATURE_EARS_COLORS][1] = "#4E3E30"
 	human_for_preview.dna.features[FEATURE_EARS_COLORS][2] = "#F4B1C8"

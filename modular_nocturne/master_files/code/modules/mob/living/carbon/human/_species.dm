@@ -67,29 +67,8 @@
 					if(markingslist[zone][i] && markingslist[zone][i] != SPRITE_ACCESSORY_NONE)
 						add_doppler_markings(target, target.dna.features["markings_list"][zone][i], target.dna.features["markings_list_colors"][zone][i], GLOB.marking_zone_to_bitflag[zone])
 
-/datum/species/regenerate_organs(mob/living/carbon/target, datum/species/old_species, replace_current = TRUE, list/excluded_zones, visual_only = FALSE, replace_missing = TRUE)
-	. = ..()
-	if(target.dna.features[FEATURE_SNOUT] && can_regenerate_mutant_feature("snout"))
-		if(target.dna.features[FEATURE_SNOUT] != /datum/sprite_accessory/snouts/none::name && target.dna.features[FEATURE_SNOUT] != /datum/sprite_accessory/blank::name)
-			var/obj/item/organ/replacement = SSwardrobe.provide_type(/obj/item/organ/snout)
-			replacement.Insert(target, special = TRUE, movement_flags = DELETE_IF_REPLACED)
-			return .
-	var/obj/item/organ/old_part = target.get_organ_slot(ORGAN_SLOT_EXTERNAL_SNOUT)
-	if(old_part)
-		old_part.Remove(target, special = TRUE, movement_flags = DELETE_IF_REPLACED)
-		old_part.moveToNullspace()
-
 // this could be better
 /datum/species/proc/can_regenerate_mutant_feature(feature_key)
 	if (type in GLOB.species_whitelist_mutant_parts)
 		return TRUE
 	return FALSE
-
-/datum/species/get_features()
-	var/list/features = ..()
-
-	features += /datum/preference/choiced/species_feature/lizard_snout
-
-	GLOB.features_by_species[type] = features
-
-	return features

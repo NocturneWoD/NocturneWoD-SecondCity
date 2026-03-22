@@ -1,5 +1,7 @@
 #define DEFAULT_SPRITE_LIST "default_sprites"
 
+#define INIT_ACCESSORY(sprite_accessory) init_sprite_accessory_subtypes(sprite_accessory, add_blank = FALSE)[DEFAULT_SPRITE_LIST]
+
 /datum/controller/subsystem/accessories
 	var/list/body_markings
 
@@ -7,5 +9,9 @@
 	. = ..()
 
 	body_markings = init_sprite_accessory_subtypes(/datum/sprite_accessory/body_marking)[DEFAULT_SPRITE_LIST]
+
+	feature_list[FEATURE_SNOUT_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/snouts)
+
+#undef INIT_ACCESSORY
 
 #undef DEFAULT_SPRITE_LIST

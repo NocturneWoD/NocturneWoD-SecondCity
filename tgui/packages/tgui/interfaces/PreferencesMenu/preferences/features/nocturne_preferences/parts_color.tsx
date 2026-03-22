@@ -7,7 +7,7 @@ import {
 } from '../base';
 import { FeatureDropdownInput } from '../dropdowns';
 
-export const has_snout: FeatureToggle = {
+export const has_snout_nocturne: FeatureToggle = {
   name: 'Add Part: Snout',
   category: 'GAMEPLAY',
   description: `

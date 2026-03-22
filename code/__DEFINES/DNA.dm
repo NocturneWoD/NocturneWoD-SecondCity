@@ -72,17 +72,18 @@
 #define FEATURE_POD_HAIR "pod_hair"
 
 // NOCTURNE EDIT START - markings
-#define FEATURE_EARS_COLORS "ears_colors"
-#define FEATURE_MARKINGS_COLORS "markings_colors"
-#define FEATURE_FRILLS_COLORS "frills_colors"
-#define FEATURE_HORNS_COLORS "horns_colors"
-#define FEATURE_MOTH_MARKS_COLORS "moth_markings_colors"
-#define FEATURE_SNOUT_COLORS "snout_colors"
-#define FEATURE_WINGS_COLORS "wings_colors"
-#define FEATURE_TAIL_OTHER "tail_other"
-#define FEATURE_TAIL_COLORS "tail_colors"
-#define FEATURE_FLUFF "fluff"
-#define FEATURE_FLUFF_COLORS "fluff_colors"
+#define FEATURE_EARS_NOCTURNE "ears_noct"
+#define FEATURE_EARS_NOCTURNE_COLORS "ears_noct_colors"
+#define FEATURE_FRILLS_NOCTURNE "frills_noct"
+#define FEATURE_FRILLS_NOCTURNE_COLORS "frills_noct_colors"
+#define FEATURE_HORNS_NOCTURNE "horns_noct"
+#define FEATURE_HORNS_NOCTURNE_COLORS "horns_noct_colors"
+#define FEATURE_SNOUT_NOCTURNE "snout_noct"
+#define FEATURE_SNOUT_NOCTURNE_COLORS "snout_noct_colors"
+#define FEATURE_TAIL_NOCTURNE "tail_noct"
+#define FEATURE_TAIL_NOCTURNE_COLORS "tail_noct_colors"
+#define FEATURE_FLUFF_NOCTURNE "fluff_noct"
+#define FEATURE_FLUFF_NOCTURNE_COLORS "fluff_noct_colors"
 // NOCTURNE EDIT END
 
 // Other

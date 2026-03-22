@@ -50,7 +50,3 @@
 			if("m_[key]_[icon_state]_[layertext]_3" in SSaccessories.cached_mutant_icon_files[icon])
 				color_layer_names["3"] = "3"
 
-/datum/sprite_accessory/snouts/none
-	name = SPRITE_ACCESSORY_NONE
-	icon = null
-	icon_state = SPRITE_ACCESSORY_NONE

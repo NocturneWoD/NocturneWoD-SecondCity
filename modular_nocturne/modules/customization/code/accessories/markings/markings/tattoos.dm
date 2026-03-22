@@ -1,5 +1,5 @@
 /datum/sprite_accessory/body_marking/tattoo
-	icon = 'modular_nocturne/modules/customization/icons/mob/human/markings/tattoo_markings.dmi'
+	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/markings/tattoo_markings.dmi'
 	default_color = "#112222" //slightly faded ink.
 	gender_specific = FALSE
 
