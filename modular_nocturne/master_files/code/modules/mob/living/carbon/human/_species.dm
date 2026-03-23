@@ -67,8 +67,6 @@
 					if(markingslist[zone][i] && markingslist[zone][i] != SPRITE_ACCESSORY_NONE)
 						add_doppler_markings(target, target.dna.features["markings_list"][zone][i], target.dna.features["markings_list_colors"][zone][i], GLOB.marking_zone_to_bitflag[zone])
 
-// this could be better
 /datum/species/proc/can_regenerate_mutant_feature(feature_key)
-	if (type in GLOB.species_whitelist_mutant_parts)
-		return TRUE
+	SHOULD_CALL_PARENT(FALSE)
 	return FALSE

@@ -134,5 +134,33 @@
 /datum/bodypart_overlay/mutant/proc/get_feature_key_for_overlay()
 	return sprite_datum?.key || feature_key
 
+/// Helper function for hiding mutant parts on the head.
+/// Use this with can_draw_on_bodypart()
+/datum/bodypart_overlay/mutant/proc/can_draw_on_head(var/mob/living/carbon/human/wearer, key)
+	if(!istype(wearer) || !wearer.head)
+		return TRUE
+
+	// Hide if wearing hat
+	if(key in wearer.try_hide_mutant_parts)
+		return FALSE
+
+	return TRUE
+
+/// Helper function for hiding mutant parts on the chest.
+/// Use this with can_draw_on_bodypart()
+/datum/bodypart_overlay/mutant/proc/can_draw_on_chest(var/mob/living/carbon/human/wearer, key)
+	if(!istype(wearer) || (!wearer.w_uniform && !wearer.wear_suit))
+		return TRUE
+
+	// Hide if wearing uniform
+	if(key in wearer.try_hide_mutant_parts)
+		return FALSE
+
+	if(wearer.wear_suit)
+		// Exception for MODs
+		if(istype(wearer.wear_suit, /obj/item/clothing/suit/mod))
+			return TRUE
+	return TRUE
+
 #undef MAX_MATRIXED_COLORS
 #undef ALPHA_OPAQUE

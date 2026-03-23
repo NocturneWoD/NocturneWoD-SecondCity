@@ -1,5 +1,7 @@
 /datum/sprite_accessory/nocturne/snouts
 	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/snouts.dmi'
+	key = FEATURE_SNOUT_NOCTURNE
+	color_src = USE_MATRIXED_COLORS
 	em_block = TRUE
 
 /datum/sprite_accessory/nocturne/snouts/none

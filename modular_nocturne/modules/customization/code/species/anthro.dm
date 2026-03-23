@@ -22,10 +22,21 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
 	)
 
+// THIS SUCKS
+/datum/species/human/anthro/can_regenerate_mutant_feature(feature_key)
+	switch(feature_key)
+		if(FEATURE_EARS_NOCTURNE)
+			return TRUE
+		if(FEATURE_SNOUT_NOCTURNE)
+			return TRUE
+		else
+			return FALSE
+
 /datum/species/human/anthro/get_features()
 	var/list/features = ..()
 
-	features += /datum/preference/choiced/species_feature/lizard_snout
+	features += /datum/preference/choiced/nocturne_feature/ears
+	features += /datum/preference/choiced/nocturne_feature/snout
 
 	GLOB.features_by_species[type] = features
 

@@ -7,6 +7,23 @@
 	id = SPECIES_DEMIHUMAN
 	examine_limb_id = SPECIES_HUMAN
 
+// THIS SUCKS
+/datum/species/human/demihuman/can_regenerate_mutant_feature(feature_key)
+	switch(feature_key)
+		if(FEATURE_EARS_NOCTURNE)
+			return TRUE
+		else
+			return FALSE
+
+/datum/species/human/demihuman/get_features()
+	var/list/features = ..()
+
+	features += /datum/preference/choiced/nocturne_feature/ears
+
+	GLOB.features_by_species[type] = features
+
+	return features
+
 /datum/species/human/demihuman/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.set_hairstyle("Bald", update = TRUE)
 	human.set_facial_hairstyle("Beard (Goatee)", update = TRUE)

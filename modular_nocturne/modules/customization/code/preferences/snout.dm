@@ -1,6 +1,4 @@
-// stupid fucking regenerate_organs override
-// could rewrite this garbage to be only one override but its 2:30 am right now
-// and i cant be assed to think
+// regenerate_organs override
 
 /datum/species/regenerate_organs(mob/living/carbon/target, datum/species/old_species, replace_current = TRUE, list/excluded_zones, visual_only = FALSE, replace_missing = TRUE)
 	. = ..()
@@ -14,7 +12,6 @@
 		old_part.Remove(target, special = TRUE, movement_flags = DELETE_IF_REPLACED)
 		old_part.moveToNullspace()
 
-
 // snout toggle
 
 /datum/preference/toggle/nocturne_toggle/snout
@@ -22,7 +19,6 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
 	feature_key = FEATURE_SNOUT_NOCTURNE
-
 
 // actual snout options
 
@@ -47,7 +43,7 @@
 /datum/preference/choiced/nocturne_feature/snout/icon_for(value)
 	return generate_snout_icon(get_accessory_for_value(value))
 
-/datum/preference/choiced/proc/generate_snout_icon(datum/sprite_accessory/sprite_accessory)
+/datum/preference/choiced/nocturne_feature/snout/proc/generate_snout_icon(datum/sprite_accessory/sprite_accessory)
 	var/static/datum/universal_icon/body
 	if (isnull(body))
 		body = uni_icon('modular_nocturne/modules/customization/icons/mob/human/species/anthro/bodyparts.dmi', "anthro_head_m", EAST)
@@ -85,12 +81,11 @@
 
 	return final_icon
 
-
 // snout colors
 
 /datum/preference/tri_color/snout_color
 	priority = PREFERENCE_PRIORITY_BODY_TYPE
-	savefile_key = "snout_color"
+	savefile_key = "snout_nocturne_color"
 	savefile_identifier = PREFERENCE_CHARACTER
 	category = PREFERENCE_CATEGORY_SUPPLEMENTAL_FEATURES
 
