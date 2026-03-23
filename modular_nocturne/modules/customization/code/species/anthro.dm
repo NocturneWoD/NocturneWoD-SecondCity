@@ -18,7 +18,8 @@
 	)
 	mutant_features = list(
 		FEATURE_EARS_NOCTURNE,
-		FEATURE_SNOUT_NOCTURNE
+		FEATURE_SNOUT_NOCTURNE,
+		FEATURE_FLUFF_NOCTURNE,
 	)
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	digi_leg_overrides = list(

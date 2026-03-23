@@ -38,3 +38,19 @@ export const ears_nocturne_color: Feature<string[]> = {
   name: 'Ears Color',
   component: FeatureTriColorInput,
 };
+
+// fluff
+
+export const has_fluff_nocturne: FeatureToggle = {
+  name: 'Add Part: Fluff',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds fluff to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const fluff_nocturne_color: Feature<string[]> = {
+  name: 'Fluff Color',
+  component: FeatureTriColorInput,
+};

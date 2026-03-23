@@ -26,3 +26,6 @@
 
 /// For mutant accessory layering, lets us use our existing icon naming scheme
 #define MUTANT_ACCESSORY_NO_AFFIX "mutant_accessory_no_affix"
+
+// organ slots
+#define ORGAN_SLOT_EXTERNAL_FLUFF "fluff"
