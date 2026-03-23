@@ -29,8 +29,3 @@
 
 	body_markings = final_markings
 	body_markings_colors = final_markings_colors
-
-/datum/preference/proc/species_can_access_mutant_customization(species_typepath)
-	if (species_typepath in GLOB.species_whitelist_mutant_parts)
-		return TRUE
-	return FALSE

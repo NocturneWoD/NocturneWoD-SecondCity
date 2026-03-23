@@ -18,10 +18,11 @@
 
 /datum/preference/toggle/nocturne_toggle/is_accessible(datum/preferences/preferences)
 	. = ..()
-	var/species = preferences.read_preference(/datum/preference/choiced/species)
-	if(!species_can_access_mutant_customization(species))
-		return FALSE
-	return TRUE
+	var/species_type = preferences.read_preference(/datum/preference/choiced/species)
+	var/datum/species/species = GLOB.species_prototypes[species_type]
+	if(LAZYLEN(species.mutant_features) && (feature_key in species.mutant_features))
+		return TRUE
+	return FALSE
 
 /datum/preference/choiced/nocturne_feature
 	abstract_type = /datum/preference/choiced/nocturne_feature
@@ -49,8 +50,9 @@
 
 /datum/preference/choiced/nocturne_feature/is_accessible(datum/preferences/preferences)
 	. = ..()
-	var/datum/species/species = preferences.read_preference(/datum/preference/choiced/species)
-	if(!species_can_access_mutant_customization(species))
+	var/species_type = preferences.read_preference(/datum/preference/choiced/species)
+	var/datum/species/species = GLOB.species_prototypes[species_type]
+	if(!LAZYLEN(species.mutant_features) || !(feature_key in species.mutant_features))
 		return FALSE
 	if(toggle_pref)
 		var/has_toggle = preferences.read_preference(toggle_pref)

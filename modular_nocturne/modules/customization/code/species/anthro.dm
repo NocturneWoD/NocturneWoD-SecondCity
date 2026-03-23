@@ -16,31 +16,15 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/anthro,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/anthro,
 	)
+	mutant_features = list(
+		FEATURE_EARS_NOCTURNE,
+		FEATURE_SNOUT_NOCTURNE
+	)
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	digi_leg_overrides = list(
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/digitigrade/anthro,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade/anthro,
 	)
-
-// THIS SUCKS
-/datum/species/human/anthro/can_regenerate_mutant_feature(feature_key)
-	switch(feature_key)
-		if(FEATURE_EARS_NOCTURNE)
-			return TRUE
-		if(FEATURE_SNOUT_NOCTURNE)
-			return TRUE
-		else
-			return FALSE
-
-/datum/species/human/anthro/get_features()
-	var/list/features = ..()
-
-	features += /datum/preference/choiced/nocturne_feature/ears
-	features += /datum/preference/choiced/nocturne_feature/snout
-
-	GLOB.features_by_species[type] = features
-
-	return features
 
 /datum/species/human/anthro/get_species_description()
 	return "A blank slate for you to make whatever silly creature your little heart desires!"

@@ -489,7 +489,6 @@
 #include "code\__DEFINES\~darkpack\traits\sources.dm"
 #include "code\__DEFINES\~nocturne\DNA.dm"
 #include "code\__DEFINES\~nocturne\mobs.dm"
-#include "code\__DEFINES\~nocturne\mutant_parts.dm"
 #include "code\__DEFINES\~nocturne\preferences.dm"
 #include "code\__HELPERS\_auxtools_api.dm"
 #include "code\__HELPERS\_dreamluau.dm"

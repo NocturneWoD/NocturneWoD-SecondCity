@@ -4,6 +4,9 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/digitigrade,
 	)
 
+	/// List of selectable mutant features.
+	var/list/mutant_features = list()
+
 //cover_flags2body_zones is funky with hand bitflags for some reason. this is more efficient for what we want to do anyway
 /datum/species/proc/marking_zones(zone)
 	if(!zone)
@@ -67,6 +70,19 @@
 					if(markingslist[zone][i] && markingslist[zone][i] != SPRITE_ACCESSORY_NONE)
 						add_doppler_markings(target, target.dna.features["markings_list"][zone][i], target.dna.features["markings_list_colors"][zone][i], GLOB.marking_zone_to_bitflag[zone])
 
+/datum/species/get_features()
+	var/list/features = ..()
+
+	for (var/preference_type in subtypesof(/datum/preference/choiced/nocturne_feature))
+		var/datum/preference/choiced/nocturne_feature/preference = GLOB.preference_entries[preference_type]
+		if(preference.feature_key in mutant_features)
+			features += preference.savefile_key
+
+	GLOB.features_by_species[type] = features
+
+	return features
+
 /datum/species/proc/can_regenerate_mutant_feature(feature_key)
-	SHOULD_CALL_PARENT(FALSE)
+	if(feature_key in mutant_features)
+		return TRUE
 	return FALSE
