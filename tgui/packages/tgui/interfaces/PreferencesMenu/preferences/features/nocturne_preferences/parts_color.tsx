@@ -54,3 +54,19 @@ export const fluff_nocturne_color: Feature<string[]> = {
   name: 'Fluff Color',
   component: FeatureTriColorInput,
 };
+
+// tail
+
+export const has_tail_nocturne: FeatureToggle = {
+  name: 'Add Part: Tail',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds a tail to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const tail_nocturne_color: Feature<string[]> = {
+  name: 'Tail Color',
+  component: FeatureTriColorInput,
+};

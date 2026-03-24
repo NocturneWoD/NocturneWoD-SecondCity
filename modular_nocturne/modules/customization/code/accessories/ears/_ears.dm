@@ -1,6 +1,6 @@
 /datum/sprite_accessory/nocturne/ears
 	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/ears.dmi'
-	key = FEATURE_EARS_NOCTURNE
+	key = FEATURE_EARS
 	color_src = USE_MATRIXED_COLORS
 	em_block = TRUE
 

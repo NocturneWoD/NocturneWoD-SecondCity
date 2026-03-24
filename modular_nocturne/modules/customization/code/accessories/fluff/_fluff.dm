@@ -1,6 +1,6 @@
 /datum/sprite_accessory/nocturne/fluff
 	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/fluff.dmi'
-	key = FEATURE_FLUFF_NOCTURNE
+	key = "fluff"
 	color_src = USE_MATRIXED_COLORS
 	em_block = TRUE
 

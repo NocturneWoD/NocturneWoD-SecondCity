@@ -8,6 +8,7 @@
 	examine_limb_id = SPECIES_HUMAN
 	mutant_features = list(
 		FEATURE_EARS_NOCTURNE,
+		FEATURE_TAIL_NOCTURNE,
 		FEATURE_FLUFF_NOCTURNE,
 	)
 
