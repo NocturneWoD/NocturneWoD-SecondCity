@@ -12,7 +12,7 @@
 
 	feature_list[FEATURE_EARS_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/ears)
 	// feature_list[FEATURE_FRILLS_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/frills)
-	// feature_list[FEATURE_HORNS_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/horns)
+	feature_list[FEATURE_HORNS_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/horns)
 	feature_list[FEATURE_SNOUT_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/snouts)
 	feature_list[FEATURE_TAIL_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/tails)
 	feature_list[FEATURE_FLUFF_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/fluff)

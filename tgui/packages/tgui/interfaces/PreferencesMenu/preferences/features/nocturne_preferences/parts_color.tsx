@@ -70,3 +70,35 @@ export const tail_nocturne_color: Feature<string[]> = {
   name: 'Tail Color',
   component: FeatureTriColorInput,
 };
+
+// horns
+
+export const has_horns_nocturne: FeatureToggle = {
+  name: 'Add Part: Horns',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds horns to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const horns_nocturne_color: Feature<string[]> = {
+  name: 'Horns Color',
+  component: FeatureTriColorInput,
+};
+
+// frills
+
+export const has_frills_nocturne: FeatureToggle = {
+  name: 'Add Part: Frills',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds frills to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const frills_nocturne_color: Feature<string[]> = {
+  name: 'Frills Color',
+  component: FeatureTriColorInput,
+};
