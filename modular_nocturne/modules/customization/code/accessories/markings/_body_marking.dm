@@ -2,5 +2,4 @@
 	name = SPRITE_ACCESSORY_NONE
 	icon_state = SPRITE_ACCESSORY_NONE
 	gender_specific = TRUE
-	default_color = "#CCCCCC"
 	var/body_zones

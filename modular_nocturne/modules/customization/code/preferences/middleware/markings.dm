@@ -212,7 +212,7 @@
 
 				// body_marking.prepare_dummy(dummy) // could do some marking specific shit for the dummy here
 
-				dummy.dna.species.add_doppler_markings(dummy, marking_name, accessory.default_color || COLOR_GRAY, zone_bitflag)
+				dummy.dna.species.add_doppler_markings(dummy, marking_name, accessory.default_color || COLOR_RED, zone_bitflag)
 
 				var/image/bodypart_image = new()
 				bodypart_image.add_overlay(bodypart.get_limb_icon())

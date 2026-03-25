@@ -8,10 +8,10 @@
 /datum/bodypart_overlay/simple/body_marking/body_markings/get_image(layer, obj/item/bodypart/limb)
 	var/gender_string = ""
 	if(use_gender && !(limb.body_zone in GLOB.limb_zones))
-		gender_string = (limb.is_dimorphic) ? (limb.limb_gender == "m" ? MALE + "_" : FEMALE + "_") : "male_" // defaults to male so that andros dont get tiddies
+		gender_string = (limb.is_dimorphic) ? (limb.limb_gender == "m" ? "_m" : "_f") : "_m" // defaults to male so that andros dont get tiddies
 	var/zonestring = limb.body_zone
-	if(limb.bodyshape & BODYSHAPE_DIGITIGRADE)
+	if((limb.bodyshape & BODYSHAPE_DIGITIGRADE) && !limb.owner?.is_digitigrade_squished())
 		zonestring = "digitigrade_1_" + limb.body_zone
 	if(ishand)
 		zonestring = limb.aux_zone
-	return image(icon, gender_string + icon_state + "_" + zonestring, layer = layer)
+	return image(icon, icon_state + "_" + zonestring + gender_string, layer = layer)

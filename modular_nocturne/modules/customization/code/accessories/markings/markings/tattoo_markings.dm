@@ -34,22 +34,6 @@
 	icon_state = "tat_silverburgh"
 	body_zones = LEG_RIGHT | LEG_LEFT
 
-/datum/sprite_accessory/body_marking/tattoo/tiger
-	name = "Tattoo - Tiger"
-	icon_state = "tat_tiger"
-	body_zones = CHEST | ARM_LEFT | ARM_RIGHT | HAND_LEFT | HAND_RIGHT | LEG_RIGHT | LEG_LEFT
-	gender_specific = TRUE
-
-/datum/sprite_accessory/body_marking/tattoo/tiger_groin
-	name = "Tattoo - Tiger (Groin)"
-	icon_state = "tat_tiger_groin"
-	body_zones = CHEST
-
-/datum/sprite_accessory/body_marking/tattoo/tiger_foot
-	name = "Tattoo - Tiger (Foot)"
-	icon_state = "tat_tiger_foot"
-	body_zones = LEG_RIGHT | LEG_LEFT
-
 /datum/sprite_accessory/body_marking/tattoo/infinity
 	name = "Tattoo - Infinity"
 	icon_state = "tat_infinity"
@@ -59,3 +43,20 @@
 	name = "Tattoo - Butterfly"
 	icon_state = "tat_butterfly"
 	body_zones = CHEST
+
+// pretending that these arent tattoos
+/datum/sprite_accessory/body_marking/tattoo/tiger
+	name = "Tiger"
+	icon_state = "tat_tiger"
+	body_zones = CHEST | ARM_LEFT | ARM_RIGHT | HAND_LEFT | HAND_RIGHT | LEG_RIGHT | LEG_LEFT
+	gender_specific = TRUE
+
+/datum/sprite_accessory/body_marking/tattoo/tiger_groin
+	name = "Tiger (Groin)"
+	icon_state = "tat_tiger_groin"
+	body_zones = CHEST
+
+/datum/sprite_accessory/body_marking/tattoo/tiger_foot
+	name = "Tiger (Foot)"
+	icon_state = "tat_tiger_foot"
+	body_zones = LEG_RIGHT | LEG_LEFT
