@@ -40,7 +40,7 @@
 		CRASH("`feature_key` was not set for [type]!")
 
 /datum/preference/choiced/nocturne_feature/init_possible_values()
-	return assoc_to_keys_features(get_accessory_list() - SPRITE_ACCESSORY_NONE)
+	return assoc_to_keys_features(get_accessory_list())
 
 /datum/preference/choiced/nocturne_feature/create_default_value()
 	return get_consistent_feature_entry(get_accessory_list())
