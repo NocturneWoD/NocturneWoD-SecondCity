@@ -6,6 +6,7 @@
 	name = "Demihuman"
 	id = SPECIES_DEMIHUMAN
 	examine_limb_id = SPECIES_HUMAN
+	mutantears = /obj/item/organ/ears/mutant
 	mutant_features = list(
 		FEATURE_EARS_NOCTURNE,
 		FEATURE_FRILLS_NOCTURNE,

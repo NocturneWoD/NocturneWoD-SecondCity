@@ -84,7 +84,7 @@
 	name = "Fennec (Downward)"
 	icon_state = "downwardfennec"
 
-/datum/sprite_accessory/nocturne/tails/human/fish
+/datum/sprite_accessory/nocturne/tails/fish
 	name = "Fish"
 	icon_state = "fish"
 

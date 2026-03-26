@@ -16,6 +16,7 @@
 		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/anthro,
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/anthro,
 	)
+	mutantears = /obj/item/organ/ears/mutant
 	mutant_features = list(
 		FEATURE_EARS_NOCTURNE,
 		FEATURE_FRILLS_NOCTURNE,

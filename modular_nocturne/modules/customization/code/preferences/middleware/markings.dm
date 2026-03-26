@@ -42,7 +42,6 @@
 			this_zone_marking_choices += list(this_marking_choice)
 
 		var/list/this_zone_markings = list()
-		for(var/marking_name in preferences.body_markings[zone])
 		for(var/marking_index in 1 to LAZYLEN(preferences.body_markings[zone]))
 			var/list/this_marking = list()
 
