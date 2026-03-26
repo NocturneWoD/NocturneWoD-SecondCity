@@ -44,7 +44,7 @@
 				overlay_indexes_to_color += index
 				index++
 		else
-			var/mutable_appearance/image_to_return = get_singular_image(build_icon_state(gender, image_layer, MUTANT_ACCESSORY_NO_AFFIX), image_layer, owner)
+			var/mutable_appearance/image_to_return = get_image(image_layer, limb)
 			returned_images += image_to_return
 			overlay_indexes_to_color += index
 	return returned_images
@@ -62,11 +62,6 @@
 /datum/bodypart_overlay/mutant/proc/color_images(list/image/overlays, layer, obj/item/bodypart/limb)
 	if(!sprite_datum || !overlays)
 		return
-	if(limb?.is_husked)
-		if(sprite_datum.color_src == USE_MATRIXED_COLORS) //Matrixed+husk needs special care, otherwise we get sparkle dogs
-			draw_color = HUSK_COLOR_LIST
-		else
-			draw_color = limb.husk_color ? limb.husk_color : HUSK_COLOR_TONE
 	var/i = 1 // Starts at 1 for color layers.
 	alpha = limb?.alpha || ALPHA_OPAQUE
 	for(var/index_to_color in overlay_indexes_to_color)
@@ -74,10 +69,15 @@
 			break
 		var/image/overlay = overlays[index_to_color]
 		switch(sprite_datum.color_src)
-			if(USE_ONE_COLOR)
-				overlay.color = islist(draw_color) ? draw_color[i] : draw_color
+			if(USE_ONE_COLOR) // legacy
+				inherit_color(limb, force=TRUE)
+				if(limb?.is_husked)
+					draw_color = limb.husk_color ? limb.husk_color : HUSK_COLOR_TONE
+				color_image(overlay, layer, limb)
 				overlay.alpha = alpha
 			if(USE_MATRIXED_COLORS)
+				if(limb?.is_husked)
+					draw_color = HUSK_COLOR_LIST
 				overlay.color = islist(draw_color) ? draw_color[i] : draw_color
 				overlay.alpha = alpha
 				i++
