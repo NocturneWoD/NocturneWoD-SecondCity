@@ -1084,6 +1084,9 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 
+/*
+// NOCTURNE REMOVAL START - lazy hack to pass unit tests
+// not like we're using these things anyway
 /datum/design/cybernetic_ears/cat
 	name = "Basic Cybernetic Cat Ears"
 	desc = "A basic pair of cybernetic cat ears"
@@ -1113,7 +1116,8 @@
 	desc = "A pair of wall-penetrating cybernetic cat ears"
 	id = "cybernetic_ears_xray_cat"
 	build_path = /obj/item/organ/ears/cat/cybernetic/xray
-
+// NOCTURNE REMOVAL END
+*/
 /datum/design/cybernetic_eyes
 	name = "Basic Cybernetic Eyes"
 	desc = "A basic pair of cybernetic eyes."

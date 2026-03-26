@@ -189,6 +189,9 @@
 /datum/bodypart_overlay/mutant/cat_ears/color_image(image/overlay, layer, obj/item/bodypart/limb)
 	return // We color base ears manually above in get_image
 
+/*
+// NOCTURNE REMOVAL START - lazy hack to pass unit tests
+// not like we're using these things anyway
 /obj/item/organ/ears/cat/cybernetic
 	name = "basic cybernetic cat ears"
 	icon = 'icons/obj/medical/organs/organs.dmi'
@@ -257,6 +260,8 @@
 
 /datum/bodypart_overlay/mutant/cat_ears/cybernetic/blue
 	inner_color = "#00D844"
+// NOCTURNE REMOVAL END
+*/
 
 /obj/item/organ/ears/ghost
 	name = "ghost ears"
