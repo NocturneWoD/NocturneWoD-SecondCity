@@ -1,11 +1,9 @@
 import {
   CheckboxInput,
   Feature,
-  FeatureChoiced,
   FeatureToggle,
   FeatureTriColorInput,
 } from '../base';
-import { FeatureDropdownInput } from '../dropdowns';
 
 // snouts
 
