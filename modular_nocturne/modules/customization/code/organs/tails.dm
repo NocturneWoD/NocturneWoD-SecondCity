@@ -3,6 +3,7 @@
 	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/mutant
 
 	dna_block = /datum/dna_block/feature/accessory/tail_nocturne
+	wag_flags = WAG_ABLE
 
 /datum/bodypart_overlay/mutant/tail/mutant
 	feature_key = FEATURE_TAIL_NOCTURNE

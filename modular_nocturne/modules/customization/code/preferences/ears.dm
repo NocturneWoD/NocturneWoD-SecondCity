@@ -78,7 +78,7 @@
 			accessory_icon.blend_color(COLOR_BLUE, ICON_MULTIPLY)
 			final_icon.blend_icon(accessory_icon, ICON_OVERLAY)
 
-	final_icon.crop(11, 20, 23, 32)
+	final_icon.crop(9, 18, 23, 32)
 	final_icon.scale(32, 32)
 
 	return final_icon
