@@ -17,6 +17,7 @@
 	var/feature_key_sprite = null
 
 /datum/bodypart_overlay/mutant/get_overlay(layer, obj/item/bodypart/limb)
+	inherit_color(limb)
 	layer = bitflag_to_layer(layer)
 	var/list/images = get_images(layer, limb)
 	color_images(images, layer, limb)
@@ -70,7 +71,6 @@
 		var/image/overlay = overlays[index_to_color]
 		switch(sprite_datum.color_src)
 			if(USE_ONE_COLOR) // legacy
-				inherit_color(limb, force=TRUE)
 				if(limb?.is_husked)
 					draw_color = limb.husk_color ? limb.husk_color : HUSK_COLOR_TONE
 				color_image(overlay, layer, limb)
