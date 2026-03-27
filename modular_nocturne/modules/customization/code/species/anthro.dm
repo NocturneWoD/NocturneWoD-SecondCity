@@ -50,16 +50,20 @@
 		"You wanna know something about acid? It's bullshit!\"",
 	)
 
-/*
-/datum/species/human/genemod/prepare_human_for_preview(mob/living/carbon/human/human_for_preview)
-	human_for_preview.dna.features[FEATURE_EARS] = "Fold"
-	human_for_preview.dna.features[FEATURE_EARS_COLORS][1] = "#4E3E30"
-	human_for_preview.dna.features[FEATURE_EARS_COLORS][2] = "#F4B1C8"
-	human_for_preview.set_haircolor("#3a2d22", update = FALSE)
-	human_for_preview.set_hairstyle("Short twintails", update = TRUE)
-	human_for_preview.dna.features[FEATURE_MUTANT_COLOR] = skintone2hex("mixed3")
-	human_for_preview.eye_color_left = "#442B12"
-	human_for_preview.eye_color_right = "#442B12"
-	regenerate_organs(human_for_preview)
-	human_for_preview.update_body(is_creating = TRUE)
-*/
+/datum/species/human/anthro/prepare_human_for_preview(mob/living/carbon/human/human)
+	// generic lizard
+	human.set_hairstyle("Bald", update = TRUE)
+	human.set_facial_hairstyle("Shaved", update = TRUE)
+	human.dna.features[FEATURE_MUTANT_COLOR] = "#556B4A"
+	human.dna.features[FEATURE_FRILLS_NOCTURNE_COLORS] = list("#556B4A", "#556B4A", "#556B4A")
+	human.dna.features[FEATURE_HORNS_NOCTURNE_COLORS] = list("#2D2824", "#2D2824", "#2D2824")
+	human.dna.features[FEATURE_SNOUT_NOCTURNE_COLORS] = list("#556B4A", "#556B4A", "#556B4A")
+	human.dna.features[FEATURE_EARS_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.dna.features[FEATURE_FRILLS_NOCTURNE] = "Short"
+	human.dna.features[FEATURE_HORNS_NOCTURNE] = "Curled"
+	human.dna.features[FEATURE_SNOUT_NOCTURNE] = "Lizard (Sharp)"
+	human.dna.features[FEATURE_TAIL_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.dna.features[FEATURE_FLUFF_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.undershirt = "Tank Top (White)"
+	regenerate_organs(human)
+	human.update_body(is_creating = TRUE)

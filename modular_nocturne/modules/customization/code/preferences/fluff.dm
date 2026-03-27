@@ -27,7 +27,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	main_feature_name = "Fluff"
 	should_generate_icons = TRUE
-	relevant_organ = /obj/item/organ/fluff
+	// relevant_organ = /obj/item/organ/fluff
 	category = PREFERENCE_CATEGORY_CLOTHING
 	feature_key = FEATURE_FLUFF_NOCTURNE
 	toggle_pref = /datum/preference/toggle/nocturne_toggle/fluff

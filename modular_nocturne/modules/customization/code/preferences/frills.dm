@@ -27,7 +27,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	main_feature_name = "Frills"
 	should_generate_icons = TRUE
-	relevant_organ = /obj/item/organ/frills/mutant
+	// relevant_organ = /obj/item/organ/frills/mutant
 	category = PREFERENCE_CATEGORY_CLOTHING
 	feature_key = FEATURE_FRILLS_NOCTURNE
 	toggle_pref = /datum/preference/toggle/nocturne_toggle/frills

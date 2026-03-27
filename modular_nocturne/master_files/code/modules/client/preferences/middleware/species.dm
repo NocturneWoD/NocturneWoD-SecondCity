@@ -16,7 +16,7 @@
 
 		var/mob/living/carbon/human/dummy/consistent/dummy = new
 		dummy.set_species(species_type)
-		dummy.equipOutfit(/datum/outfit/civillian1, visuals_only = TRUE) // NOCTURNE EDIT - just give them something generic
+		dummy.equipOutfit(/datum/outfit, visuals_only = TRUE) // naked
 		dummy.dna.species.prepare_human_for_preview(dummy)
 
 		var/datum/universal_icon/dummy_icon = get_flat_uni_icon(dummy)

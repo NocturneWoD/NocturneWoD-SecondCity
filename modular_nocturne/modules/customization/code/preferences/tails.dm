@@ -27,7 +27,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	main_feature_name = "Tail"
 	should_generate_icons = TRUE
-	relevant_organ = /obj/item/organ/tail/mutant
+	// relevant_organ = /obj/item/organ/tail/mutant
 	category = PREFERENCE_CATEGORY_CLOTHING
 	feature_key = FEATURE_TAIL_NOCTURNE
 	toggle_pref = /datum/preference/toggle/nocturne_toggle/tail

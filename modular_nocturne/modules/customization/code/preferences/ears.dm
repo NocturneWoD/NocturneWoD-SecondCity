@@ -3,10 +3,9 @@
 /datum/species/regenerate_organs(mob/living/carbon/target, datum/species/old_species, replace_current = TRUE, list/excluded_zones, visual_only = FALSE, replace_missing = TRUE)
 	. = ..()
 	if(target.dna.features[FEATURE_EARS_NOCTURNE] && can_regenerate_mutant_feature(FEATURE_EARS_NOCTURNE))
-		if(target.dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/nocturne/ears/none::name && target.dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/blank::name)
-			var/obj/item/organ/replacement = SSwardrobe.provide_type(/obj/item/organ/ears/mutant)
-			replacement.Insert(target, special = TRUE, movement_flags = DELETE_IF_REPLACED)
-			return .
+		var/obj/item/organ/replacement = SSwardrobe.provide_type(/obj/item/organ/ears/mutant)
+		replacement.Insert(target, special = TRUE, movement_flags = DELETE_IF_REPLACED)
+		return .
 
 // ear toggle
 
@@ -23,7 +22,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 	main_feature_name = "Ears"
 	should_generate_icons = TRUE
-	relevant_organ = /obj/item/organ/ears/mutant
+	// relevant_organ = /obj/item/organ/ears/mutant
 	category = PREFERENCE_CATEGORY_CLOTHING
 	feature_key = FEATURE_EARS_NOCTURNE
 	toggle_pref = /datum/preference/toggle/nocturne_toggle/ears

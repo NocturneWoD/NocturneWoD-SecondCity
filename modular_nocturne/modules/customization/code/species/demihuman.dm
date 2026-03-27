@@ -16,10 +16,20 @@
 	)
 
 /datum/species/human/demihuman/prepare_human_for_preview(mob/living/carbon/human/human)
-	human.set_hairstyle("Bald", update = TRUE)
-	human.set_facial_hairstyle("Beard (Goatee)", update = TRUE)
-	human.set_facial_haircolor("#7E3F00")
-	human.update_body()
+	// emo wolfboy
+	human.set_hairstyle("Emo", update = TRUE)
+	human.set_haircolor("#1c1c1c")
+	human.set_facial_hairstyle("Shaved", update = TRUE)
+	human.dna.features[FEATURE_EARS_NOCTURNE_COLORS] = list("#1c1c1c", "#e0afd6", "#ffffff")
+	human.dna.features[FEATURE_TAIL_NOCTURNE_COLORS] = list("#1c1c1c", "#1c1c1c", "#1c1c1c")
+	human.dna.features[FEATURE_EARS_NOCTURNE] = "Big Wolf"
+	human.dna.features[FEATURE_FRILLS_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.dna.features[FEATURE_HORNS_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.dna.features[FEATURE_TAIL_NOCTURNE] = "Husky"
+	human.dna.features[FEATURE_FLUFF_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	human.undershirt = "Shirt (Band)"
+	regenerate_organs(human)
+	human.update_body(is_creating = TRUE)
 
 /datum/species/human/demihuman/get_species_description()
 	return "A human, but with cool animal parts!"
