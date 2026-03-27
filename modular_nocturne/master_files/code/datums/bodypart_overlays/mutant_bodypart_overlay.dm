@@ -17,16 +17,19 @@
 	var/feature_key_sprite = null
 
 /datum/bodypart_overlay/mutant/get_overlay(layer, obj/item/bodypart/limb)
-	inherit_color(limb)
-	layer = bitflag_to_layer(layer)
-	var/list/images = get_images(layer, limb)
-	color_images(images, layer, limb)
-	return images
+	if(sprite_datum.color_src == USE_MATRIXED_COLORS)
+		layer = bitflag_to_layer(layer)
+		var/list/images = get_images(layer, limb)
+		color_images(images, layer, limb)
+		return images
+	else
+		return ..()
 
 /// Get the images we need to draw on the person. Called from get_overlay() which is called from _bodyparts.dm.
 /// `limb` can be null.
+/// Only used for matrixed color mutant bodyparts.
 /// This is different from the base procs as it allows for multiple overlays to
-/// be generated for one bodypart_overlay. Useful for matrixed color mutant bodyparts.
+/// be generated for one bodypart_overlay.
 /datum/bodypart_overlay/mutant/proc/get_images(image_layer, obj/item/bodypart/limb)
 	if(!sprite_datum)
 		CRASH("Trying to call get_images() on [type] while it didn't have a sprite_datum. This shouldn't happen, report it as soon as possible.")
@@ -36,18 +39,12 @@
 	var/index = 1
 	var/mob/living/carbon/human/owner = limb?.owner
 	last_built_icon_states = list()
-	switch(sprite_datum.color_src)
-		if(USE_MATRIXED_COLORS)
-			var/list/color_layer_names = get_color_layer_names(build_icon_state(gender, image_layer))
-			for(var/color_index in color_layer_names)
-				var/mutable_appearance/color_layer_image = get_singular_image(build_icon_state(gender, image_layer, color_layer_names[color_index]), image_layer, owner)
-				returned_images += color_layer_image
-				overlay_indexes_to_color += index
-				index++
-		else
-			var/mutable_appearance/image_to_return = get_image(image_layer, limb)
-			returned_images += image_to_return
-			overlay_indexes_to_color += index
+	var/list/color_layer_names = get_color_layer_names(build_icon_state(gender, image_layer))
+	for(var/color_index in color_layer_names)
+		var/mutable_appearance/color_layer_image = get_singular_image(build_icon_state(gender, image_layer, color_layer_names[color_index]), image_layer, owner)
+		returned_images += color_layer_image
+		overlay_indexes_to_color += index
+		index++
 	return returned_images
 
 /**
@@ -58,32 +55,29 @@
 	return sprite_datum.color_layer_names
 
 /// Colors the given overlays list. Limb can be null.
+/// Only used for matrixed color mutant bodyparts.
 /// This is different from the base procs as it allows for multiple overlays to be colored at once.
-/// Useful for matrixed color mutant bodyparts.
 /datum/bodypart_overlay/mutant/proc/color_images(list/image/overlays, layer, obj/item/bodypart/limb)
 	if(!sprite_datum || !overlays)
 		return
+	if(limb?.is_husked)
+		if(sprite_datum.color_src == USE_MATRIXED_COLORS) //Matrixed+husk needs special care, otherwise we get sparkle dogs
+			draw_color = HUSK_COLOR_LIST
+		else
+			draw_color = limb.husk_color ? limb.husk_color : HUSK_COLOR_TONE
 	var/i = 1 // Starts at 1 for color layers.
 	alpha = limb?.alpha || ALPHA_OPAQUE
 	for(var/index_to_color in overlay_indexes_to_color)
 		if(index_to_color > length(overlays))
 			break
 		var/image/overlay = overlays[index_to_color]
-		switch(sprite_datum.color_src)
-			if(USE_ONE_COLOR) // legacy
-				if(limb?.is_husked)
-					draw_color = limb.husk_color ? limb.husk_color : HUSK_COLOR_TONE
-				color_image(overlay, layer, limb)
-				overlay.alpha = alpha
-			if(USE_MATRIXED_COLORS)
-				if(limb?.is_husked)
-					draw_color = HUSK_COLOR_LIST
-				overlay.color = islist(draw_color) ? draw_color[i] : draw_color
-				overlay.alpha = alpha
-				i++
-			else
-				overlay.color = limb?.color
-				overlay.alpha = alpha
+		if(sprite_datum.color_src == USE_MATRIXED_COLORS)
+			overlay.color = islist(draw_color) ? draw_color[i] : draw_color
+			overlay.alpha = alpha
+			i++
+		else // just in case
+			overlay.color = limb?.color
+			overlay.alpha = alpha
 
 /**
  * Helper to generate the icon_state for the bodypart_overlay we're trying to draw.
