@@ -416,4 +416,8 @@
 		new_organ.Insert(src)
 
 	update_body_parts()
+	// NOCTURNE EDIT START
+	dna.species.remove_body_markings(src)
+	dna.species.add_body_markings(src)
+	// NOCTURNE EDIT END
 	return TRUE

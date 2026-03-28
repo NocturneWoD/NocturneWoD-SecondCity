@@ -392,6 +392,10 @@ ROUNDSTART_RACES human
 #ROUNDSTART_RACES android
 #ROUNDSTART_RACES golem
 
+## Nocturne races
+ROUNDSTART_RACES demihuman
+ROUNDSTART_RACES anthro
+
 ##-------------------------------------------------------------------------------------------
 
 ## Roundstart no-reset races

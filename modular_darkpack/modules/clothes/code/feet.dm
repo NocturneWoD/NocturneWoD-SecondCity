@@ -12,6 +12,8 @@
 	icon_state = "shoes"
 	gender = PLURAL
 	ONFLOOR_ICON_HELPER('modular_darkpack/modules/clothes/icons/clothing_onfloor.dmi')
+	// NOCTURNE TODO: make digitigrade shoe sprites
+	item_flags = IGNORE_DIGITIGRADE // NOCTURNE EDIT
 
 /obj/item/clothing/shoes/vampire/Initialize(mapload)
 	. = ..()

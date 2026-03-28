@@ -32,6 +32,8 @@
 /datum/surgery_operation/limb/modify_skin/on_success(atom/movable/operating_on, mob/living/surgeon, tool, list/operation_args)
 	var/mob/living/carbon/human/patient = get_patient(operating_on)
 
+	// NOCTURNE TODO: handle mutant colors
+
 	var/list/skin_tones = list()
 	for(var/skin_tone as anything in GLOB.skin_tone_names)
 		var/skin_tone_name = GLOB.skin_tone_names[skin_tone]

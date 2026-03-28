@@ -348,7 +348,10 @@ GLOBAL_LIST_INIT(preference_entries_by_key, init_preference_entries_by_key())
 
 /// Checks the species currently selected by the passed preferences object to see if it has this preference's key as a feature.
 /datum/preference/proc/current_species_has_savekey(datum/preferences/preferences)
-	var/species_type = /datum/species/human // DARKPACK EDIT CHANGE - SPLATS - (Bandaid)
+	// NOCTURNE EDIT START
+	// ORIGINAL: var/species_type = /datum/species/human // DARKPACK EDIT CHANGE - SPLATS - (Bandaid)
+	var/species_type = preferences.read_preference(/datum/preference/choiced/species)
+	// NOCTURNE EDIT END
 	var/datum/species/species = GLOB.species_prototypes[species_type]
 	return (savefile_key in species.get_features())
 

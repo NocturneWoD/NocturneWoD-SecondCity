@@ -34,6 +34,7 @@ import { useRandomToggleState } from '../useRandomToggleState';
 import { useServerPrefs } from '../useServerPrefs';
 import { DeleteCharacterPopup } from './DeleteCharacterPopup';
 import { MultiNameInput, NameInput } from './names';
+import { MarkingsPage } from './nocturne/MarkingsPage'; // DARKPACK EDIT ADDITION
 
 const CLOTHING_CELL_SIZE = 48;
 const CLOTHING_SIDEBAR_ROWS = 12; // DARKPACK EDIT, ORIGINAL: 9;
@@ -44,6 +45,7 @@ const CLOTHING_SELECTION_MULTIPLIER = 5.2;
 
 type CharacterControlsProps = {
   handleRotate: () => void;
+  handleOpenSpecies: () => void; // NOCTURNE EDIT
   handleOpenSplats: () => void; // DARKPACK EDIT CHANGE - SPLATS
   gender: Gender;
   setGender: (gender: Gender) => void;
@@ -64,6 +66,18 @@ function CharacterControls(props: CharacterControlsProps) {
           tooltipPosition="top"
         />
       </Stack.Item>
+
+      {/* NOCTURNE EDIT START */}
+      <Stack.Item>
+        <Button
+          onClick={props.handleOpenSpecies} // DARKPACK EDIT CHANGE - SPLATS
+          fontSize="22px"
+          icon="paw"
+          tooltip="Species" // DARKPACK EDIT CHANGE - SPLATS
+          tooltipPosition="top"
+        />
+      </Stack.Item>
+      {/* NOCTURNE EDIT END */}
 
       <Stack.Item>
         <Button
@@ -446,6 +460,7 @@ export function getRandomization(
 }
 
 type MainPageProps = {
+  openSpecies: () => void; // NOCTURNE EDIT
   openSplats: () => void; // DARKPACK EDIT CHANGE - SPLATS
 };
 
@@ -459,6 +474,11 @@ export function MainPage(props: MainPageProps) {
   const [pendingClanValue, setPendingClanValue] = useState<string | null>(null);
 
   const serverData = useServerPrefs();
+
+  // NOCTURNE EDIT START
+  const currentSpeciesData =
+    serverData?.species[data.character_preferences.misc.species];
+  // NOCTURNE EDIT END
 
   const currentSplatsData = // DARKPACK EDIT CHANGE - SPLATS
     serverData?.splats[data.character_preferences.misc.splats]; // DARKPACK EDIT CHANGE - SPLATS
@@ -486,6 +506,10 @@ export function MainPage(props: MainPageProps) {
   };
 
   if (randomBodyEnabled) {
+    // NOCTURNE EDIT START
+    nonContextualPreferences.random_species =
+      data.character_preferences.randomization.species;
+    // NOCTURNE EDIT END
     nonContextualPreferences.random_splats = // DARKPACK EDIT CHANGE - SPLATS
       data.character_preferences.randomization.splats; // DARKPACK EDIT CHANGE - SPLATS
   } else {
@@ -497,6 +521,7 @@ export function MainPage(props: MainPageProps) {
   // DARKPACK EDIT ADDITION BEGIN: SWAPPABLE PREF MENUS
   enum PrefPage {
     Visual, // The visual parts
+    Markings, // NOCTURNE EDIT ADD
     Profile, // Flavor Text, Age, Records, PDA ringtone, etc
   }
 
@@ -517,6 +542,15 @@ export function MainPage(props: MainPageProps) {
         />
       );
       break;
+      // NOCTURNE EDIT START
+      case PrefPage.Markings:
+        prefPageContents = (
+          <MarkingsPage
+            maxHeight="auto"
+          />
+        );
+        break;
+      // NOCTURNE EDIT END
     case PrefPage.Profile:
       prefPageContents = (
         <PreferenceList
@@ -626,13 +660,17 @@ export function MainPage(props: MainPageProps) {
             <Stack.Item>
               <CharacterControls
                 gender={data.character_preferences.misc.gender}
+                handleOpenSpecies={props.openSpecies} // NOCTURNE EDIT
                 handleOpenSplats={props.openSplats} // DARKPACK EDIT CHANGE - SPLATS
                 handleRotate={() => {
                   act('rotate');
                 }}
                 setGender={createSetPreference(act, 'gender')}
                 showGender={
-                  currentSplatsData ? !!currentSplatsData.sexes : true // DARKPACK EDIT CHANGE - SPLATS
+                  // NOCTURNE EDIT START
+                  // ORIGINAL: currentSplatsData ? !!currentSplatsData.sexes : true // DARKPACK EDIT CHANGE - SPLATS
+                  currentSpeciesData ? !!currentSpeciesData.sexes : true // the splat data doesnt even fucking have a gender toggle
+                  // NOCTURNE EDIT END
                 }
                 canDeleteCharacter={
                   Object.values(data.character_profiles).filter(
@@ -745,6 +783,17 @@ export function MainPage(props: MainPageProps) {
                   Character Visuals
                 </PageButton>
               </Stack.Item>
+              {/* NOCTURNE EDIT START */}
+              <Stack.Item grow={2}>
+                <PageButton
+                  currentPage={currentPrefPage}
+                  page={PrefPage.Markings}
+                  setPage={setCurrentPrefPage}
+                >
+                  Character Markings
+                </PageButton>
+              </Stack.Item>
+              {/* NOCTURNE EDIT END */}
               <Stack.Item grow={2}>
                 <PageButton
                   currentPage={currentPrefPage}

@@ -91,8 +91,15 @@
 	var/list/correct_legs = target.dna.species.bodypart_overrides.Copy() & list(BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
 
 	if(value == DIGITIGRADE_LEGS)
+		// NOCTURNE EDIT START
+		/*
+		// ORIGINAL:
 		correct_legs[BODY_ZONE_R_LEG] = /obj/item/bodypart/leg/right/digitigrade
 		correct_legs[BODY_ZONE_L_LEG] = /obj/item/bodypart/leg/left/digitigrade
+		*/
+		correct_legs[BODY_ZONE_R_LEG] = target.dna.species.digi_leg_overrides[BODY_ZONE_R_LEG]
+		correct_legs[BODY_ZONE_L_LEG] = target.dna.species.digi_leg_overrides[BODY_ZONE_L_LEG]
+		// NOCTURNE EDIT END
 
 	for(var/obj/item/bodypart/old_part as anything in target.bodyparts)
 		if(old_part.change_exempt_flags & BP_BLOCK_CHANGE_SPECIES)

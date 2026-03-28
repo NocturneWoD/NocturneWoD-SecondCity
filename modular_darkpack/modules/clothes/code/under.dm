@@ -9,6 +9,8 @@
 	worn_icon = 'modular_darkpack/modules/clothes/icons/worn.dmi'
 	ONFLOOR_ICON_HELPER('modular_darkpack/modules/clothes/icons/clothing_onfloor.dmi')
 	female_sprite_flags = NO_FEMALE_UNIFORM
+	// NOCTURNE TODO: go through all the clothing and figure out which need new sprites or work as is for digitigrade legs
+	supports_variations_flags = NONE // NOCTURNE EDIT
 
 /obj/item/clothing/under/vampire/Initialize(mapload)
 	. = ..()

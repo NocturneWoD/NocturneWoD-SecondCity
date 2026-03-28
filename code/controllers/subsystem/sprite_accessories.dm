@@ -44,6 +44,8 @@ SUBSYSTEM_DEF(accessories) // just 'accessories' for brevity
 	//All features, indexed by feature key, then name of the sprite accessory to the datum iteslf
 	var/list/list/feature_list
 
+	var/list/cached_mutant_icon_files = list() // NOCTURNE EDIT - caches files for the mutant parts system
+
 /datum/controller/subsystem/accessories/PreInit() // this stuff NEEDS to be set up before GLOB for preferences and stuff to work so this must go here. sorry
 	setup_lists()
 	init_hair_gradients()

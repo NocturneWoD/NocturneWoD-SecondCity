@@ -62,6 +62,24 @@ Unlike normal organs, we're actually inside a persons limbs at all times
 	if(isnull(feature_key))
 		return TRUE
 
+	// NOCTURNE EDIT START
+	/*
+	i fucking hate how tg handles this shit--
+
+	an organ with a bodypart overlay either HAS to have a sprite accessory,
+	or the organ shouldnt even exist
+
+	the mutant ears exist in this hybrid state where it has a bodypart overlay
+	but potentially wont have a sprite accessory, which neccesitates dirty hacks
+	like this
+
+	the mutant ears in this codebase are held together with duct tape and
+	prayers
+	*/
+	if(initial(bodypart_overlay.feature_key) == FEATURE_EARS_NOCTURNE)
+		return TRUE
+	// NOCTURNE EDIT END
+
 	if(target.dna.features[feature_key] != SPRITE_ACCESSORY_NONE)
 		return TRUE
 	return FALSE
