@@ -7,6 +7,9 @@
 #define CHANGE_HEIGHT "Change Height"
 #define CHOICE_OPTIONS list(CHANGE_HAIR, CHANGE_BEARD, CHANGE_SEX, CHANGE_EYES, CHANGE_NAME, CHANGE_RACE, CHANGE_HEIGHT)
 
+// NOCTURNE TODO: this should really be made a lot more compatible with furry stuff
+// let the player change species and mutant parts at a minimum
+
 /datum/action/cooldown/mob_cooldown/shapeshift
 	owner_has_control = FALSE
 	/// What choices we get to pick.
@@ -248,8 +251,6 @@
 	playsound(target, 'modular_darkpack/modules/powers/sounds/vicissitude.ogg', 50, TRUE)
 	to_chat(owner, span_notice("You finish altering the race of [target]."))
 	return TRUE
-
-// NOCTURNE TODO: change marking color
 
 /datum/action/cooldown/mob_cooldown/shapeshift/proc/change_height(mob/living/carbon/human/target)
 	var/list/heights = list(
