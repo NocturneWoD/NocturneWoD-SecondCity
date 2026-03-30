@@ -1,0 +1,7 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - bugfix: "fixed shapeshifting discipline to be compatible with mutant colors"
+  - bugfix: "fixed race change surgery to be compatible with mutant colors"
+  - bugfix: "fixed digitigrade legs not being compatible with clan alt sprites"
+  - bugfix: "fixed mask of a thousand faces to be better compatible with furry stuff"
