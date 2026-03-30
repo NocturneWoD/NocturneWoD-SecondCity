@@ -197,6 +197,7 @@
 	var/original_name
 	var/original_sprite
 	var/original_sprite_greyscale
+	var/original_species // NOCTURNE EDIT
 	var/list/cached_targets
 
 //mask of a thousand faces is supposed to have varying levels of success based on successes rolled
@@ -255,6 +256,7 @@
 	if(!original_dna)
 		original_dna = new /datum/dna()
 		owner.dna.copy_dna(original_dna, 0)
+		original_species = owner.dna.species.type // NOCTURNE EDIT
 		original_name = owner.name
 		if(owner_splat.clan?.alt_sprite)
 			original_sprite = owner_splat.clan.alt_sprite
@@ -264,6 +266,7 @@
 			original_sprite_greyscale = TRUE
 
 	target.dna.copy_dna(owner.dna, 0)
+	owner.set_species(target.dna.species.type) // NOCTURNE EDIT
 	var/datum/splat/vampire/kindred/target_splat = get_kindred_splat(target)
 	if(target_splat?.clan?.alt_sprite)
 		owner.set_body_sprite(target_splat.clan.alt_sprite, target_splat.clan.alt_sprite_greyscale, TRUE)
@@ -272,7 +275,7 @@
 			REMOVE_TRAIT(owner, TRAIT_MASQUERADE_VIOLATING_FACE, MAGIC_TRAIT)
 		if(owner_splat.clan && (TRAIT_MASQUERADE_VIOLATING_EYES in owner_splat.clan.clan_traits))
 			REMOVE_TRAIT(owner, TRAIT_MASQUERADE_VIOLATING_EYES, MAGIC_TRAIT)
-		owner.set_body_sprite(SPECIES_HUMAN, TRUE, TRUE)
+		owner.set_body_sprite() // NOCTURNE EDIT - ORIGINAL: owner.set_body_sprite(SPECIES_HUMAN, TRUE, TRUE)
 
 	owner.updateappearance(mutcolor_update = TRUE)
 	to_chat(owner, span_notice("You assume the appearance of [target.name]."))
@@ -284,6 +287,7 @@
 /datum/discipline_power/obfuscate/mask_of_a_thousand_faces/deactivate()
 	. = ..()
 	original_dna.copy_dna(owner.dna, 0)
+	owner.set_species(original_species) // NOCTURNE EDIT
 	owner.name = original_name
 
 	if(owner_splat.clan && (TRAIT_MASQUERADE_VIOLATING_FACE in owner_splat.clan.clan_traits))
@@ -291,7 +295,7 @@
 	if(owner_splat.clan && (TRAIT_MASQUERADE_VIOLATING_EYES in owner_splat.clan.clan_traits))
 		ADD_TRAIT(owner, TRAIT_MASQUERADE_VIOLATING_EYES, MAGIC_TRAIT)
 
-	owner.set_body_sprite(original_sprite, original_sprite_greyscale, TRUE)
+	owner.set_body_sprite() // NOCTURNE EDIT - ORIGINAL: owner.set_body_sprite(original_sprite, original_sprite_greyscale, TRUE)
 	owner.updateappearance(mutcolor_update = TRUE)
 	to_chat(owner, span_notice("You assume your original form."))
 
