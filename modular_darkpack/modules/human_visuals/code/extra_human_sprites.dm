@@ -8,6 +8,8 @@
  * * sprite_name - Name of the sprite that'll be used as the base for this human's limbs.
  * * greyscale - If the new limbs use skin tone.
  */
+// NOCTURNE EDIT START
+/* // ORIGINAL:
 /mob/living/carbon/human/proc/set_body_sprite(sprite_name, greyscale, ignore_clan)
 	// Cannot be used without species code as this relies on examine_limbs_id for defaults
 	CHECK_DNA_AND_SPECIES(src)
@@ -26,6 +28,33 @@
 	for (var/obj/item/bodypart/bodypart as anything in bodyparts)
 		var/icon_to_set = greyscale ? DEFAULT_BODYPART_ICON_ORGANIC : bodypart.icon
 		bodypart.change_appearance(icon_to_set, sprite_name, greyscale)
+*/
+/mob/living/carbon/human/proc/set_body_sprite(sprite_name, greyscale, ignore_clan)
+	// Cannot be used without species code as this relies on examine_limbs_id for defaults
+	CHECK_DNA_AND_SPECIES(src)
+
+	var/reset_icon = FALSE
+	// If no base sprite is supplied, get a default from either the species or the Clan
+	if (!sprite_name)
+		var/datum/subsplat/vampire_clan/clan = get_clan()
+		if (clan?.alt_sprite && !ignore_clan)
+			sprite_name = clan.alt_sprite
+			greyscale = clan.alt_sprite_greyscale
+		else
+			reset_icon = TRUE
+
+	// Update all limbs to the new sprite and greyscale
+	for (var/obj/item/bodypart/bodypart as anything in bodyparts)
+		if(!reset_icon)
+			var/icon_to_set
+			if(bodypart.bodyshape & BODYSHAPE_DIGITIGRADE) // we store digitigrade sprites in our modular folder
+				icon_to_set = greyscale ? 'modular_nocturne/master_files/icons/mob/human/bodyparts_greyscale.dmi' : 'modular_nocturne/master_files/icons/mob/human/bodyparts.dmi'
+			else
+				icon_to_set = greyscale ? DEFAULT_BODYPART_ICON_ORGANIC : bodypart.icon
+			bodypart.change_appearance(icon_to_set, sprite_name, greyscale)
+		else
+			bodypart.reset_appearance()
+// NOCTURNE EDIT END
 
 /**
  * Rots the vampire's body along four stages of decay.
