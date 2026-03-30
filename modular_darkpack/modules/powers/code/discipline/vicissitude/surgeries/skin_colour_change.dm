@@ -32,8 +32,7 @@
 /datum/surgery_operation/limb/modify_skin/on_success(atom/movable/operating_on, mob/living/surgeon, tool, list/operation_args)
 	var/mob/living/carbon/human/patient = get_patient(operating_on)
 
-	// NOCTURNE TODO: handle mutant colors
-
+	/* // NOCTURNE REMOVAL START
 	var/list/skin_tones = list()
 	for(var/skin_tone as anything in GLOB.skin_tone_names)
 		var/skin_tone_name = GLOB.skin_tone_names[skin_tone]
@@ -47,6 +46,45 @@
 		return FALSE
 	patient.skin_tone = new_s_tone
 	patient.dna.update_ui_block(/datum/dna_block/identity/skin_tone)
+	*/ // NOCTURNE REMOVAL END
+
+	// NOCTURNE EDIT START
+	if(HAS_TRAIT(patient, TRAIT_USES_SKINTONES))
+		var/list/skin_tones = list()
+		for(var/skin_tone as anything in GLOB.skin_tone_names)
+			var/skin_tone_name = GLOB.skin_tone_names[skin_tone]
+			skin_tones[skin_tone_name] = skin_tone
+
+		var/new_s_tone = tgui_input_list(surgeon, "Choose a skin tone", "Race change", skin_tones)
+		new_s_tone = skin_tones[new_s_tone]
+		if(!new_s_tone)
+			return FALSE
+		if(!IN_GIVEN_RANGE(surgeon, patient, 1))
+			return FALSE
+		patient.skin_tone = new_s_tone
+		patient.dna.update_ui_block(/datum/dna_block/identity/skin_tone)
+	else if(HAS_TRAIT(patient, TRAIT_MUTANT_COLORS) && !HAS_TRAIT(patient, TRAIT_FIXED_MUTANT_COLORS))
+		var/selected_color = tgui_color_picker(
+			surgeon,
+			"Select mutant color",
+			null,
+			patient.dna.features[FEATURE_MUTANT_COLOR],
+		)
+
+		if(!selected_color)
+			return FALSE
+
+		selected_color = sanitize_hexcolor(selected_color)
+
+		if(!IN_GIVEN_RANGE(surgeon, patient, 1))
+			return FALSE
+
+		patient.dna.features[FEATURE_MUTANT_COLOR] = selected_color
+		patient.dna.update_uf_block(/datum/dna_block/feature/mutant_color)
+	else
+		to_chat(surgeon, span_warning("You can't alter the race of [patient]!"))
+		return FALSE
+	// NOCTURNE EDIT END
 	patient.update_body(is_creating = TRUE)
 	patient.update_mutations_overlay()
 	SEND_SIGNAL(surgeon, COMSIG_MASQUERADE_VIOLATION)

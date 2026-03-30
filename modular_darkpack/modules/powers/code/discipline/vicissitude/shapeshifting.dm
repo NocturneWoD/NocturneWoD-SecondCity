@@ -237,6 +237,7 @@
 			return FALSE
 
 		target.dna.features[FEATURE_MUTANT_COLOR] = selected_color
+		target.dna.update_uf_block(/datum/dna_block/feature/mutant_color)
 	else
 		to_chat(owner, span_warning("You can't alter the race of [target]!"))
 		return FALSE
