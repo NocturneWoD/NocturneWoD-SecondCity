@@ -148,3 +148,10 @@
 
 /area/vtm/westfield_mall/interior/endron_logging
 	name = "Logging Facility"
+
+// NOCTURNE EDIT START
+
+/area/vtm/westfield_mall/interior/farm
+	name = "Grow Room"
+
+// NOCTURNE EDIT END

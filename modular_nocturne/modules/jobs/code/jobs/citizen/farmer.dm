@@ -16,7 +16,7 @@
 	display_order = JOB_DISPLAY_ORDER_FARMER
 	minimal_masquerade = 0
 	known_contacts = list(
-		JOB_CHEF
+		JOB_RESTAURANT,
 	)
 
 /datum/outfit/job/vampire/farmer
@@ -30,4 +30,7 @@
 	l_pocket = /obj/item/smartphone
 	r_pocket = /obj/item/vamp/keys/farmer
 	gloves = /obj/item/clothing/gloves/botanic_leather
-	backpack_contents = list(/obj/item/cultivator=1, /obj/item/card/credit=1)
+	backpack_contents = list(
+		/obj/item/cultivator = 1,
+		/obj/item/card/credit = 1,
+	)
