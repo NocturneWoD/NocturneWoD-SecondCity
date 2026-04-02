@@ -14,6 +14,7 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
+		// #include "map_files\Vampire\palm_desert\palm_desert.dmm" // NOCTURNE EDIT
 		// DARKPACK EDIT CHANGE START
 		#include "map_files\Vampire\westfield_mall\westfield_mall.dmm"
 		#include "map_files\Vampire\runtimetown.dmm"

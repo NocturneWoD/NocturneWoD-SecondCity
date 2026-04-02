@@ -105,6 +105,8 @@
 
 //////////////////////////////////////////////////
 
+// NOCTURNE REMOVAL START - MOVED TO NOCTURNE DEFINES
+/*
 #define JOB_DISPLAY_ORDER_CITIZEN 1
 
 #define JOB_DISPLAY_ORDER_PRINCE 2
@@ -171,7 +173,7 @@
 #define JOB_DISPLAY_ORDER_SECCHIEF 51
 #define JOB_DISPLAY_ORDER_PENTEX_SEC 52
 #define JOB_DISPLAY_ORDER_EMPLOYEE 53
-
+*/ // NOCTURNE REMOVAL END
 //////////////////////////////////////////////////
 
 #define DEPARTMENT_BITFLAG_CITIZEN (1<<0)
