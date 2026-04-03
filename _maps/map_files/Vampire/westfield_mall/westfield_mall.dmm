@@ -10410,7 +10410,6 @@
 "aIn" = (
 /obj/effect/turf_decal/siding/dark,
 /obj/structure/table/countertop/black,
-/obj/structure/table/countertop/black,
 /turf/open/floor/city/bacotell,
 /area/vtm/westfield_mall/interior/foodcourt/restaurant)
 "aIo" = (

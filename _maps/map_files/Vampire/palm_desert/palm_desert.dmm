@@ -1040,7 +1040,6 @@
 /area/space)
 "GD" = (
 /obj/structure/table/wood,
-/obj/structure/table/wood,
 /turf/open/floor/carpet/red,
 /area/space)
 "GG" = (
