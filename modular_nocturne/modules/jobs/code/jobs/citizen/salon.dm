@@ -25,5 +25,8 @@
 	l_pocket = /obj/item/smartphone
 	r_pocket = /obj/item/vamp/keys/salon
 	backpack_contents = list(
+		/obj/item/scissors = 1,
+		/obj/item/straight_razor = 1,
+		/obj/item/dyespray = 1,
 		/obj/item/card/credit = 1,
 	)

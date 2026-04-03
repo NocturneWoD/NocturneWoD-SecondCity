@@ -4,8 +4,8 @@
 		icon_state = ##job_name; \
 	}
 
-JOB_START_HELPER(citizen/farmer, JOB_FARMER)
-JOB_START_HELPER(citizen/chef, JOB_RESTAURANT)
-JOB_START_HELPER(citizen/salon, JOB_SALON)
+JOB_START_HELPER(farmer, JOB_FARMER)
+JOB_START_HELPER(chef, JOB_RESTAURANT)
+JOB_START_HELPER(salon, JOB_SALON)
 
 #undef JOB_START_HELPER
