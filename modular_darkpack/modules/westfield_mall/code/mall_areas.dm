@@ -148,3 +148,13 @@
 
 /area/vtm/westfield_mall/interior/endron_logging
 	name = "Logging Facility"
+
+// NOCTURNE EDIT START
+
+/area/vtm/westfield_mall/interior/farm
+	name = "Grow Room"
+
+/area/vtm/westfield_mall/interior/salon
+	name = "Black No. 1 Hair and Tattoo Salon"
+
+// NOCTURNE EDIT END

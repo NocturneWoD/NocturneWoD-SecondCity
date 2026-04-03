@@ -60,6 +60,11 @@ map westfieldmall
     default
 endmap
 
+#map palmdesert
+    votable
+    default
+endmap
+
 # Debug-only maps.
 
 map gateway_test
