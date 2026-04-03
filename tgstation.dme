@@ -7797,8 +7797,6 @@
 #include "modular_nocturne\master_files\code\modules\mob\living\carbon\human\_species.dm"
 #include "modular_nocturne\master_files\code\modules\mob\living\carbon\human\human_defines.dm"
 #include "modular_nocturne\master_files\code\modules\mob\living\carbon\human\species_types\humans.dm"
-#include "modular_nocturne\master_files\code\modules\surgery\bodyparts\_bodyparts.dm"
-#include "modular_nocturne\master_files\code\modules\surgery\bodyparts\head.dm"
 #include "modular_nocturne\master_files\code\modules\surgery\organs\_organ.dm"
 #include "modular_nocturne\modules\customization\code\accessories\ears\_ears.dm"
 #include "modular_nocturne\modules\customization\code\accessories\fluff\_fluff.dm"
