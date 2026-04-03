@@ -1,0 +1,5 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - rscadd: "Added new chef, farmer, and salon employee jobs"
+  - map: "Bar, salon, and grow room added to Westfield Mall"
