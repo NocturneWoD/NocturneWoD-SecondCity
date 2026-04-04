@@ -7812,6 +7812,8 @@
 #include "modular_nocturne\modules\customization\code\accessories\markings\tips_markings.dm"
 #include "modular_nocturne\modules\customization\code\accessories\snouts\_snouts.dm"
 #include "modular_nocturne\modules\customization\code\accessories\tails\_tails.dm"
+#include "modular_nocturne\modules\customization\code\accessories\underwear\bra.dm"
+#include "modular_nocturne\modules\customization\code\accessories\underwear\underwear.dm"
 #include "modular_nocturne\modules\customization\code\dna\dna_features_block.dm"
 #include "modular_nocturne\modules\customization\code\organs\ears.dm"
 #include "modular_nocturne\modules\customization\code\organs\fluff.dm"

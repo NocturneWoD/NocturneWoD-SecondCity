@@ -1,13 +1,13 @@
-/proc/generate_underwear_icon(datum/sprite_accessory/accessory, datum/universal_icon/base_icon, color)
+/proc/generate_underwear_icon(datum/sprite_accessory/accessory, datum/universal_icon/base_icon, color, icon_offset = 0) // NOCTURNE EDIT - ORIGINAL: /proc/generate_underwear_icon(datum/sprite_accessory/accessory, datum/universal_icon/base_icon, color)
 	var/datum/universal_icon/final_icon = base_icon.copy()
 
 	if (!isnull(accessory))
-		var/datum/universal_icon/accessory_icon = uni_icon('icons/mob/clothing/underwear.dmi', accessory.icon_state)
+		var/datum/universal_icon/accessory_icon = uni_icon(accessory.icon, accessory.icon_state) // NOCTURNE EDIT - ORIGINAL: var/datum/universal_icon/accessory_icon = uni_icon('icons/mob/clothing/underwear.dmi', accessory.icon_state)
 		if (color && !accessory.use_static)
 			accessory_icon.blend_color(color, ICON_MULTIPLY)
 		final_icon.blend_icon(accessory_icon, ICON_OVERLAY)
 
-	final_icon.crop(10, 1, 22, 13)
+	final_icon.crop(10, 1 + icon_offset, 22, 13 + icon_offset) // NOCTURNE EDIT - ORIGINAL: final_icon.crop(10, 1, 22, 13)
 	final_icon.scale(32, 32)
 
 	return final_icon
@@ -139,6 +139,8 @@
 /datum/preference/choiced/undershirt/create_default_value()
 	return /datum/sprite_accessory/clothing/undershirt/nude::name
 
+// NOCTURNE REMOVAL START
+/*
 /datum/preference/choiced/undershirt/create_informed_default_value(datum/preferences/preferences)
 	switch(preferences.read_preference(/datum/preference/choiced/gender))
 		if(MALE)
@@ -147,6 +149,8 @@
 			return /datum/sprite_accessory/clothing/undershirt/sports_bra::name
 
 	return ..()
+*/
+// NOCTURNE REMOVAL END
 
 /datum/preference/choiced/undershirt/icon_for(value)
 	var/static/datum/universal_icon/body
@@ -196,7 +200,7 @@
 		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_r_leg"), ICON_OVERLAY)
 		lower_half.blend_icon(uni_icon('icons/mob/human/bodyparts_greyscale.dmi', "human_l_leg"), ICON_OVERLAY)
 
-	return generate_underwear_icon(SSaccessories.underwear_list[value], lower_half, COLOR_ALMOST_BLACK)
+	return generate_underwear_icon(SSaccessories.underwear_list[value], lower_half, COLOR_ALMOST_BLACK, icon_offset = 5) // NOCTURNE EDIT - ORIGINAL: return generate_underwear_icon(SSaccessories.underwear_list[value], lower_half, COLOR_ALMOST_BLACK)
 
 /datum/preference/choiced/underwear/apply_to_human(mob/living/carbon/human/target, value)
 	target.underwear = value

@@ -1380,6 +1380,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	digi_icon_state = "boxers_stripe_threecolor"
 	greyscale_colors = "#D62626#EEEEEE#2E26D6"
 
+// NOCTURNE REMOVAL START - Underwear and bra split
+/*
 //FEMALE UNDERWEAR
 /datum/sprite_accessory/clothing/underwear/female_bikini
 	name = "Bikini"
@@ -1485,6 +1487,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "female_kinky"
 	gender = FEMALE
 	use_static = TRUE
+*/
+// NOCTURNE REMOVAL END
 
 ////////////////////////////
 // Undershirt Definitions //
@@ -1684,6 +1688,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "whiteshortsleeve"
 	gender = NEUTER
 
+// NOCTURNE REMOVAL START - Underwear and bra split
+/*
 /datum/sprite_accessory/clothing/undershirt/sports_bra
 	name = "Sports Bra"
 	icon_state = "sports_bra"
@@ -1693,6 +1699,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	name = "Sports Bra (Alt)"
 	icon_state = "sports_bra_alt"
 	gender = NEUTER
+*/
+// NOCTURNE REMOVAL END
 
 /datum/sprite_accessory/clothing/undershirt/blueshirtsport
 	name = "Sports Shirt (Blue)"

@@ -50,3 +50,70 @@
 			if("m_[key]_[icon_state]_[layertext]_3" in SSaccessories.cached_mutant_icon_files[icon])
 				color_layer_names["3"] = "3"
 
+// underwear overrides
+
+/datum/sprite_accessory/clothing/underwear
+	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/underwear/underwear.dmi'
+	///Whether the underwear uses a special sprite for digitigrade legs. Adds a "_d" suffix to the icon state. Overrides digi_icon_state.
+	var/has_digitigrade = FALSE
+	///Whether this underwear includes a top (Because gender = FEMALE doesn't actually apply here.). Hides breasts, nothing more.
+	var/hides_breasts = FALSE
+
+/datum/sprite_accessory/clothing/underwear/make_appearance(color = COLOR_WHITE, physique = MALE, bodyshape = BODYSHAPE_HUMANOID)
+	var/static/list/cached_icons = list()
+	var/use_female = physique == FEMALE
+
+	var/use_digi_template = digi_icon_state && (bodyshape & BODYSHAPE_DIGITIGRADE) && !has_digitigrade
+	var/use_digi_icon = has_digitigrade && (bodyshape & BODYSHAPE_DIGITIGRADE)
+	var/digi_icon_key = use_digi_icon ? "_d" : ""
+
+	var/key = "[icon_state][digi_icon_key]-[greyscale_config || "ng"]-[use_female]-[use_digi_template]-[greyscale_colors]"
+	var/mutable_appearance/result
+	if(cached_icons[key]) // it's already cached
+		result = mutable_appearance(icon(cached_icons[key]))
+
+	else if(greyscale_config || use_female || use_digi_template) // icon ops ahead
+		var/icon/created = icon(greyscale_config ? SSgreyscale.GetColoredIconByType(greyscale_config, greyscale_colors) : icon, "[icon_state][digi_icon_key]")
+		if(use_female)
+			created = wear_female_version("[icon_state][digi_icon_key]", icon, FEMALE_UNIFORM_FULL)
+		if(use_digi_template)
+			var/icon/replacement = icon(SSgreyscale.GetColoredIconByType(/datum/greyscale_config/digitigrade_underwear, greyscale_colors), digi_icon_state)
+			created = replace_icon_legs(created, replacement)
+
+		cached_icons[key] = fcopy_rsc(created)
+		result = mutable_appearance(created)
+
+	else // no caching necessary
+		result = mutable_appearance(icon, "[icon_state][digi_icon_key]")
+
+	result.layer = -BODY_LAYER
+	result.color = use_static ? null : color
+
+	return result
+
+/datum/sprite_accessory/clothing/underwear/male_briefs
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_boxers
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_stripe
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_midway
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_longjohns
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_hearts
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_commie
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_usastripe
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_uk
+	has_digitigrade = TRUE
