@@ -230,6 +230,9 @@ export type PreferencesMenuData = {
   character_preview_view: string;
   character_profiles: (string | null)[];
 
+  preview_options: string[]; // NOCTURNE EDIT
+  preview_selection: string; // NOCTURNE EDIT
+
   character_preferences: CharacterPreferencesData;
 
   content_unlocked: BooleanLike;

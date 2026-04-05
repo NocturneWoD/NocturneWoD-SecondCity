@@ -2,6 +2,9 @@
 	var/list/list/body_markings = list()
 	var/list/list/body_markings_colors = list()
 
+	/// Preference of how the preview should show the character.
+	var/preview_pref = PREVIEW_PREF_JOB
+
 /datum/preferences/proc/validate_markings()
 	var/list/list/final_markings = list()
 	var/list/list/final_markings_colors = list()

@@ -7,6 +7,13 @@
 	feature_key = FEATURE_FRILLS_NOCTURNE
 	feature_key_sprite = FEATURE_FRILLS
 
-/datum/bodypart_overlay/mutant/frills/mutant/color_images(list/image/overlays, layer, obj/item/bodypart/limb)
-	draw_color = limb.owner?.dna.features[FEATURE_FRILLS_NOCTURNE_COLORS]
-	return ..()
+/datum/bodypart_overlay/mutant/frills/mutant/inherit_color(obj/item/bodypart/bodypart_owner, force)
+	if(isnull(bodypart_owner))
+		draw_color = null
+		return TRUE
+
+	if(draw_color && !force)
+		return FALSE
+
+	draw_color = bodypart_owner.owner?.dna.features[FEATURE_FRILLS_NOCTURNE_COLORS]
+	return TRUE

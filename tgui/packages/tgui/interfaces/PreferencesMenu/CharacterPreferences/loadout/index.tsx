@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Divider,
+  Dropdown, // NOCTURNE EDIT
   Icon,
   Input,
   NoticeBox,
@@ -287,6 +288,8 @@ function LoadoutPreviewSection() {
     <Section
       fill
       title="Preview"
+      // NOCTURNE REMOVAL START - THIS IS FUCKING REDUNDANT
+      /*
       buttons={
         <Button.Checkbox
           align="center"
@@ -296,6 +299,8 @@ function LoadoutPreviewSection() {
           Job Clothes
         </Button.Checkbox>
       }
+      */
+      // NOCTURNE REMOVAL END
     >
       <Stack vertical fill>
         <Stack.Item grow align="center">
@@ -304,6 +309,19 @@ function LoadoutPreviewSection() {
         <Stack.Divider />
         <Stack.Item align="center">
           <Stack>
+            {/* NOCTURNE EDIT START */}
+            <Stack.Item>
+              <Dropdown
+                selected={data.preview_selection}
+                options={data.preview_options}
+                onSelected={(value) =>
+                  act('update_preview', {
+                    updated_preview: value,
+                  })
+                }
+              />
+            </Stack.Item>
+            {/* NOCTURNE EDIT END */}
             <Stack.Item>
               <Button
                 icon="chevron-left"
