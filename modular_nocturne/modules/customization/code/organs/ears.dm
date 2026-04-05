@@ -20,5 +20,5 @@
 	draw_color = bodypart_owner.owner?.dna.features[FEATURE_EARS_NOCTURNE_COLORS]
 	return TRUE
 
-/datum/bodypart_overlay/mutant/ears/mutant/ears/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner)
+/datum/bodypart_overlay/mutant/ears/mutant/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
 	return ..() && can_draw_on_head(bodypart_owner.owner, feature_key)

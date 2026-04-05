@@ -20,5 +20,5 @@
 	draw_color = bodypart_owner.owner?.dna.features[FEATURE_TAIL_NOCTURNE_COLORS]
 	return TRUE
 
-/datum/bodypart_overlay/mutant/tail/mutant/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner)
-	return ..() && can_draw_on_chest(bodypart_owner.owner, FEATURE_TAIL_NOCTURNE) // so are tails
+/datum/bodypart_overlay/mutant/tail/mutant/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
+	return ..() && can_draw_on_chest(bodypart_owner.owner, FEATURE_TAIL_NOCTURNE)

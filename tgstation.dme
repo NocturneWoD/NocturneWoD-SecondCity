@@ -7837,6 +7837,7 @@
 #include "modular_nocturne\modules\customization\code\species\anthro.dm"
 #include "modular_nocturne\modules\customization\code\species\anthro_bodyparts.dm"
 #include "modular_nocturne\modules\customization\code\species\demihuman.dm"
+#include "modular_nocturne\modules\customization\code\verbs\hide_mutant_parts.dm"
 #include "modular_nocturne\modules\customization\code\verbs\toggle_undies.dm"
 #include "modular_nocturne\modules\decor\code\decor.dm"
 #include "modular_nocturne\modules\jobs\code\door_access.dm"
