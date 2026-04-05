@@ -12,20 +12,40 @@
 	var/tail_button = (FEATURE_TAIL_NOCTURNE in try_hide_mutant_parts) ? "Show tail" : "Hide tail"
 
 	var/list/choice_list = list()
+	var/available_parts = 0
 
-	if(FEATURE_EARS_NOCTURNE in dna.species.mutant_features)
+	if( \
+		(FEATURE_EARS_NOCTURNE in dna.species.mutant_features) && \
+		dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/nocturne/horns/none::name && \
+		dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/blank::name \
+	)
 		choice_list += list("[ears_button]" = FEATURE_EARS_NOCTURNE)
+		available_parts++
 
-	if(FEATURE_HORNS_NOCTURNE in dna.species.mutant_features)
-		choice_list += list("[horns_button]" = FEATURE_EARS_NOCTURNE)
+	if( \
+		(FEATURE_HORNS_NOCTURNE in dna.species.mutant_features) && \
+		dna.features[FEATURE_HORNS_NOCTURNE] != /datum/sprite_accessory/nocturne/ears/none::name && \
+		dna.features[FEATURE_HORNS_NOCTURNE] != /datum/sprite_accessory/blank::name \
+	)
+		choice_list += list("[horns_button]" = FEATURE_HORNS_NOCTURNE)
+		available_parts++
 
-	if(FEATURE_TAIL_NOCTURNE in dna.species.mutant_features)
-		choice_list += list("[tail_button]" = FEATURE_EARS_NOCTURNE)
+	if( \
+		(FEATURE_TAIL_NOCTURNE in dna.species.mutant_features) && \
+		dna.features[FEATURE_TAIL_NOCTURNE] != /datum/sprite_accessory/nocturne/tails/none::name && \
+		dna.features[FEATURE_TAIL_NOCTURNE] != /datum/sprite_accessory/blank::name \
+	)
+		choice_list += list("[tail_button]" = FEATURE_TAIL_NOCTURNE)
+		available_parts++
+
+	if(!available_parts)
+		to_chat(usr, span_warning("You have no mutant parts to hide!"))
+		return
 
 	if(LAZYLEN(try_hide_mutant_parts))
 		choice_list += list("Show all" = "show")
 
-	if(LAZYLEN(try_hide_mutant_parts) < 3)
+	if(LAZYLEN(try_hide_mutant_parts) < available_parts)
 		choice_list += list("Hide all" = "hide")
 
 	var/picked_visibility = tgui_input_list(src, "Choose visibility setting", "Show/Hide mutant parts", choice_list)
