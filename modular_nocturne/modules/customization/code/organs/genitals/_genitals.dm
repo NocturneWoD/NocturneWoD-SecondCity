@@ -18,8 +18,9 @@
 
 	var/datum/bodypart_overlay/mutant/genital/our_overlay = bodypart_overlay
 
-	our_overlay.sprite_suffix = sprite_suffix
-	our_overlay.organ_slot = src.slot
+	if(our_overlay)
+		our_overlay.sprite_suffix = sprite_suffix
+		our_overlay.organ_slot = src.slot
 
 /obj/item/organ/genital/proc/get_sprite_size_string()
 	var/is_aroused = aroused == AROUSAL_FULL ? "_aroused" : ""
