@@ -29,3 +29,17 @@
 
 // organ slots
 #define ORGAN_SLOT_EXTERNAL_FLUFF "fluff"
+#define ORGAN_SLOT_EXTERNAL_BREASTS "breasts"
+#define ORGAN_SLOT_EXTERNAL_VAGINA "vagina"
+#define ORGAN_SLOT_EXTERNAL_PINTLE "pintle"
+#define ORGAN_SLOT_EXTERNAL_TESTICLES "testicles"
+
+// "organ" visibility flags
+#define ORGAN_VISIBILITY_MODE_ALWAYS_SHOW "Always Show"
+#define ORGAN_VISIBILITY_MODE_NORMAL "Normal"
+#define ORGAN_VISIBILITY_MODE_ALWAYS_HIDE "Always Hide"
+
+// more "organ" flags
+#define AROUSAL_CANT 0
+#define AROUSAL_NONE 1
+#define AROUSAL_FULL 2

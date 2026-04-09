@@ -13,6 +13,7 @@
 		FEATURE_HORNS_NOCTURNE,
 		FEATURE_TAIL_NOCTURNE,
 		FEATURE_FLUFF_NOCTURNE,
+		FEATURE_BREASTS_NOCTURNE,
 	)
 
 /datum/species/human/demihuman/prepare_human_for_preview(mob/living/carbon/human/human)

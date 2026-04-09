@@ -43,6 +43,8 @@
 					layertext = "BEHIND"
 				if(BODY_ADJ_LAYER)
 					layertext = "ADJ"
+				if (BODY_FRONT_UNDER_CLOTHES_LAYER)
+					layertext =  "FRONT_UNDER"
 				else
 					layertext = "FRONT"
 			if("m_[key]_[icon_state]_[layertext]_2" in SSaccessories.cached_mutant_icon_files[icon])

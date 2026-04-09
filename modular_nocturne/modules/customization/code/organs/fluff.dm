@@ -11,6 +11,8 @@
 
 	dna_block = /datum/dna_block/feature/accessory/fluff_nocturne
 
+	organ_flags = parent_type::organ_flags | ORGAN_EXTERNAL
+
 /datum/bodypart_overlay/mutant/fluff
 	layers = EXTERNAL_FRONT | EXTERNAL_ADJACENT
 	feature_key = FEATURE_FLUFF_NOCTURNE

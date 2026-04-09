@@ -21,4 +21,4 @@
 	return TRUE
 
 /datum/bodypart_overlay/mutant/tail/mutant/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
-	return ..() && can_draw_on_chest(bodypart_owner.owner, FEATURE_TAIL_NOCTURNE)
+	return ..() && can_draw_on_chest(owner, FEATURE_TAIL_NOCTURNE)

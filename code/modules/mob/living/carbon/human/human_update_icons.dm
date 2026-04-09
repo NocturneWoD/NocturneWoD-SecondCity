@@ -126,8 +126,9 @@ There are several things that need to be remembered:
 		my_chest?.worn_uniform_offset?.apply_offset(uniform_overlay)
 		overlays_standing[UNIFORM_LAYER] = uniform_overlay
 
+	update_body_parts() // NOCTURNE EDIT - funny enough, nova made this change AND NEVER FUCKING MARKED IT
 	apply_overlay(UNIFORM_LAYER)
-	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_ICLOTHING)
+	// check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_ICLOTHING) // NOCTURNE REMOVAL
 
 /mob/living/carbon/human/update_worn_id()
 	remove_overlay(ID_LAYER)
@@ -419,8 +420,9 @@ There are several things that need to be remembered:
 		my_chest?.worn_suit_offset?.apply_offset(suit_overlay)
 		overlays_standing[SUIT_LAYER] = suit_overlay
 
+	update_body_parts() // NOCTURNE EDIT
 	apply_overlay(SUIT_LAYER)
-	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_OCLOTHING)
+	// check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_OCLOTHING) // NOCTURNE REMOVAL
 
 /mob/living/carbon/human/update_pockets()
 	if(client && hud_used)
@@ -468,7 +470,8 @@ There are several things that need to be remembered:
 		overlays_standing[FACEMASK_LAYER] = mask_overlay
 
 	apply_overlay(FACEMASK_LAYER)
-	check_body_shape(BODYSHAPE_SNOUTED, ITEM_SLOT_MASK)
+	update_body_parts() // NOCTURNE EDIT
+	// check_body_shape(BODYSHAPE_SNOUTED, ITEM_SLOT_MASK) // NOCTURNE REMOVAL
 
 /mob/living/carbon/human/update_worn_back()
 	remove_overlay(BACK_LAYER)

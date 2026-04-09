@@ -14,27 +14,15 @@
 	var/list/choice_list = list()
 	var/available_parts = 0
 
-	if( \
-		(FEATURE_EARS_NOCTURNE in dna.species.mutant_features) && \
-		dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/nocturne/horns/none::name && \
-		dna.features[FEATURE_EARS_NOCTURNE] != /datum/sprite_accessory/blank::name \
-	)
+	if(FEATURE_EARS_NOCTURNE in dna.species.mutant_features)
 		choice_list += list("[ears_button]" = FEATURE_EARS_NOCTURNE)
 		available_parts++
 
-	if( \
-		(FEATURE_HORNS_NOCTURNE in dna.species.mutant_features) && \
-		dna.features[FEATURE_HORNS_NOCTURNE] != /datum/sprite_accessory/nocturne/ears/none::name && \
-		dna.features[FEATURE_HORNS_NOCTURNE] != /datum/sprite_accessory/blank::name \
-	)
+	if(FEATURE_HORNS_NOCTURNE in dna.species.mutant_features)
 		choice_list += list("[horns_button]" = FEATURE_HORNS_NOCTURNE)
 		available_parts++
 
-	if( \
-		(FEATURE_TAIL_NOCTURNE in dna.species.mutant_features) && \
-		dna.features[FEATURE_TAIL_NOCTURNE] != /datum/sprite_accessory/nocturne/tails/none::name && \
-		dna.features[FEATURE_TAIL_NOCTURNE] != /datum/sprite_accessory/blank::name \
-	)
+	if(FEATURE_TAIL_NOCTURNE in dna.species.mutant_features)
 		choice_list += list("[tail_button]" = FEATURE_TAIL_NOCTURNE)
 		available_parts++
 

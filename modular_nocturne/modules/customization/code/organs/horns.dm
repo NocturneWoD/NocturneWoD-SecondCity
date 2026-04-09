@@ -20,4 +20,4 @@
 	return TRUE
 
 /datum/bodypart_overlay/mutant/horns/mutant/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
-	return ..() && can_draw_on_head(bodypart_owner.owner, feature_key)
+	return ..() && can_draw_on_head(owner, feature_key)

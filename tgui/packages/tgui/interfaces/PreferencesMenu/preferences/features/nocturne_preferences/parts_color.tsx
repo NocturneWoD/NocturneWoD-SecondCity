@@ -100,3 +100,19 @@ export const frills_nocturne_color: Feature<string[]> = {
   name: 'Frills Color',
   component: FeatureTriColorInput,
 };
+
+// boobs
+
+export const has_breasts_nocturne: FeatureToggle = {
+  name: 'Add Part: Breasts',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds breasts to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const breasts_nocturne_color: Feature<string[]> = {
+  name: 'Breasts Color',
+  component: FeatureTriColorInput,
+};
