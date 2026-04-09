@@ -148,3 +148,19 @@ export const testicles_nocturne_color: Feature<string[]> = {
   name: 'Testicles Color',
   component: FeatureTriColorInput,
 };
+
+// vagina
+
+export const has_vagina_nocturne: FeatureToggle = {
+  name: 'Add Part: Vagina',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds a vagina to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const vagina_nocturne_color: Feature<string[]> = {
+  name: 'Vagina Color',
+  component: FeatureTriColorInput,
+};
