@@ -1,6 +1,6 @@
 /obj/item/organ/genital/vagina
 	name = "vagina"
-	desc = "The 'ol cum tanks."
+	desc = ""
 	icon = 'modular_nocturne/modules/customization/icons/obj/medical/organs/organs.dmi'
 	icon_state = "vagina"
 

@@ -1,6 +1,6 @@
 /mob/living/carbon/human/verb/hide_mutant_parts()
 	set category = "IC"
-	set name = "Toggle mutant part hiding"
+	set name = "Hide/Reveal mutant parts"
 	set desc = "Allows you to toggle which mutant parts should try to be hidden."
 
 	if(stat != CONSCIOUS)
