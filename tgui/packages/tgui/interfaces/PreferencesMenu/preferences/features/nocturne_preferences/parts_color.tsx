@@ -116,3 +116,19 @@ export const breasts_nocturne_color: Feature<string[]> = {
   name: 'Breasts Color',
   component: FeatureTriColorInput,
 };
+
+// pintle
+
+export const has_pintle_nocturne: FeatureToggle = {
+  name: 'Add Part: Penis',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds a penis to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const pintle_nocturne_color: Feature<string[]> = {
+  name: 'Penis Color',
+  component: FeatureTriColorInput,
+};

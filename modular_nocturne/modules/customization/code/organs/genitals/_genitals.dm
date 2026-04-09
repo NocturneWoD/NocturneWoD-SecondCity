@@ -46,6 +46,9 @@
 	return .
 
 /datum/bodypart_overlay/mutant/genital/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner, mob/living/carbon/owner, is_husked = FALSE)
-	var/obj/item/organ/genital/owning_organ = owner.get_organ_slot(organ_slot)
-	return ..() && owning_organ?.is_exposed()
+	if(owner)
+		var/obj/item/organ/genital/owning_organ = owner.get_organ_slot(organ_slot)
+		return ..() && owning_organ?.is_exposed()
+
+	return ..()
 

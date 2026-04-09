@@ -27,6 +27,7 @@
 	feature_list[FEATURE_TAIL_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/tails)
 	feature_list[FEATURE_FLUFF_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/fluff)
 	feature_list[FEATURE_BREASTS_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/breasts)
+	feature_list[FEATURE_PINTLE_NOCTURNE] = INIT_ACCESSORY(/datum/sprite_accessory/nocturne/pintle)
 
 #undef INIT_ACCESSORY
 

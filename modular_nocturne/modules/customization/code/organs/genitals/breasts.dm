@@ -41,7 +41,7 @@
 
 /datum/bodypart_overlay/mutant/genital/breasts
 	feature_key = FEATURE_BREASTS_NOCTURNE
-	layers = EXTERNAL_ADJACENT | EXTERNAL_BEHIND
+	layers = EXTERNAL_BODY_FRONT_UNDER_CLOTHES | EXTERNAL_BEHIND
 	feature_key_sprite = "breasts"
 
 	organ_slot = ORGAN_SLOT_EXTERNAL_BREASTS
