@@ -132,3 +132,19 @@ export const pintle_nocturne_color: Feature<string[]> = {
   name: 'Penis Color',
   component: FeatureTriColorInput,
 };
+
+// testicles
+
+export const has_testicles_nocturne: FeatureToggle = {
+  name: 'Add Part: Testicles',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds testicles to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const testicles_nocturne_color: Feature<string[]> = {
+  name: 'Testicles Color',
+  component: FeatureTriColorInput,
+};
