@@ -128,7 +128,7 @@ There are several things that need to be remembered:
 
 	update_body_parts() // NOCTURNE EDIT - funny enough, nova made this change AND NEVER FUCKING MARKED IT
 	apply_overlay(UNIFORM_LAYER)
-	// check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_ICLOTHING) // NOCTURNE REMOVAL
+	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_ICLOTHING)
 
 /mob/living/carbon/human/update_worn_id()
 	remove_overlay(ID_LAYER)
@@ -422,7 +422,7 @@ There are several things that need to be remembered:
 
 	update_body_parts() // NOCTURNE EDIT
 	apply_overlay(SUIT_LAYER)
-	// check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_OCLOTHING) // NOCTURNE REMOVAL
+	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_OCLOTHING)
 
 /mob/living/carbon/human/update_pockets()
 	if(client && hud_used)
@@ -469,9 +469,9 @@ There are several things that need to be remembered:
 		my_head.worn_mask_offset?.apply_offset(mask_overlay)
 		overlays_standing[FACEMASK_LAYER] = mask_overlay
 
-	apply_overlay(FACEMASK_LAYER)
 	update_body_parts() // NOCTURNE EDIT
-	// check_body_shape(BODYSHAPE_SNOUTED, ITEM_SLOT_MASK) // NOCTURNE REMOVAL
+	apply_overlay(FACEMASK_LAYER)
+	check_body_shape(BODYSHAPE_SNOUTED, ITEM_SLOT_MASK)
 
 /mob/living/carbon/human/update_worn_back()
 	remove_overlay(BACK_LAYER)
