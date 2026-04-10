@@ -43,6 +43,8 @@
 					layertext = "BEHIND"
 				if(BODY_ADJ_LAYER)
 					layertext = "ADJ"
+				if (BODY_FRONT_UNDER_CLOTHES_LAYER)
+					layertext =  "FRONT_UNDER"
 				else
 					layertext = "FRONT"
 			if("m_[key]_[icon_state]_[layertext]_2" in SSaccessories.cached_mutant_icon_files[icon])
@@ -50,3 +52,51 @@
 			if("m_[key]_[icon_state]_[layertext]_3" in SSaccessories.cached_mutant_icon_files[icon])
 				color_layer_names["3"] = "3"
 
+// sock overrides
+
+/datum/sprite_accessory/clothing/socks
+	//All underwear goes in the same file for the sake of digi variants
+	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/underwear/socks.dmi'
+	use_static = TRUE
+
+// undershirt overrides
+
+/datum/sprite_accessory/clothing/undershirt
+	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/underwear/undershirt.dmi'
+	use_static = TRUE
+	///Whether this underwear includes a bottom (For Leotards and the likes)
+	var/hides_groin = FALSE
+
+// underwear overrides
+
+/datum/sprite_accessory/clothing/underwear
+	icon = 'modular_nocturne/modules/customization/icons/mob/human/accessories/underwear/underwear.dmi'
+	///Whether this underwear includes a top (Because gender = FEMALE doesn't actually apply here.). Hides breasts, nothing more.
+	var/hides_breasts = FALSE
+
+/datum/sprite_accessory/clothing/underwear/male_briefs
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_boxers
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_stripe
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_midway
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_longjohns
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_hearts
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_commie
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_usastripe
+	has_digitigrade = TRUE
+
+/datum/sprite_accessory/clothing/underwear/male_uk
+	has_digitigrade = TRUE

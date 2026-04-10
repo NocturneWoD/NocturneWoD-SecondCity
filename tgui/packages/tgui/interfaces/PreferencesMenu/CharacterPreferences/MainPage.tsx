@@ -6,6 +6,7 @@ import { sendAct } from 'tgui/events/act';
 import {
   Box,
   Button,
+  Dropdown, // NOCTURNE EDIT
   Floating,
   Input,
   LabeledList,
@@ -705,13 +706,29 @@ export function MainPage(props: MainPageProps) {
               />
             </Stack.Item>
 
-            <Stack.Item grow>
+            {/* NOCTURNE EDIT START - ORIGINAL: <Stack.Item grow> */}
+            <Stack.Item grow maxHeight="450px">
+            {/* NOCTURNE EDIT END */}
               <CharacterPreview
                 height="100%"
                 id={data.character_preview_view}
               />
             </Stack.Item>
 
+            {/* NOCTURNE EDIT START */}
+            <Stack.Item position="relative">
+              <Dropdown
+                width="100%"
+                selected={data.preview_selection}
+                options={data.preview_options}
+                onSelected={(value) =>
+                  act('update_preview', {
+                    updated_preview: value,
+                  })
+                }
+              />
+            </Stack.Item>
+            {/* NOCTURNE EDIT END */}
             <Stack.Item position="relative">
               <NameInput
                 name={data.character_preferences.names[data.name_to_use]}

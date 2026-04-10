@@ -18,12 +18,31 @@
 
 /datum/bodypart_overlay/mutant/get_overlay(layer, obj/item/bodypart/limb)
 	if(sprite_datum.color_src == USE_MATRIXED_COLORS)
+		inherit_color(limb)
 		layer = bitflag_to_layer(layer)
 		var/list/images = get_images(layer, limb)
 		color_images(images, layer, limb)
 		return images
 	else
 		return ..()
+
+/// Generate a unique key based on our sprites. So that if we've aleady drawn these sprites,
+/// they can be found in the cache and wont have to be drawn again (blessing and curse, but mostly curse)
+/datum/bodypart_overlay/mutant/generate_icon_cache()
+	. = list()
+	. += "[get_base_icon_state()]"
+	. += "[get_feature_key_for_overlay()]"
+
+	if(islist(draw_color))
+		for(var/sub_color in draw_color)
+			. += "[sub_color]"
+	else
+		. += "[draw_color]"
+
+	if(alpha != ALPHA_OPAQUE)
+		. += "[alpha]"
+
+	return .
 
 /// Get the images we need to draw on the person. Called from get_overlay() which is called from _bodyparts.dm.
 /// `limb` can be null.

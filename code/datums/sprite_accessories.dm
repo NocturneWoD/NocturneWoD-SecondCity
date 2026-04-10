@@ -1254,6 +1254,11 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	/// Used so greyscale copies can have the same palette.
 	var/greyscale_colors = "#FFFFFF#FFFFFF#FFFFFF"
 
+	// NOCTURNE EDIT START
+	///Whether the underwear uses a special sprite for digitigrade legs. Adds a "_d" suffix to the icon state. Overrides digi_icon_state.
+	var/has_digitigrade = FALSE
+	// NOCTURNE EDIT END
+
 /**
  * Generate an appearance from this clothing datum
  *
@@ -1264,17 +1269,23 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 /datum/sprite_accessory/clothing/proc/make_appearance(color = COLOR_WHITE, physique = MALE, bodyshape = BODYSHAPE_HUMANOID)
 	var/static/list/cached_icons = list()
 	var/use_female = physique == FEMALE
+	// NOCTURNE EDIT START
+	/* // ORIGINAL:
 	var/use_digi = digi_icon_state && (bodyshape & BODYSHAPE_DIGITIGRADE)
+	*/
+	var/use_digi = digi_icon_state && (bodyshape & BODYSHAPE_DIGITIGRADE) && !has_digitigrade
+	var/digi_icon_key = has_digitigrade && (bodyshape & BODYSHAPE_DIGITIGRADE) ? "_d" : ""
+	// NOCTUNRE EDIT END
 
-	var/key = "[icon_state]-[greyscale_config || "ng"]-[use_female]-[use_digi]-[greyscale_colors]"
+	var/key = "[icon_state][digi_icon_key]-[greyscale_config || "ng"]-[use_female]-[use_digi]-[greyscale_colors]" // NOCTURNE EDIT - ORIGINAL: var/key = "[icon_state]-[greyscale_config || "ng"]-[use_female]-[use_digi]-[greyscale_colors]"
 	var/mutable_appearance/result
 	if(cached_icons[key]) // it's already cached
 		result = mutable_appearance(icon(cached_icons[key]))
 
 	else if(greyscale_config || use_female || use_digi) // icon ops ahead
-		var/icon/created = icon(greyscale_config ? SSgreyscale.GetColoredIconByType(greyscale_config, greyscale_colors) : icon, icon_state)
+		var/icon/created = icon(greyscale_config ? SSgreyscale.GetColoredIconByType(greyscale_config, greyscale_colors) : icon, "[icon_state][digi_icon_key]") // NOCTURNE EDIT - ORIGINAL: var/icon/created = icon(greyscale_config ? SSgreyscale.GetColoredIconByType(greyscale_config, greyscale_colors) : icon, icon_state)
 		if(use_female)
-			created = wear_female_version(icon_state, icon, FEMALE_UNIFORM_FULL)
+			created = wear_female_version("[icon_state][digi_icon_key]", icon, FEMALE_UNIFORM_FULL) // NOCTURNE EDIT - ORIGINAL: created = wear_female_version(icon_state, icon, FEMALE_UNIFORM_FULL)
 		if(use_digi)
 			var/icon/replacement = icon(SSgreyscale.GetColoredIconByType(/datum/greyscale_config/digitigrade_underwear, greyscale_colors), digi_icon_state)
 			created = replace_icon_legs(created, replacement)
@@ -1283,7 +1294,7 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 		result = mutable_appearance(created)
 
 	else // no caching necessary
-		result = mutable_appearance(icon, icon_state)
+		result = mutable_appearance(icon, "[icon_state][digi_icon_key]") // NOCTURNE EDIT - ORIGINAL: result = mutable_appearance(icon, icon_state)
 
 	result.layer = -BODY_LAYER
 	result.color = use_static ? null : color
@@ -1380,6 +1391,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	digi_icon_state = "boxers_stripe_threecolor"
 	greyscale_colors = "#D62626#EEEEEE#2E26D6"
 
+// NOCTURNE REMOVAL START - Underwear and bra split
+/*
 //FEMALE UNDERWEAR
 /datum/sprite_accessory/clothing/underwear/female_bikini
 	name = "Bikini"
@@ -1485,6 +1498,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "female_kinky"
 	gender = FEMALE
 	use_static = TRUE
+*/
+// NOCTURNE REMOVAL END
 
 ////////////////////////////
 // Undershirt Definitions //
@@ -1684,6 +1699,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	icon_state = "whiteshortsleeve"
 	gender = NEUTER
 
+// NOCTURNE REMOVAL START - Underwear and bra split
+/*
 /datum/sprite_accessory/clothing/undershirt/sports_bra
 	name = "Sports Bra"
 	icon_state = "sports_bra"
@@ -1693,6 +1710,8 @@ GLOBAL_LIST_EMPTY(blended_hair_icons_cache)
 	name = "Sports Bra (Alt)"
 	icon_state = "sports_bra_alt"
 	gender = NEUTER
+*/
+// NOCTURNE REMOVAL END
 
 /datum/sprite_accessory/clothing/undershirt/blueshirtsport
 	name = "Sports Shirt (Blue)"

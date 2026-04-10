@@ -15,3 +15,15 @@
 
 /datum/dna_block/feature/accessory/fluff_nocturne
 	feature_key = FEATURE_FLUFF_NOCTURNE
+
+/datum/dna_block/feature/accessory/breasts_nocturne
+	feature_key = FEATURE_BREASTS_NOCTURNE
+
+/datum/dna_block/feature/accessory/pintle_nocturne
+	feature_key = FEATURE_PINTLE_NOCTURNE
+
+/datum/dna_block/feature/accessory/testicles_nocturne
+	feature_key = FEATURE_TESTICLES_NOCTURNE
+
+/datum/dna_block/feature/accessory/vagina_nocturne
+	feature_key = FEATURE_VAGINA_NOCTURNE

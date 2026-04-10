@@ -122,6 +122,16 @@ INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 	target.dna.features[FEATURE_SNOUT_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
 	target.dna.features[FEATURE_TAIL_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
 	target.dna.features[FEATURE_FLUFF_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+
+	// set it so that we have no genitals
+	target.dna.features[FEATURE_BREASTS_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	target.dna.features[FEATURE_BREASTS_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_PINTLE_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	target.dna.features[FEATURE_PINTLE_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_TESTICLES_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	target.dna.features[FEATURE_TESTICLES_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
+	target.dna.features[FEATURE_VAGINA_NOCTURNE] = SPRITE_ACCESSORY_NONE
+	target.dna.features[FEATURE_VAGINA_NOCTURNE_COLORS] = DEFAULT_MATRIXED_FEATURE_COLORS
 	// NOCTURNE EDIT END
 	target.dna.initialize_dna(newblood_type = get_blood_type(BLOOD_TYPE_O_MINUS), create_mutation_blocks = FALSE, randomize_features = FALSE)
 	// UF and UI are nondeterministic, even though the features are the same some blocks will randomize slightly

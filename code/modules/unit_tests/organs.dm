@@ -18,6 +18,14 @@
 /datum/unit_test/organ_sanity/proc/organ_test_insert(obj/item/organ/organ_type)
 	// Appropriate mob (Human) which will receive organ.
 	var/mob/living/carbon/human/lab_rat = allocate(/mob/living/carbon/human/consistent)
+	// NOCTURNE EDIT START
+	// FORCE THIS FUCKING PIECE OF SHIT TO HAVE GENITALIA
+	// FUCK YOU FUCK YOU FUCK YOU FUCK YOU FUCK YOU
+	lab_rat.dna.features[FEATURE_BREASTS_NOCTURNE] = get_consistent_feature_entry(SSaccessories.feature_list[FEATURE_BREASTS_NOCTURNE])
+	lab_rat.dna.features[FEATURE_PINTLE_NOCTURNE] = get_consistent_feature_entry(SSaccessories.feature_list[FEATURE_PINTLE_NOCTURNE])
+	lab_rat.dna.features[FEATURE_TESTICLES_NOCTURNE] = get_consistent_feature_entry(SSaccessories.feature_list[FEATURE_TESTICLES_NOCTURNE])
+	lab_rat.dna.features[FEATURE_VAGINA_NOCTURNE] = get_consistent_feature_entry(SSaccessories.feature_list[FEATURE_VAGINA_NOCTURNE])
+	// NOCTURNE EDIT END
 	var/obj/item/organ/test_organ = new organ_type()
 
 	// Inappropriate mob (Dog) which will hopefully reject organ.

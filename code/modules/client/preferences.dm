@@ -177,6 +177,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		data["character_profiles"] = create_character_profiles()
 		tainted_character_profiles = FALSE
 
+	data["preview_selection"] = preview_pref // NOCTURNE EDIT
+
 	data["character_preferences"] = compile_character_preferences(user)
 
 	data["active_slot"] = default_slot
@@ -188,6 +190,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 /datum/preferences/ui_static_data(mob/user)
 	var/list/data = list()
+
+	data["preview_options"] = list(PREVIEW_PREF_JOB, PREVIEW_PREF_LOADOUT, PREVIEW_PREF_UNDERWEAR, PREVIEW_PREF_NAKED) // NOCTURNE EDIT
 
 	data["character_profiles"] = create_character_profiles()
 
@@ -313,6 +317,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			return TRUE
 		// DARKPACK EDIT ADD END
 		// NOCTURNE EDIT START
+		if("update_preview")
+			preview_pref = params["updated_preview"]
+			character_preview_view.update_body()
+			return TRUE
+
 		if ("set_tricolor_preference")
 			var/requested_preference_key = params["preference"]
 			var/index_key = params["value"]

@@ -100,3 +100,67 @@ export const frills_nocturne_color: Feature<string[]> = {
   name: 'Frills Color',
   component: FeatureTriColorInput,
 };
+
+// boobs
+
+export const has_breasts_nocturne: FeatureToggle = {
+  name: 'Add Part: Breasts',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds breasts to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const breasts_nocturne_color: Feature<string[]> = {
+  name: 'Breasts Color',
+  component: FeatureTriColorInput,
+};
+
+// pintle
+
+export const has_pintle_nocturne: FeatureToggle = {
+  name: 'Add Part: Penis',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds a penis to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const pintle_nocturne_color: Feature<string[]> = {
+  name: 'Penis Color',
+  component: FeatureTriColorInput,
+};
+
+// testicles
+
+export const has_testicles_nocturne: FeatureToggle = {
+  name: 'Add Part: Testicles',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds testicles to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const testicles_nocturne_color: Feature<string[]> = {
+  name: 'Testicles Color',
+  component: FeatureTriColorInput,
+};
+
+// vagina
+
+export const has_vagina_nocturne: FeatureToggle = {
+  name: 'Add Part: Vagina',
+  category: 'GAMEPLAY',
+  description: `
+    When toggled, adds a vagina to your character.
+  `,
+  component: CheckboxInput,
+};
+
+export const vagina_nocturne_color: Feature<string[]> = {
+  name: 'Vagina Color',
+  component: FeatureTriColorInput,
+};

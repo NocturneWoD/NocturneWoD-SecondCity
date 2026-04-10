@@ -1,3 +1,11 @@
+/datum/species/human
+	mutant_features = list(
+		FEATURE_BREASTS_NOCTURNE,
+		FEATURE_PINTLE_NOCTURNE,
+		FEATURE_TESTICLES_NOCTURNE,
+		FEATURE_VAGINA_NOCTURNE,
+	)
+
 /datum/species/human/get_species_description()
 	return "A plain, boring human. No weird animal parts to be found here!"
 

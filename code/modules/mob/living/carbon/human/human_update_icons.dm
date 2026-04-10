@@ -128,6 +128,7 @@ There are several things that need to be remembered:
 
 	apply_overlay(UNIFORM_LAYER)
 	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_ICLOTHING)
+	update_body_parts() // NOCTURNE EDIT - funny enough, nova made this change AND NEVER FUCKING MARKED IT
 
 /mob/living/carbon/human/update_worn_id()
 	remove_overlay(ID_LAYER)
@@ -421,6 +422,7 @@ There are several things that need to be remembered:
 
 	apply_overlay(SUIT_LAYER)
 	check_body_shape(BODYSHAPE_DIGITIGRADE, ITEM_SLOT_OCLOTHING)
+	update_body_parts() // NOCTURNE EDIT
 
 /mob/living/carbon/human/update_pockets()
 	if(client && hud_used)
@@ -469,6 +471,7 @@ There are several things that need to be remembered:
 
 	apply_overlay(FACEMASK_LAYER)
 	check_body_shape(BODYSHAPE_SNOUTED, ITEM_SLOT_MASK)
+	update_body_parts() // NOCTURNE EDIT
 
 /mob/living/carbon/human/update_worn_back()
 	remove_overlay(BACK_LAYER)
@@ -871,21 +874,36 @@ generate/load female uniform sprites matching all previously decided variables
 	// Underwear, Undershirts & Socks
 	var/list/standing = list()
 	var/active_bodyshapes = get_active_bodyshapes()
-	if(underwear)
+	if(underwear && !(underwear_visibility & UNDERWEAR_HIDE_UNDIES)) // NOCTURNE EDIT - ORIGINAL: if(underwear)
 		var/datum/sprite_accessory/clothing/underwear/undie_accessory = SSaccessories.underwear_list[underwear]
 		var/mutable_appearance/underwear_overlay = undie_accessory?.make_appearance(underwear_color, physique, active_bodyshapes)
 		if(underwear_overlay)
 			standing += underwear_overlay
-
-	if(undershirt)
+	// NOCTURNE EDIT START
+	if(bra  && !(underwear_visibility & UNDERWEAR_HIDE_BRA))
+		var/datum/sprite_accessory/clothing/bra/bra_accessory = SSaccessories.bra_list[bra]
+		var/mutable_appearance/bra_overlay = bra_accessory?.make_appearance(bra_color, physique, active_bodyshapes)
+		if(bra_overlay)
+			standing += bra_overlay
+	// NOCTURNE EDIT END
+	if(undershirt && !(underwear_visibility & UNDERWEAR_HIDE_SHIRT)) // NOCTURNE EDIT - ORIGINAL:  if(undershirt)
 		var/datum/sprite_accessory/clothing/undershirt/shirt_accessory = SSaccessories.undershirt_list[undershirt]
+		// NOCTURNE EDIT START
+		/* // ORIGINAL:
 		var/mutable_appearance/shirt_overlay = shirt_accessory?.make_appearance(null, physique, active_bodyshapes)
+		*/
+		var/mutable_appearance/shirt_overlay = shirt_accessory?.make_appearance(undershirt_color, physique, active_bodyshapes)
+		// NOCTURNE EDIT END
 		if(shirt_overlay)
 			standing += shirt_overlay
-
-	if(socks && num_legs >= 2 && !(bodyshape & BODYSHAPE_DIGITIGRADE))
+	if(socks && (num_legs >= 2) && !(underwear_visibility & UNDERWEAR_HIDE_SOCKS)) // NOCTURNE EDIT - ORIGINAL: if(socks && num_legs >= 2 && !(bodyshape & BODYSHAPE_DIGITIGRADE))
 		var/datum/sprite_accessory/clothing/socks/sock_accessory = SSaccessories.socks_list[socks]
+		// NOCTURNE EDIT START
+		/* // ORIGINAL:
 		var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(null, physique, active_bodyshapes)
+		*/
+		var/mutable_appearance/socks_overlay = sock_accessory?.make_appearance(socks_color, physique, active_bodyshapes)
+		// NOCTURNE EDIT END
 		if(socks_overlay)
 			standing += socks_overlay
 
