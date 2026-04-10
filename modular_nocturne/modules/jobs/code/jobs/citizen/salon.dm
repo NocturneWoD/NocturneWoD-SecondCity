@@ -7,7 +7,6 @@
 	config_tag = "SALON"
 	outfit = /datum/outfit/job/vampire/salon
 	job_flags = CITY_JOB_FLAGS
-	allowed_splats = SPLAT_ALL
 	exp_required_type_department = EXP_TYPE_SERVICES
 	department_for_prefs = /datum/job_department/city_services
 	departments_list = list(
