@@ -91,10 +91,15 @@
 
 	var/datum/reagent/consumable/ethanol/dummy_reagent = holder.has_reagent(/datum/reagent/consumable/ethanol)
 	for(var/i in 1 to round(created_volume, CHEMICAL_VOLUME_ROUNDING))
+		// NOCTURNE EDIT START
+		/* ORIGINAL:
 		var/obj/item/food/drug/meth_crystal/new_crystal = new(location)
 		new_crystal.pixel_x = rand(-6, 6)
 		new_crystal.pixel_y = rand(-6, 6)
 		new_crystal.color = gradient("#FAFAFA", "#78C8FA", dummy_reagent.creation_purity)
+		*/
+		var/obj/item/reagent_containers/applicator/snortable/meth/new_crystal = new(location)
+		// NOCTURNE EDIT END
 
 		var/datum/reagents/crystal_reagents = new_crystal.reagents
 		crystal_reagents.clear_reagents()

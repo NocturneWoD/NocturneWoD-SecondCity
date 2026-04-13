@@ -1,3 +1,4 @@
+/*
 /obj/item/seeds/cocaleaf
 	name = "coca leaf seed pack"
 	desc = "These seeds grow into coca shrubs. They make you feel energized just looking at them..."
@@ -21,3 +22,4 @@
 	icon_state = "cocoleaf"
 	foodtypes = FRUIT // i guess? i mean it grows on trees...
 	tastes = list("leaves" = 1)
+*/
