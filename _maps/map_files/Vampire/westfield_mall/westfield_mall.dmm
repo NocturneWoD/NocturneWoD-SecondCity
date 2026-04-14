@@ -7845,6 +7845,9 @@
 /area/vtm/westfield_mall/interior/camarilla)
 "azR" = (
 /obj/structure/table,
+/obj/machinery/reagentgrinder{
+	pixel_y = 17
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/anarch/basement)
 "azS" = (
@@ -7887,8 +7890,19 @@
 /turf/open/floor/wood/smooth,
 /area/vtm/interior/shop)
 "aAa" = (
-/obj/structure/table,
 /obj/effect/decal/pallet,
+/obj/structure/table,
+/obj/item/seeds/cocaleaf{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/seeds/cocaleaf{
+	pixel_y = 6;
+	pixel_x = 5
+	},
+/obj/item/seeds/cocaleaf{
+	pixel_y = 3
+	},
 /turf/open/floor/plating/rough,
 /area/vtm/interior/anarch/basement)
 "aAc" = (
@@ -11780,11 +11794,6 @@
 /obj/machinery/light/blacklight/directional/south,
 /turf/open/floor/wood/herring,
 /area/vtm/westfield_mall/interior/hot_ishu)
-"aMV" = (
-/obj/effect/turf_decal/siding/dark,
-/obj/structure/table/countertop/black,
-/turf/open/floor/city/bacotell,
-/area/vtm/westfield_mall/interior/foodcourt/restaurant)
 "aMX" = (
 /obj/structure/platform/lowwall/painted/window,
 /turf/open/floor/plating/rough,
@@ -62318,7 +62327,7 @@ aew
 aRX
 aVc
 abW
-aMV
+aIn
 aLU
 aLU
 abf
