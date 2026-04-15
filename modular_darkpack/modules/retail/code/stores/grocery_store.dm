@@ -34,6 +34,7 @@
 		new /datum/data/vending_product("blue stripe", /obj/item/reagent_containers/cup/glass/bottle/beer/vampire/blue_stripe),
 		new /datum/data/vending_product("candle pack", /obj/item/storage/fancy/candle_box),
 		new /datum/data/vending_product("bruise pack", /obj/item/stack/medical/bruise_pack),
+		new /datum/data/vending_product("nail polish remover", /obj/item/reagent_containers/cup/bottle/acetone/vampire), // NOCTURNE EDIT
 		new /datum/data/vending_product("kitchen knife", /obj/item/knife, 26),
 		new /datum/data/vending_product("rolling pin", /obj/item/kitchen/rollingpin, 8),
 		new /datum/data/vending_product("mixing bowl", /obj/item/reagent_containers/glass/mixing_bowl),

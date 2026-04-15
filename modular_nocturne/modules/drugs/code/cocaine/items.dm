@@ -14,3 +14,10 @@
 
 	spawn_count = 3
 	spawn_type = /obj/item/reagent_containers/applicator/snortable/cocaine
+
+// only here because this needs to be placed in the map
+// NOCTURNE TODO: give this a cool sprite
+/obj/item/reagent_containers/cup/bottle/acetone/vampire
+	name = "nail polish remover"
+	desc = "A small bottle of acetone."
+	list_reagents = list(/datum/reagent/acetone = 30)
