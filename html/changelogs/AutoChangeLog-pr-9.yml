@@ -1,0 +1,5 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - rscadd: "Made cocaine and meth better"
+  - code_imp: "Rewrote drug baggies to actually store objects, and not just be renamed cups"
