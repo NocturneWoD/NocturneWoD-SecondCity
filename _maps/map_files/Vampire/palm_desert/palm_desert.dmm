@@ -110,7 +110,7 @@
 "cS" = (
 /obj/structure/platform/lowwall/old,
 /obj/structure/table/wood,
-/turf/open/space/basic,
+/turf/open/floor/wood/smooth/old,
 /area/space)
 "cV" = (
 /obj/structure/water_source/puddle,
@@ -1038,10 +1038,6 @@
 "GC" = (
 /turf/closed/wall/vampwall/old,
 /area/space)
-"GD" = (
-/obj/structure/table/wood,
-/turf/open/floor/carpet/red,
-/area/space)
 "GG" = (
 /obj/effect/decal/cleanable/gasoline,
 /turf/open/floor/wood/smooth/old,
@@ -1154,10 +1150,6 @@
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/misc/grass/nosmooth,
-/area/space)
-"Ki" = (
-/obj/structure/platform/lowwall/junk/window,
-/turf/open/space/basic,
 /area/space)
 "Kp" = (
 /obj/structure/bed/double,
@@ -38450,7 +38442,7 @@ sK
 Fr
 Pt
 Re
-GD
+Rm
 vQ
 Ze
 lf
@@ -38754,7 +38746,7 @@ sK
 kb
 kb
 kb
-Ki
+lf
 kb
 kb
 kb
