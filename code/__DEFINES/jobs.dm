@@ -26,6 +26,10 @@
 
 // DARKPACK EDIT ADD END
 
+// NOCTURNE EDIT START
+#define JOB_UNAVAILABLE_FLAVOUR 14
+// NOCTURNE EDIT END
+
 /// Used when the `get_job_unavailable_error_message` proc can't make sense of a given code.
 #define GENERIC_JOB_UNAVAILABLE_ERROR "Error: Unknown job availability."
 

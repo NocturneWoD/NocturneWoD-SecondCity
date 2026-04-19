@@ -987,6 +987,13 @@ SUBSYSTEM_DEF(job)
 		job_debug("[debug_prefix] Error: [get_job_unavailable_error_message(JOB_UNAVAILABLE_AGE)], Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")
 		return JOB_UNAVAILABLE_AGE
 
+	// NOCTURNE EDIT START
+	if(CONFIG_GET(flag/min_flavor_text))
+		if(length_char(player.client.prefs.read_preference(/datum/preference/text/flavor_text)) <= CONFIG_GET(number/flavor_text_character_requirement))
+			job_debug("[debug_prefix] Error: [get_job_unavailable_error_message(JOB_UNAVAILABLE_FLAVOUR)], Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")
+			return JOB_UNAVAILABLE_FLAVOUR
+	// NOCTURNE EDIT END
+
 	// Need to recheck the player exists after is_banned_from since it can query the DB which may sleep.
 	if(QDELETED(player))
 		job_debug("[debug_prefix]: Player is qdeleted, Player: [player][add_job_to_log ? ", Job: [possible_job]" : ""]")
