@@ -1305,6 +1305,12 @@
 	},
 /turf/open/floor/wood/ornate,
 /area/vtm/palm_desert/interior/millennium)
+"bNk" = (
+/obj/effect/decal/cleanable/trash,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
+/area/vtm/palm_desert/interior/anarch)
 "bNK" = (
 /obj/effect/decal/pallet,
 /obj/item/cultivator/rake{
@@ -1614,6 +1620,10 @@
 /obj/effect/turf_decal/crosswalk,
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/commercial)
+"cjZ" = (
+/obj/effect/decal/cleanable/vomit/old,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "ckf" = (
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 8
@@ -1710,6 +1720,12 @@
 	},
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/palm_desert/outside/office)
+"cro" = (
+/obj/structure/railing{
+	dir = 9
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "crM" = (
 /obj/structure/destructible/cult/item_dispenser/archives/library,
 /turf/open/floor/city/plating,
@@ -2356,6 +2372,12 @@
 /obj/effect/mapping_helpers/door/lock,
 /turf/open/floor/city/industrial,
 /area/vtm/interior/sewer/nosferatu_town)
+"dmZ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "dno" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/concrete,
@@ -2391,6 +2413,10 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"dpn" = (
+/obj/structure/railing,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "dpu" = (
 /obj/structure/chair/sofa/corp/left{
 	color = "#808080"
@@ -3305,6 +3331,10 @@
 	},
 /turf/open/misc/dirt,
 /area/vtm/interior/sabbat_lair)
+"elm" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "eln" = (
 /turf/closed/wall/vampwall/rock,
 /area/vtm/palm_desert/outside/commercial)
@@ -4124,6 +4154,10 @@
 /obj/structure/vampdoor/woodglass,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/ghetto)
+"fkk" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "fkT" = (
 /obj/effect/decal/rugs,
 /turf/open/floor/plating/concrete,
@@ -5978,6 +6012,10 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
+"hIG" = (
+/obj/effect/decal/cleanable/litter,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/anarch)
 "hJL" = (
 /obj/effect/decal/cleanable/litter,
 /turf/open/floor/plating/rough,
@@ -6660,6 +6698,12 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/supply)
+"iKm" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "iKn" = (
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -8756,6 +8800,13 @@
 /obj/structure/glowshroom/single,
 /turf/open/floor/plating/rough/cave,
 /area/vtm/interior/caves)
+"lxG" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/splatter/over_window,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "lxZ" = (
 /obj/effect/decal/wallpaper/grey{
 	color = "#6d6d6d"
@@ -9104,6 +9155,12 @@
 	},
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/millennium)
+"lTC" = (
+/obj/structure/railing{
+	dir = 5
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "lTJ" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk/poor,
@@ -10403,6 +10460,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/ghetto)
+"nDs" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "nDJ" = (
 /turf/closed/wall/vampwall/rock,
 /area/vtm/interior/sabbat_lair)
@@ -10583,6 +10646,9 @@
 /obj/structure/coclock/grandpa,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
+"nQj" = (
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "nQF" = (
 /obj/structure/table,
 /obj/structure/fluff/tv{
@@ -11310,6 +11376,12 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/clinic)
+"oGZ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "oHk" = (
 /obj/structure/curtain/bounty{
 	pixel_y = 15;
@@ -12111,6 +12183,9 @@
 /obj/structure/railing,
 /turf/open/floor/plating/stone,
 /area/vtm/interior/caves)
+"pCb" = (
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/anarch)
 "pCd" = (
 /obj/structure/stone_tile/surrounding,
 /obj/structure/werewolf_totem/generic/alltribes,
@@ -12411,6 +12486,13 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert)
+"pTE" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "pTN" = (
 /obj/effect/turf_decal/bordur{
 	dir = 10
@@ -15260,6 +15342,12 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/city/circled,
 /area/vtm/interior/laundromat)
+"twc" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/anarch)
 "twt" = (
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/hunter)
@@ -15999,6 +16087,13 @@
 	},
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/giovanni)
+"upF" = (
+/obj/structure/vampdoor/old,
+/obj/effect/mapping_helpers/door/autoname,
+/obj/effect/mapping_helpers/door/access/bar,
+/obj/effect/mapping_helpers/door/unlock,
+/turf/open/space/basic,
+/area/vtm/palm_desert/interior/anarch)
 "upI" = (
 /obj/structure/closet/crate/trashcart/laundry,
 /obj/item/clothing/under/suit/white,
@@ -16213,6 +16308,10 @@
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
+"uGe" = (
+/obj/machinery/light/small/red/dim/directional/east,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/anarch)
 "uGm" = (
 /obj/structure/table/countertop/red,
 /obj/machinery/light/small/directional/north,
@@ -16498,6 +16597,10 @@
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/brick,
 /area/vtm/interior)
+"vhG" = (
+/obj/machinery/light/small/red/dim/directional/west,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/anarch)
 "via" = (
 /obj/structure/roadblock/alt{
 	pixel_y = 10
@@ -19907,10 +20010,10 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
+mwG
+mwG
+mwG
+mwG
 kKo
 kKo
 kKo
@@ -20059,10 +20162,10 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
 kKo
 kKo
 kKo
@@ -20211,18 +20314,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+saR
+lAE
+mwG
+mwG
+mwG
+mwG
+mwG
+mwG
+mwG
+mwG
+mwG
 rfr
 fpf
 ruw
@@ -20363,18 +20466,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
+pCb
+pCb
+pCb
+vhG
+pCb
+pCb
+pCb
+mwG
 rfr
 hNK
 ruw
@@ -20515,18 +20618,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
+pCb
+cro
+oGZ
+oGZ
+oGZ
+nDs
+pCb
+mwG
 rfr
 dOX
 ruw
@@ -20667,18 +20770,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
+pCb
+twc
+nQj
+elm
+nQj
+dpn
+pCb
+mwG
 rfr
 hNK
 ruw
@@ -20819,18 +20922,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+upF
+pCb
+lxG
+nQj
+nQj
+fkk
+dpn
+pCb
+mwG
 rfr
 fpf
 ruw
@@ -20971,18 +21074,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
+pCb
+twc
+cjZ
+nQj
+nQj
+dpn
+pCb
+mwG
 rfr
 hNK
 ruw
@@ -21123,18 +21226,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+lAE
+lAE
+mwG
+pCb
+lTC
+dmZ
+pTE
+dmZ
+iKm
+pCb
+mwG
 rfr
 rfr
 rfr
@@ -21275,18 +21378,18 @@ kKo
 kKo
 kKo
 kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
-kKo
+ycj
+bNk
+lAE
+mwG
+pCb
+pCb
+pCb
+uGe
+hIG
+pCb
+pCb
+mwG
 kKo
 kKo
 kKo
@@ -21427,9 +21530,9 @@ mwG
 mwG
 mwG
 mwG
-mwG
-mwG
-mwG
+ycj
+lAE
+lAE
 mwG
 mwG
 mwG
