@@ -34,6 +34,11 @@
 	icon_state = "pp25"
 	COOLDOWN_DECLARE(emergency_cooldown)
 
+/obj/item/radio/headset/darkpack/police/Initialize(mapload)
+	. = ..()
+	set_frequency(FREQ_POLICE)
+	radio_network = NETWORK_POLICE
+
 /obj/item/radio/headset/darkpack/police/examine(mob/user)
 	. = ..()
 	var/turf/current_turf = get_turf(src)
