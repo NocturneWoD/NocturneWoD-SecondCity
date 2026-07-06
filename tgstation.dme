@@ -8159,6 +8159,7 @@
 #include "modular_nocturne\modules\drugs\code\cocaine\seeds.dm"
 #include "modular_nocturne\modules\drugs\code\meth\items.dm"
 #include "modular_nocturne\modules\drugs\code\weed\items.dm"
+#include "modular_nocturne\modules\events\code\economy_crash_event.dm"
 #include "modular_nocturne\modules\flavor_text\code\examine.dm"
 #include "modular_nocturne\modules\flavor_text\code\preferences\examine_headshot_pref.dm"
 #include "modular_nocturne\modules\jobs\code\_departments.dm"
