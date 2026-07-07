@@ -18,7 +18,7 @@
 	female_clothes = /obj/item/clothing/under/vampire/baali/female
 	enlightenment = TRUE
 	// whitelisted = TRUE // NOCTURNE REMOVAL
-	subsplat_keys = /obj/item/vamp/keys/baali
+	// subsplat_keys = /obj/item/vamp/keys/baali // NOCTURNE REMOVAL
 
 /datum/subsplat/vampire_clan/baali/psychomania_effect(mob/living/target, mob/living/owner)
 	to_chat(target, span_notice("The sacred icons appearing before you lack the true substance of faith"))

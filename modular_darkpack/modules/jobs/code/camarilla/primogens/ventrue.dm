@@ -13,7 +13,7 @@
 	exp_required_type_department = EXP_TYPE_CAMARILLA
 	exp_granted_type = EXP_TYPE_CAMARILLA
 	config_tag = "PRIMOGEN_VENTRUE"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/ventrue
 
 	display_order = JOB_DISPLAY_ORDER_VENTRUE

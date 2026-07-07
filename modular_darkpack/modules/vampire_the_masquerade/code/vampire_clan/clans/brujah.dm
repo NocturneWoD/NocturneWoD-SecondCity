@@ -15,7 +15,7 @@
 	)
 	male_clothes = /obj/item/clothing/under/vampire/brujah
 	female_clothes = /obj/item/clothing/under/vampire/brujah/female
-	subsplat_keys = /obj/item/vamp/keys/brujah
+	// subsplat_keys = /obj/item/vamp/keys/brujah // NOCTURNE REMOVAL
 
 
 /datum/subsplat/vampire_clan/brujah/psychomania_effect(mob/living/target, mob/living/owner)

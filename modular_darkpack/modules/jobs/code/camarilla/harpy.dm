@@ -13,7 +13,7 @@
 	exp_required_type = EXP_TYPE_CAMARILLA
 	exp_required_type_department = EXP_TYPE_CAMARILLA
 	exp_granted_type = EXP_TYPE_CAMARILLA
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/harpy
 
 	display_order = JOB_DISPLAY_ORDER_HARPY

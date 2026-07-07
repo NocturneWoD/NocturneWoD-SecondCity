@@ -1,0 +1,4 @@
+author: "lpeapnni"
+delete-after: True
+changes:
+  - balance: "Door bashing has been removed. Reinforced doors are now indestructible."

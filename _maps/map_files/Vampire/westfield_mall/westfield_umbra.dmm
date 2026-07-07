@@ -238,6 +238,12 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/outside/penumbra)
+"dm" = (
+/obj/transfer_point_vamp/umbral{
+	id = "umbra_dora"
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
 "dn" = (
 /obj/structure/vampdoor/wood{
 	dir = 8
@@ -1871,6 +1877,10 @@
 /obj/machinery/photocopier/prebuilt,
 /turf/open/umbra,
 /area/vtm/outside/penumbra)
+"AB" = (
+/obj/structure/chair/sofa/corp,
+/turf/open/umbra,
+/area/vtm/outside/penumbra)
 "AE" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -1975,6 +1985,12 @@
 /obj/effect/decal/graffiti/large,
 /turf/open/umbra,
 /area/vtm/outside/penumbra)
+"Cg" = (
+/obj/structure/chair/sofa/corp/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
 "Ck" = (
 /turf/open/floor/plating/concrete,
 /area/vtm/outside/penumbra)
@@ -1990,6 +2006,10 @@
 	dir = 10
 	},
 /turf/open/misc/grass,
+/area/vtm/outside/penumbra)
+"Cr" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/plating/concrete,
 /area/vtm/outside/penumbra)
 "Cs" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -2103,6 +2123,25 @@
 /obj/structure/platform/lowwall/market/window,
 /turf/open/floor/plating/rough,
 /area/vtm/outside/penumbra)
+"DV" = (
+/obj/structure/chair/sofa/corp{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
+"DX" = (
+/obj/structure/pole{
+	pixel_w = -16
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
+"Ec" = (
+/obj/item/stack/dollar{
+	amount = 228;
+	anchored = 1
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
 "El" = (
 /obj/structure/vampdoor/simple,
 /obj/effect/mapping_helpers/door/access/police,
@@ -2145,8 +2184,24 @@
 /obj/effect/decal/cleanable/trash,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/outside/penumbra)
+"EN" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 4
+	},
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
 "EO" = (
 /turf/open/misc/dirt,
+/area/vtm/outside/penumbra)
+"ET" = (
+/obj/effect/decal/cleanable/blood/footprints,
+/turf/open/floor/plating/concrete,
+/area/vtm/outside/penumbra)
+"EY" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	pixel_y = 9
+	},
+/turf/open/floor/plating/concrete,
 /area/vtm/outside/penumbra)
 "Fa" = (
 /obj/structure/table,
@@ -2169,6 +2224,9 @@
 /obj/effect/decal/cleanable/trash,
 /obj/structure/chair/darkpack,
 /turf/open/floor/plating/rough,
+/area/vtm/outside/penumbra)
+"Fo" = (
+/turf/open/floor/light,
 /area/vtm/outside/penumbra)
 "Fu" = (
 /obj/structure/vampipe{
@@ -3012,6 +3070,12 @@
 /obj/structure/table,
 /turf/open/floor/plating/canalplating,
 /area/vtm/outside/penumbra)
+"SS" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 1
+	},
+/turf/open/floor/plating/sidewalk,
+/area/vtm/outside/penumbra)
 "ST" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/sidewalk/rich,
@@ -3185,6 +3249,11 @@
 /obj/structure/chair/pew/left,
 /turf/open/floor/plating/sidewalk/rich,
 /area/vtm/outside/penumbra)
+"Vq" = (
+/obj/structure/closet/crate/dumpster,
+/obj/structure/sign/city/strip_club/directional/north,
+/turf/open/floor/plating/sidewalk,
+/area/vtm/outside/penumbra)
 "Vr" = (
 /obj/effect/turf_decal/weather/dirt,
 /obj/effect/turf_decal/weather/dirt{
@@ -3227,6 +3296,10 @@
 	dir = 8
 	},
 /turf/open/misc/grass,
+/area/vtm/outside/penumbra)
+"Wg" = (
+/obj/structure/closet/crate/dumpster,
+/turf/open/floor/plating/sidewalk,
 /area/vtm/outside/penumbra)
 "Wl" = (
 /obj/structure/platform/lowwall/rich/window,
@@ -23144,11 +23217,11 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
+ZK
+ZK
+ZK
+ZK
+ZK
 qF
 qF
 qF
@@ -23402,10 +23475,10 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
+Cg
+DV
+EN
+ZK
 qF
 qF
 qF
@@ -23657,14 +23730,14 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+ZK
+AB
+Ck
+DX
+ET
+ZK
+ZK
+ZK
 qF
 qF
 xx
@@ -23916,13 +23989,13 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+Cr
+Ec
+Ck
+Ck
+Ck
+ZK
+ZK
 qF
 qF
 xx
@@ -24174,12 +24247,12 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
+ET
+EY
+Ck
+Ck
+Ck
+ZK
 qF
 qF
 xx
@@ -24433,10 +24506,10 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
+Ck
+Ck
+Ck
+ZK
 qF
 xx
 qF
@@ -24685,16 +24758,16 @@ qF
 qF
 qF
 qF
+ZK
 qF
+tD
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+tD
+Hx
+Ck
+Ck
+ZK
+Vq
 qF
 qF
 qF
@@ -24944,14 +25017,14 @@ qF
 qF
 qF
 qF
+tD
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
+tD
+Ck
+ZC
+ZK
+Wg
 qF
 qF
 xx
@@ -25201,15 +25274,15 @@ qF
 qF
 qF
 qF
+tD
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+Fo
+tD
+Ck
+Ck
+SS
+ik
+ik
 qF
 qF
 qF
@@ -25458,15 +25531,15 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+tD
+tD
+tD
+tD
+Ck
+Ck
+SS
+ik
+ik
 qF
 qF
 qF
@@ -25713,17 +25786,17 @@ qF
 qF
 qF
 qF
+ZK
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+Ck
+Ck
+dm
+Ck
+ZK
+Wg
+ik
 qF
 qF
 qF
@@ -25973,15 +26046,15 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+ZK
+Ck
+Ck
+Ck
+Ck
+ZK
+ik
+ik
+ik
 xx
 qF
 qF
@@ -26230,15 +26303,15 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
-qF
+ZK
+ZK
+ZK
+ZK
+ZK
+ZK
+ik
+ik
+ik
 qF
 xx
 xx
@@ -26491,11 +26564,11 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
-qF
+ik
+ik
+xx
+xx
+ik
 xx
 xx
 xx
@@ -26748,10 +26821,10 @@ qF
 qF
 qF
 qF
-qF
-qF
-qF
-qF
+ik
+xx
+xx
+xx
 xx
 xx
 xx
@@ -27003,10 +27076,10 @@ qF
 qF
 qF
 qF
+ZK
 qF
 qF
-qF
-qF
+xx
 qF
 qF
 xx

@@ -7,7 +7,7 @@
 	supervisors = " the Laws of Hospitality"
 	config_tag = "BOGATYR"
 	outfit = /datum/outfit/job/vampire/bogatyr
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	exp_required_type_department = EXP_TYPE_MANOR
 	department_for_prefs = /datum/job_department/manor
 	departments_list = list(

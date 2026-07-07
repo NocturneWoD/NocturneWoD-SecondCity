@@ -17,7 +17,7 @@
 	male_clothes = /obj/item/clothing/under/vampire/salubri
 	female_clothes = /obj/item/clothing/under/vampire/salubri/female
 	enlightenment = FALSE
-	subsplat_keys = /obj/item/vamp/keys/salubri
+	// subsplat_keys = /obj/item/vamp/keys/salubri // NOCTURNE REMOVAL
 
 /datum/subsplat/vampire_clan/salubri/on_gain(mob/living/carbon/human/gaining_mob, datum/splat/gaining_splat, joining_round)
 	. = ..()

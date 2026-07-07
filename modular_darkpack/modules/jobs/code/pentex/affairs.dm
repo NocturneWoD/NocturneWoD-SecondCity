@@ -13,10 +13,10 @@
 	exp_required_type_department = EXP_TYPE_SPIRAL
 	exp_granted_type = EXP_TYPE_SPIRAL
 	config_tag = "PENTEX_AFFAIRS"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/affairs
 
-	// allowed_splats = list(SPLAT_GAROU) // NOCTURNE REMOVAL
+	allowed_splats = list(SPLAT_GAROU)
 	minimal_masquerade = 5
 	// minimal_renown_rank = 3
 	allowed_tribes = list(TRIBE_BLACK_SPIRAL_DANCERS, TRIBE_RONIN)

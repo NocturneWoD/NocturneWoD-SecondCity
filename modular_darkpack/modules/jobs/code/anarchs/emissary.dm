@@ -5,7 +5,7 @@
 	spawn_positions = 1
 	supervisors = SUPERVISOR_BARON
 	config_tag = "EMISSARY"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/emissary
 
 	display_order = JOB_DISPLAY_ORDER_EMISSARY

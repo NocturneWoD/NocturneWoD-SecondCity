@@ -7,7 +7,7 @@
 	config_tag = "LA_SQUADRA"
 	outfit = /datum/outfit/job/vampire/squadra
 	job_flags = CITY_JOB_FLAGS
-	display_order = JOB_DISPLAY_ORDER_GIOVANNI
+	display_order = JOB_DISPLAY_ORDER_SQUADRA // NOCTURNE EDIT - ORIGINAL: display_order = JOB_DISPLAY_ORDER_GIOVANNI
 	exp_required_type_department = EXP_TYPE_GIOVANNI
 	department_for_prefs = /datum/job_department/giovanni
 	departments_list = list(

@@ -15,7 +15,7 @@
 	)
 	male_clothes = /obj/item/clothing/under/vampire/bandit
 	female_clothes = /obj/item/clothing/under/vampire/bandit
-	subsplat_keys = /obj/item/vamp/keys/banuhaqim
+	// subsplat_keys = /obj/item/vamp/keys/banuhaqim // NOCTURNE REMOVAL
 
 /datum/subsplat/vampire_clan/banu_haqim/psychomania_effect(mob/living/target, mob/living/owner)
 	to_chat(target, span_cult("An overwhelming presence manifests around me.."))

@@ -7,15 +7,13 @@
 	spawn_positions = 3
 	supervisors = "the Board and the Branch Lead"
 	req_admin_notify = 1
-	/* // NOCTURNE REMOVAL START
 	minimal_player_age = 25
 	exp_requirements = 50
 	exp_required_type = EXP_TYPE_SPIRAL
 	exp_required_type_department = EXP_TYPE_SPIRAL
-	*/ // NOCTURNE REMOVAL END
 	exp_granted_type = EXP_TYPE_SPIRAL
 	config_tag = "PENTEX_EMPLOYEE"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/employee
 
 	alt_titles = list(

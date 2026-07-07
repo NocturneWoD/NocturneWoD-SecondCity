@@ -6,7 +6,7 @@
 	supervisors = "your faith"
 	config_tag = "PRIEST"
 	outfit = /datum/outfit/job/vampire/priest
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	display_order = JOB_DISPLAY_ORDER_PRIEST
 	exp_required_type_department = EXP_TYPE_CHURCH
 	department_for_prefs = /datum/job_department/church

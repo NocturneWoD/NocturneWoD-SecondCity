@@ -12,7 +12,7 @@
 	)
 	male_clothes = /obj/item/clothing/under/vampire/malkavian
 	female_clothes = /obj/item/clothing/under/vampire/malkavian/female
-	subsplat_keys = /obj/item/vamp/keys/malkav
+	// subsplat_keys = /obj/item/vamp/keys/malkav // NOCTURNE REMOVAL
 	var/list/mob/living/madness_network
 
 /datum/subsplat/vampire_clan/malkavian/dominate

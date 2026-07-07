@@ -13,7 +13,7 @@
 	exp_required_type_department = EXP_TYPE_SPIRAL
 	exp_granted_type = EXP_TYPE_SPIRAL
 	config_tag = "PENTEX_EXECUTIVE"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/executive
 
 	alt_titles = list(

@@ -370,6 +370,7 @@ export function JobsPage() {
       <Stack vertical fill>
         <Stack.Item mt={15}>
           <Stack fill g={1} className="PreferencesMenu__Jobs">
+            { /* NOCTURNE REMOVAL START
             {
               // DARKPACK EDIT ADD START
             }
@@ -408,6 +409,38 @@ export function JobsPage() {
             {
               // DARKPACK EDIT ADD END
             }
+            NOCTURNE REMOVAL END */ }
+
+            { /* NOCTURNE ADDITION START */ }
+            <Stack.Item>
+              <Stack vertical>
+                <PriorityHeaders />
+                <Department department="Prince" />
+                <Department department="Camarilla" />
+                <Department department="Anarch" />
+                <Department department="Chantry" />
+                <Department department="Giovanni" />
+              </Stack>
+            </Stack.Item>
+            <Stack.Item mt={-5.9}>
+              <Stack vertical>
+                <PriorityHeaders />
+                <Department department="Police" />
+                <Department department="Warehouse" />
+                <Department department="City_Services" />
+                <Department department="Citizen" />
+              </Stack>
+            </Stack.Item>
+            <Stack.Item>
+              <Stack vertical>
+                <PriorityHeaders />
+                <Department department="Magadon" />
+                <Department department="Sabbat" />
+                <Department department="Garou_Nation" />
+                <Department department="Hunter" />
+              </Stack>
+            </Stack.Item>
+            { /* NOCTURNE ADDITION END */ }
           </Stack>
         </Stack.Item>
       </Stack>

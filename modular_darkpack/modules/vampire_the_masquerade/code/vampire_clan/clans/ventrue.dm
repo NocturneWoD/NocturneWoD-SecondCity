@@ -15,7 +15,7 @@
 	)
 	male_clothes = /obj/item/clothing/under/vampire/ventrue
 	female_clothes = /obj/item/clothing/under/vampire/ventrue/female
-	subsplat_keys = /obj/item/vamp/keys/ventrue
+	// subsplat_keys = /obj/item/vamp/keys/ventrue // NOCTURNE REMOVAL
 
 /datum/subsplat/vampire_clan/ventrue/antitribu
 	name = "Ventrue antitribu"

@@ -29,23 +29,20 @@
 		}
 	],
 	"job_changes": {
-		"Graveyard Keeper": {
-			"spawn_positions": 0,
-			"total_positions": 0
-		},
 		"Street Janitor": {
-			"spawn_positions": 4,
-			"total_positions": 4
+			"spawn_positions": 3,
+			"total_positions": 3
 		},
 		"Taxi Driver": {
 			"spawn_positions": 0,
 			"total_positions": 0
 		},
-		"Sweeper": {
-			"spawn_positions": 2,
-			"total_positions": 2
-		},
+
 		"Brusier": {
+			"spawn_positions": 3,
+			"total_positions": 3
+		},
+		"Sweeper": {
 			"spawn_positions": 4,
 			"total_positions": 4
 		},
@@ -53,14 +50,7 @@
 			"spawn_positions": 2,
 			"total_positions": 2
 		},
-		"Priest": {
-			"spawn_positions": 0,
-			"total_positions": 0
-		},
-		"Doctor": {
-			"spawn_positions": 3,
-			"total_positions": 3
-		},
+
 		"La Squadra": {
 			"spawn_positions": 5,
 			"total_positions": 5
@@ -69,14 +59,38 @@
 			"spawn_positions": 5,
 			"total_positions": 5
 		},
-		"Club Worker": {
-			"spawn_positions": 0,
-			"total_positions": 0
+
+		"Hound": {
+			"spawn_positions": 5,
+			"total_positions": 5
+		},
+		"Tower Employee": {
+			"spawn_positions": 3,
+			"total_positions": 3
+		},
+
+		"Police Sergeant": {
+			"spawn_positions": 2,
+			"total_positions": 2
+		},
+		"Police Officer": {
+			"spawn_positions": 5,
+			"total_positions": 5
 		},
 		"Emergency Dispatcher": {
-			"spawn_positions": 1,
-			"total_positions": 1
+			"spawn_positions": 2,
+			"total_positions": 2
+		},
+
+		"Supply Technician": {
+			"spawn_positions": 5,
+			"total_positions": 5
+		},
+
+		"Truthcatcher": {
+			"spawn_positions": 0,
+			"total_positions": 0
 		}
 	},
-	"max_npcs": 60
+	"max_npcs": 45
 }
