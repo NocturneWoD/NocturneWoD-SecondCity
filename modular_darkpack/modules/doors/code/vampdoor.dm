@@ -15,10 +15,10 @@
 	pass_flags_self = PASSDOORS
 
 	max_integrity = 350
-	integrity_failure = 0.5
+	integrity_failure = 0.25 // NOCTURNE EDIT - ORIGINAL: integrity_failure = 0.5
 	armor_type = /datum/armor/machinery_door
 	receive_ricochet_chance_mod = 0.8
-	damage_deflection = 10
+	damage_deflection = 25 // NOCTURNE EDIT - ORIGINAL: damage_deflection = 10
 
 	var/closed = TRUE
 	var/locked = FALSE
@@ -219,6 +219,7 @@
 	if(door_broken)
 		to_chat(user, span_warning("There is no door to use here."))
 		return
+	/* // NOCTURNE REMOVAL - BASHING IS TOO CRAZY
 	var/mob/living/living_user = user
 	if(living_user.combat_mode)
 		if(ishuman(user))
@@ -277,6 +278,35 @@
 		if(!has_keys)
 			to_chat(user, span_warning("You need a key to lock/unlock this door!"))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	*/ // NOCTURNE REMOVAL END
+
+	// NOCTURNE ADDITION START
+	var/has_keys = FALSE
+	for(var/obj/item/vamp/keys/found_key in user)
+		// check if we already set has_keys so the first key you try and no do_after.
+		if(has_keys && !do_after(user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+		has_keys = TRUE
+		if(try_keys(user, found_key))
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		if(human_user.back)
+			for(var/obj/item/vamp/keys/found_key in human_user.back)
+				if(!do_after(human_user, 1 SECONDS, src, interaction_key = DOAFTER_SOURCE_DOOR))
+					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+				has_keys = TRUE
+				if(try_keys(user, found_key))
+					return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+	if(lock_id == LOCKACCESS_ALL)
+		if(try_keys(user, need_key = FALSE))
+			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+	if(!has_keys)
+		to_chat(user, span_warning("You need a key to lock/unlock this door!"))
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	// NOCTURNE ADDITION END
 
 /obj/structure/vampdoor/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(istype(tool, /obj/item/door_repair_kit))

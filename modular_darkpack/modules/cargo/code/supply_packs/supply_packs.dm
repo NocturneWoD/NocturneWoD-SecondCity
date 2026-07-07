@@ -157,6 +157,6 @@
 /datum/supply_pack/local/thermal_drill
 	name = "Thermal Drill"
 	desc = "Contains a thermal drill."
-	cost = 4000
+	cost = 10000 // NOCTURNE EDIT - ORIGINAL: cost = 4000
 	contains = list(/obj/structure/drill)
 	crate_name = "drill crate"

@@ -55,12 +55,13 @@ endmap
 	minplayers 40
 endmap
 
-map westfieldmall
+#map westfieldmall
     votable
-    default
 endmap
 
 map palmdesert
+    votable
+    default
 endmap
 
 # Debug-only maps.

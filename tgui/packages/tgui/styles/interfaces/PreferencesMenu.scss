@@ -31,7 +31,11 @@ $department_map: (
   'City_Services': var(--color-white),
   'Garou_Nation': var(--color-olive),
   'Pentex': var(--color-green),
-  'Society_of_Leopold': var(--color-yellow), // DARKPACK EDIT ADD END
+  'Society_of_Leopold': var(--color-yellow),
+  // DARKPACK EDIT ADD END
+  // NOCTURNE ADDITION START
+  'Magadon': var(--color-purple),
+  'Hunter': var(--color-yellow), // NOCTURNE ADDITION END
 );
 
 .ChoicedSelection {

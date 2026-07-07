@@ -7,7 +7,7 @@
 	exp_required_type_department = EXP_TYPE_SERVICES
 	config_tag = "GRAVEYARD_KEEPER"
 	outfit = /datum/outfit/job/vampire/graveyard
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	display_order = JOB_DISPLAY_ORDER_GRAVEYARD
 	department_for_prefs = /datum/job_department/city_services
 	departments_list = list(

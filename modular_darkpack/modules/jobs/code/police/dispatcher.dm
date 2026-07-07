@@ -12,7 +12,7 @@
 	department_for_prefs = /datum/job_department/police
 	departments_list = list(
 		/datum/job_department/police,
-		/datum/job_department/clinic,
+		// /datum/job_department/clinic, // NOCTURNE REMOVAL
 	)
 
 	allowed_splats = list(SPLAT_GHOUL, SPLAT_KINFOLK, SPLAT_NONE)
@@ -30,5 +30,5 @@
 	shoes = /obj/item/clothing/shoes/vampire/businessblack
 	id = /obj/item/card/government
 	l_pocket = /obj/item/smartphone
-	r_pocket = /obj/item/vamp/keys/dispatch
+	r_pocket = /obj/item/vamp/keys/police/dispatcher // NOCTURNE EDIT - ORIGINAL: r_pocket = /obj/item/vamp/keys/dispatch
 	backpack_contents = list(/obj/item/card/credit=1)

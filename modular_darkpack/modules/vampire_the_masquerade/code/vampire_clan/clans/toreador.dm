@@ -15,7 +15,7 @@
 	)
 	male_clothes = /obj/item/clothing/under/vampire/toreador
 	female_clothes = /obj/item/clothing/under/vampire/toreador/female
-	subsplat_keys = /obj/item/vamp/keys/toreador
+	// subsplat_keys = /obj/item/vamp/keys/toreador // NOCTURNE REMOVAL
 
 /datum/subsplat/vampire_clan/toreador/psychomania_effect(mob/living/target, mob/living/owner)
 	target.playsound_local(target, "modular_darkpack/modules/powers/sounds/daimonion_laughs/demonlaugh2.ogg", 50, FALSE)

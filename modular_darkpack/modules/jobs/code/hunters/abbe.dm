@@ -8,7 +8,7 @@
 	supervisors = SUPERVISOR_SOCIETY_OF_LEOPOLD
 	minimal_player_age = 7
 	config_tag = "ABBE"
-	job_flags = CITY_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
 	outfit = /datum/outfit/job/vampire/abbe
 
 	display_order = JOB_DISPLAY_ORDER_ABBE
