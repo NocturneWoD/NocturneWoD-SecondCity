@@ -18130,8 +18130,11 @@
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
 "wgy" = (
+/obj/effect/decal/cleanable/litter,
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/city/factory,
+/turf/open/floor/plating/rough/cave{
+	icon_state = "stone8"
+	},
 /area/vtm/palm_desert/interior/anarch)
 "wgK" = (
 /obj/structure/chair/pew/left{
@@ -20482,7 +20485,7 @@ kKo
 kKo
 kKo
 ycj
-lAE
+gCs
 lAE
 upF
 jYF
@@ -20640,7 +20643,7 @@ upF
 pCb
 pCb
 knt
-mwG
+upF
 vYb
 evo
 pCb
@@ -20792,7 +20795,7 @@ upF
 pCb
 rEf
 cWR
-mwG
+upF
 sVf
 eCZ
 pmQ
@@ -20937,14 +20940,14 @@ kKo
 kKo
 kKo
 kKo
-mwG
+ycj
 lAE
 lAE
-mwG
+upF
 bjq
 mwG
 mwG
-mwG
+upF
 pCb
 rIJ
 pCb
@@ -21242,7 +21245,7 @@ kKo
 kKo
 kKo
 ycj
-saR
+wgy
 lAE
 upF
 pCb
@@ -21701,7 +21704,7 @@ ycj
 lAE
 lAE
 bjq
-wgy
+pCb
 twc
 nQj
 elm
@@ -22154,7 +22157,7 @@ kKo
 kKo
 kKo
 ycj
-lAE
+gCs
 lAE
 upF
 pCb
