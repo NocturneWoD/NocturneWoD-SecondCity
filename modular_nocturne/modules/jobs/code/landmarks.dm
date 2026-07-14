@@ -14,4 +14,20 @@ JOB_START_HELPER(magadon/security_chief, JOB_MAGADON_SECURITY_CHIEF)
 JOB_START_HELPER(magadon/security, JOB_MAGADON_SECURITY)
 JOB_START_HELPER(magadon/doctor, JOB_MAGADON_DOCTOR)
 
+JOB_START_HELPER(hunter/soldier, JOB_HUNTER_CELL_SOLDIER)
+JOB_START_HELPER(hunter/general, JOB_HUNTER_CELL_HEAD)
+
 #undef JOB_START_HELPER
+
+/obj/effect/abstract/hunter_delivery_spot
+	icon = 'icons/effects/landmarks_static.dmi'
+	icon_state = "x2"
+	invisibility = INVISIBILITY_ABSTRACT
+
+/obj/effect/abstract/hunter_delivery_spot/Initialize(mapload)
+	. = ..()
+	GLOB.hunter_delivery_spots += src
+
+/obj/effect/abstract/hunter_delivery_spot/Destroy(force)
+	. = ..()
+	GLOB.hunter_delivery_spots -= src

@@ -1,0 +1,5 @@
+author: "Art-gif-dotcom"
+delete-after: True
+changes:
+  - rscadd: "Gives clinic sec and chief sec a radio"
+  - code_imp: "Changes name of Endron network to Magadon network"

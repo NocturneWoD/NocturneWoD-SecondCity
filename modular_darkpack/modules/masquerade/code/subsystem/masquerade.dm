@@ -10,6 +10,12 @@ SUBSYSTEM_DEF(masquerade)
 	var/ending = FALSE
 	var/roundend_started = FALSE
 
+	// NOCTURNE ADDITION START
+	var/hunter_suspicious_delivery = FALSE
+	var/hunter_moderate_delivery = FALSE
+	var/hunter_breach_delivery = FALSE
+	// NOCTURNE ADDITION END
+
 /datum/controller/subsystem/masquerade/Initialize()
 	masquerade_breachers = new()
 	var/list/masquerade_filter = list()
@@ -109,6 +115,8 @@ SUBSYSTEM_DEF(masquerade)
 	if(istype(werewolf_splat))
 		werewolf_splat.adjust_renown(pick(RENOWN_HONOR, RENOWN_GLORY, RENOWN_WISDOM), -1)
 	*/
+
+	check_hunter_deliveries() // NOCTURNE ADDITION
 
 	save_persistent_masquerade(player_breacher)
 	check_roundend_condition()

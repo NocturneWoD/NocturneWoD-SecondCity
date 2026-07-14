@@ -3,4 +3,4 @@
 #define NETWORK_MILITARY "Military Network"
 #define NETWORK_CAMARILLA "Tower Network"
 #define NETWORK_ANARCH "Bar Network"
-#define NETWORK_ENDRON "Endron Network"
+#define NETWORK_ENDRON "Magadon Network" // NOCTURNE EDIT - ORIGINAL: NETWORK_ENDRON "Endron Network"

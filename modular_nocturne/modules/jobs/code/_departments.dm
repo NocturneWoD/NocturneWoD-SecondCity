@@ -10,7 +10,7 @@
 /datum/job_department/hunter
 	department_name = DEPARTMENT_HUNTER
 	department_bitflags = DEPARTMENT_BITFLAG_HUNTER
-	department_head = /datum/job/vampire/branch_lead
+	department_head = /datum/job/vampire/hunter_cell_head
 	department_experience_type = EXP_TYPE_HUNTER
 	display_order = 1
 	label_class = "hunter"

@@ -2982,6 +2982,7 @@
 /obj/structure/chair/darkpack/green{
 	dir = 8
 	},
+/obj/effect/landmark/start/darkpack/hunter/soldier,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/hunter)
 "dOJ" = (
@@ -3546,6 +3547,7 @@
 /obj/structure/chair/office/darkpack/green{
 	dir = 1
 	},
+/obj/effect/landmark/start/darkpack/hunter/general,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/interior/hunter)
 "elW" = (
@@ -4618,6 +4620,7 @@
 	dir = 8;
 	pixel_y = 4
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/concrete{
 	color = "#bfbfbf"
 	},
@@ -4904,6 +4907,7 @@
 /obj/structure/chair/darkpack/green{
 	dir = 4
 	},
+/obj/effect/landmark/start/darkpack/hunter/soldier,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/hunter)
 "fSg" = (
@@ -5253,6 +5257,13 @@
 "gry" = (
 /turf/open/floor/wood/rough,
 /area/vtm/interior/church)
+"grD" = (
+/turf/open/floor/plating/canalplating,
+/area/vtm/interior/sewer/nosferatu_town)
+"grQ" = (
+/obj/effect/landmark/start/darkpack/hunter/soldier,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/hunter)
 "gsi" = (
 /obj/item/reagent_containers/cup/bottle/morphine,
 /obj/item/reagent_containers/cup/bottle/morphine,
@@ -5991,6 +6002,13 @@
 /obj/machinery/light/prince/directional/north,
 /turf/open/floor/carpet/red,
 /area/vtm/interior/church)
+"hlh" = (
+/obj/structure/curtain/bounty/start_closed{
+	pixel_y = 15;
+	pixel_x = -32
+	},
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/interior/hunter)
 "hlq" = (
 /obj/structure/flora/bush/flowers_br/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random{
@@ -6158,6 +6176,7 @@
 	icon_state = "piping25";
 	pixel_y = 32
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/hunter)
 "hwd" = (
@@ -6672,12 +6691,9 @@
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/hunter)
 "iji" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = 41
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/supply)
+/obj/structure/platform/lowwall/brick_old/window/reinforced,
+/turf/open/floor/plating/rough,
+/area/vtm/palm_desert/interior/hunter)
 "ijZ" = (
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -7275,6 +7291,7 @@
 /area/vtm/interior/laundromat)
 "iRi" = (
 /obj/effect/decal/pallet,
+/obj/effect/abstract/hunter_delivery_spot,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/hunter)
 "iRD" = (
@@ -7606,6 +7623,10 @@
 /obj/structure/table/wood,
 /obj/machinery/photocopier/prebuilt{
 	pixel_y = 10
+	},
+/obj/structure/curtain/bounty/start_closed{
+	pixel_y = 15;
+	pixel_x = -32
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/interior/hunter)
@@ -8694,13 +8715,22 @@
 	pixel_y = 4;
 	anchored = 1
 	},
-/obj/item/gun/ballistic/shotgun/vampire,
-/obj/item/gun/ballistic/shotgun/vampire,
-/obj/item/gun/ballistic/shotgun/vampire/doublebarrel,
-/obj/item/gun/ballistic/shotgun/vampire/doublebarrel,
-/obj/item/ammo_box/darkpack/c12g/buck,
-/obj/item/ammo_box/darkpack/c12g/buck,
-/obj/item/ammo_box/darkpack/c12g/buck,
+/obj/item/gun/ballistic/automatic/pistol/darkpack/m1911,
+/obj/item/gun/ballistic/automatic/pistol/darkpack/m1911,
+/obj/item/gun/ballistic/automatic/pistol/darkpack/glock19,
+/obj/item/gun/ballistic/automatic/pistol/darkpack/glock19,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/glock9mm,
+/obj/item/ammo_box/magazine/darkpack45acp,
+/obj/item/ammo_box/magazine/darkpack45acp,
+/obj/item/ammo_box/magazine/darkpack45acp,
+/obj/item/ammo_box/magazine/darkpack45acp,
+/obj/item/ammo_box/magazine/darkpack45acp,
+/obj/item/ammo_box/magazine/darkpack45acp,
 /turf/open/floor/plating/concrete{
 	color = "#bfbfbf"
 	},
@@ -10290,12 +10320,12 @@
 /turf/open/floor/mineral/plastitanium,
 /area/vtm/palm_desert/interior/millennium)
 "mxb" = (
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = 42
+/obj/effect/decal/fakelattice{
+	density = 0
 	},
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/supply)
+/obj/machinery/light/small/directional/east,
+/turf/open/misc/dirt,
+/area/vtm/palm_desert/interior/hunter)
 "mxg" = (
 /obj/structure/chair/sofa/middle/brown{
 	dir = 4
@@ -10709,10 +10739,6 @@
 	density = 0
 	},
 /obj/structure/closet/cabinet,
-/obj/item/clothing/suit/armor/riot/knight/red,
-/obj/item/clothing/suit/armor/riot/knight/red,
-/obj/item/clothing/head/helmet/knight/red,
-/obj/item/clothing/head/helmet/knight/red,
 /turf/open/misc/dirt,
 /area/vtm/palm_desert/interior/hunter)
 "nbG" = (
@@ -12129,10 +12155,10 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
 "oIz" = (
-/obj/structure/platform/lowwall/brick_old/window,
 /obj/structure/barricade/wooden/crude{
 	pixel_y = 15
 	},
+/obj/structure/platform/lowwall/brick_old/window/reinforced,
 /turf/open/floor/plating/rough,
 /area/vtm/palm_desert/interior/hunter)
 "oII" = (
@@ -12196,14 +12222,6 @@
 /obj/structure/ladder/manhole/down,
 /turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/outside/residential)
-"oLN" = (
-/obj/effect/decal/pallet,
-/obj/structure/closet/crate/wooden{
-	pixel_y = 4;
-	anchored = 1
-	},
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/hunter)
 "oMT" = (
 /obj/effect/turf_decal/stock{
 	dir = 8;
@@ -13153,6 +13171,10 @@
 /area/vtm/interior)
 "pOR" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/curtain/bounty/start_closed{
+	pixel_y = 15;
+	pixel_x = -32
+	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/interior/hunter)
 "pOV" = (
@@ -15866,6 +15888,7 @@
 /area/vtm/interior/sewer/nosferatu_town)
 "sPz" = (
 /obj/structure/closet/crate/freezer/blood,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/hunter)
 "sPH" = (
@@ -16203,14 +16226,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
 "tpc" = (
-/obj/item/storage/belt/sheath/vamp/sword{
-	pixel_y = 13;
-	pixel_x = -6
-	},
-/obj/item/storage/belt/sheath/vamp/sword{
-	pixel_y = 9;
-	pixel_x = 5
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/concrete{
 	color = "#bfbfbf"
 	},
@@ -16803,6 +16819,7 @@
 	pixel_y = 3;
 	pixel_x = -3
 	},
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/hunter)
 "tYR" = (
@@ -17981,13 +17998,6 @@
 /obj/structure/platform/lowwall/painted/window,
 /turf/open/floor/city/bacotell,
 /area/vtm/palm_desert/interior/restaurant)
-"vBV" = (
-/obj/effect/decal/pallet,
-/obj/structure/closet/crate/large{
-	anchored = 1
-	},
-/turf/open/floor/plating/rough,
-/area/vtm/palm_desert/interior/hunter)
 "vCx" = (
 /obj/structure/chair/office/darkpack/green{
 	dir = 1
@@ -19015,9 +19025,6 @@
 /area/vtm/interior/sabbat_lair)
 "wXf" = (
 /obj/effect/decal/pallet,
-/obj/structure/closet/crate/large{
-	anchored = 1
-	},
 /obj/structure/sign/flag/azurepeak{
 	pixel_y = 30
 	},
@@ -37172,7 +37179,7 @@ vpK
 wBl
 sPz
 lqw
-oLN
+qTc
 qTc
 dIx
 gGf
@@ -37480,7 +37487,7 @@ fDd
 fDd
 dIx
 iUX
-aDj
+mxb
 naY
 eFn
 kKo
@@ -37779,7 +37786,7 @@ eFn
 iXa
 iSV
 fDd
-fDd
+grQ
 fDd
 kgf
 dIx
@@ -38082,7 +38089,7 @@ kKo
 eFn
 rgI
 fDd
-aDj
+mxb
 dHd
 dHd
 bko
@@ -57717,9 +57724,9 @@ jie
 jie
 rpx
 rpx
-iji
-iji
-iji
+jie
+jie
+jie
 rpx
 rpx
 ahR
@@ -57863,9 +57870,9 @@ asu
 gYM
 rpx
 rpx
-mxb
-mxb
-mxb
+jie
+jie
+jie
 rpx
 rpx
 mRp
@@ -59818,9 +59825,9 @@ asu
 gYM
 eFn
 eFn
-oIz
-oIz
-oIz
+iji
+iji
+iji
 eFn
 eFn
 eFn
@@ -59971,15 +59978,15 @@ xyB
 eFn
 szS
 joF
-tOo
+hlh
 pOR
 tOo
 eFn
 bXq
 mRc
 iRi
-vBV
-vBV
+iRi
+iRi
 iRi
 kIg
 iSm
@@ -60585,13 +60592,13 @@ nJe
 eFn
 iig
 viY
-vBV
-vBV
+iRi
+iRi
 iRi
 viY
 iSm
-vBV
-vBV
+iRi
+iRi
 iRi
 viY
 eFn
@@ -60739,11 +60746,11 @@ viY
 iSm
 iRi
 iRi
-vBV
+iRi
 iSm
 abs
-vBV
-vBV
+iRi
+iRi
 iRi
 cgH
 eFn

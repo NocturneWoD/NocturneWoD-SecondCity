@@ -33,6 +33,7 @@
 	name = JOB_MAGADON_SECURITY
 	jobtype = /datum/job/vampire/magadon_security
 
+	ears = /obj/item/radio/headset/darkpack
 	id = /obj/item/card/magadon/security
 	uniform =  /obj/item/clothing/under/vampire/magadon_shirt
 	shoes = /obj/item/clothing/shoes/vampire/jackboots

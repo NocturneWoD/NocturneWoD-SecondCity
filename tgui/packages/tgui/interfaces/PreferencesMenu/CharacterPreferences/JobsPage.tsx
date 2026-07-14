@@ -437,7 +437,7 @@ export function JobsPage() {
                 <Department department="Magadon" />
                 <Department department="Sabbat" />
                 <Department department="Garou_Nation" />
-                <Department department="Hunter" />
+                <Department department="Bushwhacker" />
               </Stack>
             </Stack.Item>
             { /* NOCTURNE ADDITION END */ }
