@@ -80,3 +80,11 @@
 		LOCKACCESS_THEMAYOR,
 		LOCKACCESS_CLEANING
 	)
+
+// RED News
+/obj/item/vamp/keys/rednews
+	name = "news crew keys"
+	accesslocks = list(
+		LOCKACCESS_REDNEWS
+	)
+	color = COLOR_RED_GRAY

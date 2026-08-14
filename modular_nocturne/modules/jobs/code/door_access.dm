@@ -7,6 +7,9 @@
 /obj/effect/mapping_helpers/door/access/salon
 	lock_id = LOCKACCESS_SALON
 
+/obj/effect/mapping_helpers/door/access/rednews
+	lock_id = LOCKACCESS_REDNEWS
+
 // magadon
 
 /obj/effect/mapping_helpers/door/access/magadon
@@ -17,3 +20,5 @@
 
 /obj/effect/mapping_helpers/door/access/magadon_corporate
 	lock_id = LOCKACCESS_MAGADON_CORPORATE
+
+
