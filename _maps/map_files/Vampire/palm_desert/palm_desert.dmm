@@ -27909,11 +27909,6 @@
 "wxf" = (
 /turf/open/floor/carpet/darkpack,
 /area/vtm/palm_desert/interior/rednews)
-"wxT" = (
-/obj/structure/table/countertop,
-/obj/structure/table/countertop,
-/turf/open/floor/city/bacotell,
-/area/vtm/palm_desert/interior/anarch)
 "wyi" = (
 /obj/sabbatrune,
 /turf/open/floor/plating/canalplating,
@@ -33114,7 +33109,7 @@ bUU
 mwG
 tip
 iXm
-wxT
+wVu
 vcW
 dUx
 pQS
