@@ -58,6 +58,10 @@
 	show_area_name = TRUE
 	domain = TRUE
 
+/area/vtm/palm_desert/interior/giovanni/mansion
+	name = "Giovanni Mansion"
+	icon_state = "giovanni"
+	ambience_index = AMBIENCE_TOWER
 
 // millenium "tower"
 
