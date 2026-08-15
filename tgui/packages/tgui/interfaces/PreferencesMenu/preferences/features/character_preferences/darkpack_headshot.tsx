@@ -13,3 +13,17 @@ export const headshot: Feature<string> = {
   description: description,
   component: FeatureShortTextInput,
 };
+
+// NOCTURNE ADDITION START
+export const war_form_headshot: Feature<string> = {
+  name: 'Headshot (Crinos)',
+  description: description,
+  component: FeatureShortTextInput,
+};
+
+export const feral_form_headshot: Feature<string> = {
+  name: 'Headshot (Hispo/Lupus)',
+  description: description,
+  component: FeatureShortTextInput,
+};
+// NOCTURNE ADDITION END

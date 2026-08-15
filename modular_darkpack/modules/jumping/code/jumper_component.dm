@@ -132,7 +132,7 @@
 		log_combat(jumper, adjusted_target, "jumped", addition="from tile in [AREACOORD(start_T)] towards tile at [AREACOORD(end_T)]")
 
 	jumper.newtonian_move(get_dir(adjusted_target, jumper))
-	jumper.safe_throw_at(adjusted_target, jumper.throw_range, jumper.throw_speed, jumper, null, null, null, jumper.move_force, spin = FALSE)
+	jumper.safe_throw_at(adjusted_target, jumper.throw_range, 1, jumper, null, null, null, jumper.move_force, spin = FALSE)
 
 	if(CONFIG_GET(flag/jump_slowdown))
 		jumper.post_jump_slowdown(get_dist(start_T, end_T)*JUMP_SLOWDOWN_MULT)

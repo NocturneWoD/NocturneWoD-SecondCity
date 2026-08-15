@@ -9,33 +9,59 @@
 
 // FIGHT FORMS
 /mob/living/basic/pet/dog/wolf/protean
+	// NOCTURNE EDIT START
+	maxHealth = 400
+	health = 400
+	melee_damage_lower = 25
+	melee_damage_upper = 25
+	/* //NOCTURNE EDIT END - ORIGINAL:
 	maxHealth = 300
 	health = 300
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+	*/
 	random_wolf_color = FALSE
+	speed = -0.4 // NOCTURNE ADDITION
 
 /mob/living/basic/pet/dog/darkpack/protean
+	// NOCTURNE EDIT START
 	maxHealth = 300
 	health = 300
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+	/* //NOCTURNE EDIT END - ORIGINAL:
+	maxHealth = 300
+	health = 300
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	*/
+	speed = -0.6 // NOCTURNE ADDITION
 
 /mob/living/basic/bear/vampire/protean
+	// NOCTURNE EDIT START
+	maxHealth = 500
+	health = 500
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	/* //NOCTURNE EDIT END - ORIGINAL:
 	maxHealth = 300
 	health = 300
 	melee_damage_lower = 20
 	melee_damage_upper = 20
+	*/
+	speed = 0.4 // NOCTURNE ADDITION
 
 // FLIGHT FORMS
 /mob/living/basic/bat/protean
 	maxHealth = 300
 	health = 300
 	mob_size = MOB_SIZE_SMALL
+	speed = -0.4 // NOCTURNE ADDITION
 
 /mob/living/basic/corvid/protean
 	maxHealth = 300
 	health = 300
+	speed = -0.2 // NOCTURNE ADDITION
 
 /datum/action/cooldown/spell/shapeshift/gangrel/beast_form/Grant(mob/grant_to)
 	. = ..()

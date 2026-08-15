@@ -37,15 +37,18 @@
 		obscured = holder_human.obscured_slots & HIDEFACE
 
 		var/main_flavor_text_key = EXAMINE_DNA_FLAVOR_TEXT
+		var/headshot_key = EXAMINE_DNA_HEADSHOT
 
 		if(iscrinos(holder))
 			main_flavor_text_key = EXAMINE_DNA_WAR_FORM_FLAVOR_TEXT
+			headshot_key = EXAMINE_DNA_WAR_FORM_HEADSHOT
 		else if(ishispo(holder) || islupus(holder))
 			main_flavor_text_key = EXAMINE_DNA_FERAL_FORM_FLAVOR_TEXT
+			headshot_key = EXAMINE_DNA_FERAL_FORM_HEADSHOT
 
 		//Check if the mob is obscured, then continue to headshot
 		if(isobserver(user) || show_flavor_text_when_masked || !obscured)
-			headshot = holder_human.dna.features[EXAMINE_DNA_HEADSHOT]
+			headshot = holder_human.dna.features[headshot_key]
 			/* // NOCTURNE REMOVAL START
 			flavor_text = holder_human.dna.features[main_flavor_text_key]
 			flavor_text_nsfw = holder.dna.features[EXAMINE_DNA_NSFW_FLAVOR_TEXT]

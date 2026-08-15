@@ -268,4 +268,9 @@
 	return TRUE
 
 /mob/living/carbon/human/npc/proc/ghoul_player_controlled(mob/owner)
+	// NOCTURNE ADDITION START
+	for (var/obj/item/dropping_item in drop_on_death_list)
+		LAZYREMOVE(drop_on_death_list, dropping_item)
+		REMOVE_TRAIT(dropping_item, TRAIT_NODROP, NPC_ITEM_TRAIT)
+	// NOCTURNE ADDITION END
 	message_admins("[key_name_admin(src)] has became a ghoul by [key_name_admin(owner)].")

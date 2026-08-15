@@ -7687,6 +7687,7 @@
 #include "modular_darkpack\modules\npc\code\human\npc_types\bouncers\bouncer_giovanni.dm"
 #include "modular_darkpack\modules\npc\code\human\npc_types\endron\endron_npcs.dm"
 #include "modular_darkpack\modules\npc\code\human\socialroles\__socialrole.dm"
+#include "modular_darkpack\modules\npc\code\human\socialroles\anthro_types.dm"
 #include "modular_darkpack\modules\npc\code\human\socialroles\bandit.dm"
 #include "modular_darkpack\modules\npc\code\human\socialroles\endronsecurity.dm"
 #include "modular_darkpack\modules\npc\code\human\socialroles\guard.dm"

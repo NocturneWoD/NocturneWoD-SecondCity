@@ -35,7 +35,7 @@
 
 /datum/bodypart_overlay/mutant/genital/vagina
 	feature_key = FEATURE_VAGINA_NOCTURNE
-	layers = EXTERNAL_BODY_FRONT_UNDER_CLOTHES
+	layers = list(EXTERNAL_BODY_FRONT_UNDER_CLOTHES = BODY_FRONT_UNDER_CLOTHES_LAYER)
 	feature_key_sprite = "vagina"
 
 	organ_slot = ORGAN_SLOT_EXTERNAL_VAGINA

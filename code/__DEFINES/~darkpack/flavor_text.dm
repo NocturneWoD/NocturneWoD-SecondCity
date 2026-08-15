@@ -2,6 +2,10 @@
 
 /// Examine Panel headshot
 #define EXAMINE_DNA_HEADSHOT "headshot"
+// NOCTURNE ADDITION START
+#define EXAMINE_DNA_WAR_FORM_HEADSHOT "war_form_headshot"
+#define EXAMINE_DNA_FERAL_FORM_HEADSHOT "feral_form_headshot"
+// NOCTURNE ADDITION END
 /// Examine Panel flavor text
 #define EXAMINE_DNA_FLAVOR_TEXT "flavor_text"
 #define EXAMINE_DNA_WAR_FORM_FLAVOR_TEXT "war_form_flavor_text"
