@@ -32,7 +32,7 @@
 // base overlay
 
 /datum/bodypart_overlay/mutant/genital
-	layers = list(EXTERNAL_ADJACENT = BODY_ADJ_LAYER)
+	layers = EXTERNAL_ADJACENT
 	/// The suffix appended to the feature_key for the overlays.
 	var/sprite_suffix
 	/// Organ slot, used to get reference to the actual organ this is attached to without angering the CI gods.

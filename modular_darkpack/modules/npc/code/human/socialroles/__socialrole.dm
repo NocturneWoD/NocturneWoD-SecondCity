@@ -235,20 +235,11 @@
 
 	var/is_criminal = FALSE
 
-	// NOCTURNE ADDITION START
-	var/list/species_weighted = list(
-		/datum/species/human = 10, //racism
-		/datum/species/human/demihuman = 20,
-		/datum/species/human/anthro = 70
-	)
-
-	var/datum/anthro_type/coolfurry
-	// NOCTURNE ADDITION END
-
 /mob/living/carbon/human/npc/proc/AssignSocialRole(datum/socialrole/S, dont_random)
 	socialrole = new S()
 
 	fully_replace_character_name(name, real_name)
+
 
 	maxHealth = round(initial(maxHealth)+(initial(maxHealth)/3)*(st_get_stat(STAT_STAMINA)))
 	health = round(initial(health)+(initial(health)/3)*(st_get_stat(STAT_STAMINA)))
@@ -275,64 +266,6 @@
 		if(socialrole.preferred_gender)
 			gender = socialrole.preferred_gender
 		physique = gender
-
-		// NOCTURNE ADDITION START
-		set_species(pick_weight(socialrole.species_weighted))
-
-		if(dna.species.id != SPECIES_HUMAN)
-			var/datum/anthro_type/F = pick(subtypesof(/datum/anthro_type))
-			socialrole.coolfurry = new F()
-
-			if (socialrole.coolfurry.bald_chance > 0 && dna.species.id != SPECIES_DEMIHUMAN)
-				if (prob(socialrole.coolfurry.bald_chance))
-					socialrole.male_hair = list("Bald")
-					socialrole.female_hair = list("Bald")
-					socialrole.male_facial = list("Shaved")
-
-			var/list/color_scheme = pick(socialrole.coolfurry.color_schemes)
-
-			socialrole.hair_colors = list(color_scheme[2])
-
-			dna.features[FEATURE_MUTANT_COLOR] = color_scheme[1]
-			dna.features[FEATURE_EARS_NOCTURNE] = pick(socialrole.coolfurry.ears)
-			dna.features[FEATURE_FRILLS_NOCTURNE] = pick(socialrole.coolfurry.frills)
-			dna.features[FEATURE_HORNS_NOCTURNE] = pick(socialrole.coolfurry.horns)
-			dna.features[FEATURE_TAIL_NOCTURNE] = pick(socialrole.coolfurry.tails)
-			dna.features[FEATURE_FRILLS_NOCTURNE_COLORS] = color_scheme
-			dna.features[FEATURE_HORNS_NOCTURNE_COLORS] = color_scheme
-			dna.features[FEATURE_TAIL_NOCTURNE_COLORS] = color_scheme
-			dna.features[FEATURE_EARS_NOCTURNE_COLORS] = color_scheme
-
-			if (dna.species.id == SPECIES_ANTHRO)
-				dna.features[FEATURE_SNOUT_NOCTURNE] = pick(socialrole.coolfurry.snouts)
-				dna.features[FEATURE_SNOUT_NOCTURNE_COLORS] = color_scheme
-
-			if(gender == MALE)
-				if(prob(20)) //GULP!?
-					dna.features[FEATURE_VAGINA_NOCTURNE] = "Human"
-					dna.features[FEATURE_VAGINA_NOCTURNE_COLORS] = list("#F09488","#F09488","#F09488")
-				else
-					dna.features[FEATURE_PINTLE_NOCTURNE] = pick(socialrole.coolfurry.pintles)
-					dna.features[FEATURE_TESTICLES_NOCTURNE] = "Medium"
-					dna.features[FEATURE_PINTLE_NOCTURNE_COLORS] = list(color_scheme[1], "#A73A3A", "#A73A3A")
-					dna.features[FEATURE_TESTICLES_NOCTURNE_COLORS] = color_scheme
-			else
-				dna.features[FEATURE_BREASTS_NOCTURNE] = "Medium"
-				dna.features[FEATURE_BREASTS_NOCTURNE_COLORS] = color_scheme
-				if(prob(20)) //GULP?!!!
-					dna.features[FEATURE_PINTLE_NOCTURNE] = pick(socialrole.coolfurry.pintles)
-					dna.features[FEATURE_TESTICLES_NOCTURNE] = "Medium"
-					dna.features[FEATURE_PINTLE_NOCTURNE_COLORS] = list(color_scheme[1], "#A73A3A", "#A73A3A")
-					dna.features[FEATURE_TESTICLES_NOCTURNE_COLORS] = color_scheme
-				else
-					dna.features[FEATURE_VAGINA_NOCTURNE] = "Human"
-					dna.features[FEATURE_VAGINA_NOCTURNE_COLORS] = list("#F09488","#F09488","#F09488")
-			dna.features[FEATURE_FLUFF_NOCTURNE] = SPRITE_ACCESSORY_NONE
-			dna.features[FEATURE_WINGS_NOCTURNE] = SPRITE_ACCESSORY_NONE
-
-			regenerate_organs()
-		// NOCTURNE ADDITION END
-
 		var/list/m_names = list()
 		var/list/f_names = list()
 		var/list/s_names = list()
@@ -352,7 +285,7 @@
 		age = rand(socialrole.min_age, socialrole.max_age)
 		skin_tone = pick(socialrole.s_tones)
 
-		if (age >= 55 && dna.species.id != SPECIES_ANTHRO) // NOCTURNE EDIT - ORIGINAL: if (age >= 55)
+		if (age >= 55)
 			set_haircolor("#a2a2a2")
 			set_facial_haircolor(hair_color)
 		else
@@ -382,7 +315,7 @@
 		if (prob(25))
 			socks = random_socks()
 
-		update_body(is_creating = (dna.species.id == SPECIES_ANTHRO)) // NOCTURNE EDIT - ORIGINAL: update_body()
+		update_body()
 
 	// this should be refactored into just... applying a premade outfit
 	var/datum/outfit/O = new()
