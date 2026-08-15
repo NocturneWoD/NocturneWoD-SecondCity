@@ -41,3 +41,9 @@
 	l_pocket = /obj/item/smartphone
 	r_pocket = /obj/item/vamp/keys/magadon/corporate
 	backpack_contents = list(/obj/item/phone_book=1, /obj/item/veil_contract, /obj/item/card/credit/rich=1)
+
+/datum/job/vampire/magadon_middle_manager/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	var/obj/structure/vaultdoor/pincode/magadon/door = locate() in GLOB.vault_doors
+	if(door)
+		spawned.mind.add_memory(/datum/memory/key/magadon_vault_code, remembered_code = door.pincode)

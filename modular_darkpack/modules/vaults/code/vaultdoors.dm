@@ -36,6 +36,13 @@
 	desc = "A massive reinforced vault door protecting the bank's reserves."
 	lock_id = "bank_vault"
 
+// NOCTURNE ADDITION START
+/obj/structure/vaultdoor/pincode/magadon
+	name = "\improper Magadon-branded vault door"
+	desc = "A massive reinforced vault door protecting something. You feel watched."
+	lock_id = "magadon_vault"
+// NOCTURNE ADDITION END
+
 /obj/structure/vaultdoor/Initialize(mapload)
 	. = ..()
 	pincode = create_unique_pincode()

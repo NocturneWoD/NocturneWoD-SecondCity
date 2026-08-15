@@ -725,7 +725,12 @@ export function JobsPage() {
             <Stack.Item>
               <Stack vertical>
                 <PriorityHeaders />
-                <Department department="Magadon"
+                <Department department="Church"
+                  dragging={dragging}
+                  setDragging={setDragging}
+                  hoveringOver={hoveringOver}
+                  setHoveringOver={setHoveringOver}
+                /><Department department="Magadon"
                   dragging={dragging}
                   setDragging={setDragging}
                   hoveringOver={hoveringOver}

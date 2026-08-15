@@ -10,7 +10,7 @@
 	display_order = JOB_DISPLAY_ORDER_PRIEST
 	exp_required_type_department = EXP_TYPE_CHURCH
 	departments_list = list(
-		/datum/job_department/city_services,
+		/datum/job_department/church,
 	)
 	allowed_splats = list(SPLAT_NONE, SPLAT_GHOUL, SPLAT_KINDRED)
 	allowed_clans = list(VAMPIRE_CLAN_LASOMBRA, VAMPIRE_CLAN_CAPPADOCIAN, VAMPIRE_CLAN_BANU_HAQIM_VIZIER) //Each have pretty big religious influences, so!
