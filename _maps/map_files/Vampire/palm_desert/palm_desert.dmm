@@ -475,22 +475,6 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
-"avk" = (
-/obj/machinery/light/directional/east,
-/obj/structure/platform/lowwall/painted,
-/obj/effect/decal/wallpaper/light/low,
-/obj/machinery/button/elevator{
-	id = "elev_magadon_1";
-	pixel_x = 8;
-	pixel_y = 10
-	},
-/obj/machinery/lift_indicator{
-	linked_elevator_id = "elev_magadon_1";
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "avo" = (
 /obj/structure/chair/sofa/left/brown{
 	color = "#525252";
@@ -967,6 +951,12 @@
 /obj/item/reagent_containers/cup/glass/bottle/beer/vampire/blue_stripe,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/supply)
+"aLI" = (
+/obj/structure/fluff/fake_camera{
+	dir = 4
+	},
+/turf/open/floor/city/plating,
+/area/vtm/palm_desert/interior/clinic)
 "aMe" = (
 /obj/machinery/light/dim/directional/east,
 /turf/open/floor/plating/concrete,
@@ -1479,16 +1469,6 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
-"bfq" = (
-/obj/structure/vampdoor/glass{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/door/autoname,
-/obj/effect/mapping_helpers/door/unlock,
-/obj/effect/mapping_helpers/door/lock_difficulty/six,
-/obj/effect/mapping_helpers/door/access/clinic,
-/turf/open/floor/plating/concrete,
-/area/vtm/palm_desert/interior/clinic)
 "bfH" = (
 /obj/item/toy/basketball,
 /turf/open/floor/plating/sidewalk/poor,
@@ -1831,6 +1811,11 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/sabbat_lair)
+"bzr" = (
+/obj/effect/gibspawner/human/bodypartless,
+/obj/structure/lattice/grate,
+/turf/open/water/river,
+/area/vtm/palm_desert/interior/clinic)
 "bzv" = (
 /obj/effect/turf_decal/bordur{
 	dir = 4
@@ -1940,10 +1925,14 @@
 /turf/open/floor/carpet/darkpack,
 /area/vtm/palm_desert/interior/giovanni/mansion)
 "bFd" = (
-/obj/structure/fluff/fake_camera{
-	dir = 8
+/obj/structure/vampdoor/glass,
+/obj/effect/mapping_helpers/door/access/clinic,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/turf_decal/siding/white{
+	dir = 1
 	},
-/turf/open/floor/city/factory,
+/turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
 "bFp" = (
 /turf/open/floor/carpet/neon/simple/red,
@@ -3485,14 +3474,12 @@
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/interior)
 "cTO" = (
-/obj/structure/vampdoor/glass,
-/obj/effect/mapping_helpers/door/access/clinic,
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/obj/effect/turf_decal/siding/white{
+/obj/effect/decal/rugs,
+/obj/structure/fluff/fake_camera{
 	dir = 1
 	},
-/turf/open/floor/city/circled,
+/obj/machinery/light/cold/dim/directional/north,
+/turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/clinic)
 "cTX" = (
 /obj/structure/chair/sofa/city_bench/wood/right{
@@ -4740,10 +4727,6 @@
 	},
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/supply)
-"dRI" = (
-/obj/machinery/light/cold/dim/directional/east,
-/turf/open/floor/city/factory,
-/area/vtm/palm_desert/interior/clinic)
 "dRU" = (
 /obj/structure/fluff/tv{
 	icon_state = "tv_analog";
@@ -5601,21 +5584,6 @@
 /obj/structure/bed/maint,
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/clinic)
-"ewQ" = (
-/obj/structure/platform/lowwall/painted,
-/obj/effect/decal/wallpaper/light/low,
-/obj/machinery/lift_indicator{
-	linked_elevator_id = "elev_magadon_1";
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/obj/machinery/button/elevator{
-	id = "elev_magadon_1";
-	pixel_x = 8;
-	pixel_y = 10
-	},
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "exW" = (
 /obj/effect/turf_decal/bordur{
 	dir = 8
@@ -6178,9 +6146,14 @@
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
 "eZp" = (
-/obj/effect/gibspawner/human/bodypartless,
-/obj/structure/lattice/grate,
-/turf/open/water/river,
+/obj/structure/vampdoor/glass{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/autoname,
+/obj/effect/mapping_helpers/door/unlock,
+/obj/effect/mapping_helpers/door/lock_difficulty/six,
+/obj/effect/mapping_helpers/door/access/clinic,
+/turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/clinic)
 "eZy" = (
 /obj/effect/turf_decal/siding/dark{
@@ -6865,14 +6838,6 @@
 /obj/effect/landmark/latejoin,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
-"fwm" = (
-/obj/structure/curtain/cloth{
-	color = "#AA3333";
-	pixel_y = 15;
-	pixel_x = 32
-	},
-/turf/open/floor/wood/herring,
-/area/vtm/palm_desert/interior/giovanni/mansion)
 "fwD" = (
 /obj/structure/table/countertop/bacotell,
 /obj/structure/platform/lowwall/brick_old,
@@ -7152,16 +7117,17 @@
 /turf/open/floor/wood/herring,
 /area/vtm/palm_desert/interior/townhall)
 "fIB" = (
-/obj/structure/vampdoor{
-	dir = 4
+/obj/machinery/lift_indicator/directional/north{
+	pixel_y = 20;
+	pixel_x = -5;
+	linked_elevator_id = "elev_magadon_1"
 	},
-/obj/effect/turf_decal/siding/white{
-	dir = 8
+/obj/machinery/button/elevator/directional/north{
+	pixel_x = 7;
+	pixel_y = 35;
+	id = "elev_magadon_1"
 	},
-/obj/effect/mapping_helpers/door/access/clinic,
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/turf/open/floor/city/circled/large,
+/turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/clinic)
 "fIW" = (
 /obj/effect/decal/wallpaper,
@@ -8688,6 +8654,10 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"gRT" = (
+/obj/structure/noticeboard/directional/north,
+/turf/open/floor/city/circled,
+/area/vtm/palm_desert/interior/clinic)
 "gRZ" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/darkpack/redsilver,
@@ -9500,12 +9470,11 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior)
 "hDE" = (
-/obj/effect/decal/rugs,
-/obj/structure/fluff/fake_camera{
-	dir = 1
-	},
-/obj/machinery/light/cold/dim/directional/north,
-/turf/open/floor/city/factory,
+/obj/structure/platform/lowwall/painted,
+/obj/structure/table,
+/obj/structure/retail/pharmacy,
+/obj/effect/decal/wallpaper/light/low,
+/turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/clinic)
 "hDN" = (
 /obj/structure/fermenting_barrel,
@@ -11334,13 +11303,6 @@
 /obj/structure/chair/wood/darkpack/red,
 /turf/open/floor/city/circled,
 /area/vtm/interior)
-"jbD" = (
-/obj/structure/platform/lowwall/painted,
-/obj/structure/table,
-/obj/structure/retail/pharmacy,
-/obj/effect/decal/wallpaper/light/low,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "jbI" = (
 /obj/structure/vampdoor,
 /obj/effect/mapping_helpers/door/autoname,
@@ -13718,12 +13680,6 @@
 	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
-"kLI" = (
-/obj/structure/fluff/fake_camera{
-	dir = 4
-	},
-/turf/open/floor/city/plating,
-/area/vtm/palm_desert/interior/clinic)
 "kLZ" = (
 /obj/effect/decal/cleanable/gasoline,
 /obj/item/clothing/mask/gas/vampire,
@@ -13802,14 +13758,6 @@
 /obj/structure/sign/city/hotel/directional/east,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
-"kQl" = (
-/mob/living/carbon/human/npc/pharmacystore_magadon,
-/obj/effect/mapping_helpers/mob_buckler,
-/obj/structure/chair/office/darkpack/blue{
-	dir = 1
-	},
-/turf/open/floor/city/circled,
-/area/vtm/palm_desert/interior/clinic)
 "kQv" = (
 /obj/structure/bury_pit,
 /turf/open/misc/dirt,
@@ -14946,11 +14894,14 @@
 /turf/open/floor/carpet/darkpack/old,
 /area/vtm/palm_desert/outside/commercial)
 "lIW" = (
-/obj/structure/rack/wide/wood_shelf_big{
-	dir = 8
+/obj/structure/table/no_smooth/wood/low,
+/obj/item/newspaper{
+	pixel_x = 5;
+	pixel_y = 6
 	},
-/turf/open/floor/city/plating,
-/area/vtm/interior/library)
+/obj/item/newspaper,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "lJb" = (
 /obj/structure/table/countertop,
 /obj/item/storage/ashtray,
@@ -16064,7 +16015,13 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 8
 	},
-/turf/closed/wall/vampwall/painted,
+/obj/effect/mapping_helpers/door/access/clinic,
+/obj/structure/vampdoor{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/mapping_helpers/door/lock,
+/turf/open/floor/city/circled/large,
 /area/vtm/palm_desert/interior/clinic)
 "mFE" = (
 /obj/effect/turf_decal/bordur{
@@ -16229,13 +16186,15 @@
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
 "mMa" = (
-/obj/effect/decal/shadow/low,
-/obj/fake_platform/stone/noclimb,
-/turf/open/floor/fakepit{
-	desc = "A bottomless pit. Strange sounds can be heard, echoing in the darkness below.";
-	name = "dark pit"
+/obj/effect/turf_decal/bordur/end{
+	dir = 8
 	},
-/area/vtm/palm_desert/interior/clinic)
+/obj/structure/flora/bush/flowers_br/style_random,
+/obj/structure/flora/bush/sparsegrass/style_random{
+	pixel_x = -2
+	},
+/turf/open/misc/grass/nosmooth,
+/area/vtm/palm_desert/outside/industrial)
 "mMw" = (
 /obj/structure/chair/wood/darkpack/red{
 	dir = 1
@@ -16973,6 +16932,18 @@
 /obj/effect/turf_decal/bordur,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"nsE" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/clinic,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/turf/open/floor/city/circled,
+/area/vtm/palm_desert/interior/clinic)
 "nsU" = (
 /obj/structure/vampipe{
 	icon_state = "piping24";
@@ -19492,6 +19463,11 @@
 	},
 /turf/open/floor/city/plating_mono,
 /area/vtm/palm_desert/interior/giovanni)
+"plW" = (
+/obj/effect/decal/rugs,
+/obj/structure/fluff/fake_camera,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/clinic)
 "plZ" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -20542,17 +20518,11 @@
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/strip_mall)
 "qav" = (
-/obj/structure/vampdoor/reinf{
-	dir = 4
+/obj/structure/rack/wide/wood_shelf_big{
+	dir = 8
 	},
-/obj/effect/mapping_helpers/door/access/clinic,
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/obj/effect/turf_decal/siding/white{
-	dir = 4
-	},
-/turf/open/floor/city/circled,
-/area/vtm/palm_desert/interior/clinic)
+/turf/open/floor/city/plating,
+/area/vtm/interior/library)
 "qax" = (
 /obj/effect/turf_decal/bordur,
 /turf/open/genturf,
@@ -20688,13 +20658,6 @@
 /obj/item/ammo_box/darkpack/c9mm,
 /turf/open/floor/plating/stone,
 /area/vtm/interior/caves)
-"qek" = (
-/obj/structure/table/countertop/black,
-/obj/item/radio/entertainment/speakers/physical{
-	pixel_y = 4
-	},
-/turf/open/floor/city/circled,
-/area/vtm/palm_desert/interior/clinic)
 "qfA" = (
 /obj/structure/closet{
 	dir = 4
@@ -20921,6 +20884,13 @@
 	dir = 4
 	},
 /turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/clinic)
+"qqd" = (
+/obj/structure/table/countertop/black,
+/obj/item/radio/entertainment/speakers/physical{
+	pixel_y = 4
+	},
+/turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
 "qqh" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -22745,6 +22715,14 @@
 /obj/machinery/light/small/pink/directional/north,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/commercial)
+"rzU" = (
+/mob/living/carbon/human/npc/pharmacystore_magadon,
+/obj/effect/mapping_helpers/mob_buckler,
+/obj/structure/chair/office/darkpack/blue{
+	dir = 1
+	},
+/turf/open/floor/city/circled,
+/area/vtm/palm_desert/interior/clinic)
 "rAL" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 1
@@ -23587,11 +23565,11 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert)
 "soh" = (
-/obj/structure/platform/lowwall/painted,
-/obj/structure/table,
-/obj/item/folder/blue,
-/obj/effect/decal/wallpaper/light/low,
-/turf/open/floor/wood/smooth,
+/obj/structure/lattice/grate,
+/obj/effect/turf_decal/siding/wideplating_new/dark{
+	dir = 1
+	},
+/turf/open/water/river,
 /area/vtm/palm_desert/interior/clinic)
 "sou" = (
 /obj/effect/decal/pallet,
@@ -24517,6 +24495,13 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
+"tgA" = (
+/obj/structure/platform/lowwall/painted,
+/obj/structure/table,
+/obj/item/folder/blue,
+/obj/effect/decal/wallpaper/light/low,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "tgD" = (
 /obj/structure/flora/bush/flowers_pp/style_random,
 /turf/open/floor/grass,
@@ -24890,6 +24875,10 @@
 /obj/structure/platform/lowwall/market,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/police)
+"tzF" = (
+/obj/machinery/light/cold/dim/directional/east,
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/clinic)
 "tAf" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 4
@@ -25471,15 +25460,6 @@
 /obj/effect/turf_decal/siding/wood/light,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/giovanni/mansion)
-"tXE" = (
-/obj/structure/vampdoor/reinf{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/door/access/clinic,
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "tXN" = (
 /obj/structure/table,
 /obj/item/newspaper,
@@ -25779,6 +25759,14 @@
 /obj/structure/bed/medical/emergency,
 /turf/open/floor/city/clinic,
 /area/vtm/palm_desert/interior/clinic)
+"uhY" = (
+/obj/structure/curtain/cloth{
+	color = "#AA3333";
+	pixel_y = 15;
+	pixel_x = 32
+	},
+/turf/open/floor/wood/herring,
+/area/vtm/palm_desert/interior/giovanni/mansion)
 "uia" = (
 /turf/open/floor/city/toilet,
 /area/vtm/interior/police)
@@ -26646,6 +26634,15 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/city/gummaguts,
 /area/vtm/palm_desert/interior/hotel)
+"uYn" = (
+/obj/structure/vampdoor/reinf{
+	dir = 4
+	},
+/obj/effect/mapping_helpers/door/access/clinic,
+/obj/effect/mapping_helpers/door/lock,
+/obj/effect/mapping_helpers/door/lock_difficulty/eight,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/clinic)
 "uZe" = (
 /obj/structure/chair/sofa/city_bench/metal/right{
 	dir = 8
@@ -27276,9 +27273,15 @@
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/rednews)
 "vAl" = (
-/obj/structure/platform/lowwall/painted/window,
+/obj/structure/platform/lowwall/painted,
+/obj/structure/table,
+/obj/structure/vampfence/rich{
+	dir = 4;
+	pixel_y = 8;
+	name = "bars"
+	},
 /obj/effect/decal/wallpaper/light/low,
-/turf/open/floor/plating/concrete,
+/turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/clinic)
 "vAQ" = (
 /obj/structure/railing{
@@ -27567,8 +27570,12 @@
 /turf/open/misc/grass/nosmooth,
 /area/vtm/palm_desert/outside/office)
 "vMK" = (
-/obj/structure/lattice/grate,
-/turf/open/water/river,
+/obj/effect/decal/shadow/low,
+/obj/fake_platform/stone/noclimb,
+/turf/open/floor/fakepit{
+	desc = "A bottomless pit. Strange sounds can be heard, echoing in the darkness below.";
+	name = "dark pit"
+	},
 /area/vtm/palm_desert/interior/clinic)
 "vMO" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
@@ -28265,11 +28272,9 @@
 /turf/open/floor/grass,
 /area/vtm/graveyard)
 "wrt" = (
-/obj/effect/decal/rugs,
-/obj/structure/fluff/fake_camera{
-	dir = 4
-	},
-/turf/open/floor/city/factory,
+/obj/structure/platform/lowwall/painted/window,
+/obj/effect/decal/wallpaper/light/low,
+/turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/clinic)
 "wru" = (
 /obj/structure/table/wood,
@@ -29100,9 +29105,6 @@
 /area/vtm/palm_desert/interior/hotel)
 "wZa" = (
 /obj/structure/lattice/grate,
-/obj/effect/turf_decal/siding/wideplating_new/dark{
-	dir = 1
-	},
 /turf/open/water/river,
 /area/vtm/palm_desert/interior/clinic)
 "wZd" = (
@@ -29255,11 +29257,6 @@
 /obj/effect/landmark/navigate_destination,
 /turf/open/floor/city/industrial,
 /area/vtm/palm_desert/interior/millennium)
-"xfp" = (
-/obj/effect/decal/rugs,
-/obj/structure/fluff/fake_camera,
-/turf/open/floor/city/factory,
-/area/vtm/palm_desert/interior/clinic)
 "xfC" = (
 /obj/structure/ladder{
 	pixel_y = 12
@@ -29371,25 +29368,22 @@
 	},
 /area/vtm/palm_desert/interior/anarch)
 "xme" = (
-/obj/effect/turf_decal/bordur/end{
-	dir = 8
+/obj/effect/decal/rugs,
+/obj/structure/fluff/fake_camera{
+	dir = 4
 	},
-/obj/structure/flora/bush/flowers_br/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random{
-	pixel_x = -2
-	},
-/turf/open/misc/grass/nosmooth,
-/area/vtm/palm_desert/outside/industrial)
+/turf/open/floor/city/factory,
+/area/vtm/palm_desert/interior/clinic)
 "xnd" = (
-/obj/machinery/button/elevator{
-	id = "elev_magadon_1";
-	pixel_x = -32;
-	pixel_y = 32
+/obj/machinery/button/elevator/directional/north{
+	pixel_x = 7;
+	pixel_y = 35;
+	id = "elev_magadon_1"
 	},
-/obj/machinery/lift_indicator{
-	linked_elevator_id = "elev_magadon_1";
-	pixel_x = -32;
-	pixel_y = 32
+/obj/machinery/lift_indicator/directional/north{
+	pixel_y = 20;
+	pixel_x = -5;
+	linked_elevator_id = "elev_magadon_1"
 	},
 /turf/open/floor/city/plating,
 /area/vtm/palm_desert/interior/clinic)
@@ -29513,15 +29507,6 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/giovanni/mansion)
-"xti" = (
-/obj/structure/table/no_smooth/wood/low,
-/obj/item/newspaper{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/newspaper,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "xtj" = (
 /obj/effect/turf_decal/bordur/corner,
 /turf/open/floor/plating/sidewalk/poor,
@@ -29919,8 +29904,10 @@
 /turf/open/floor/city/toilet,
 /area/vtm/palm_desert/interior/motel)
 "xMF" = (
-/obj/structure/noticeboard/directional/north,
-/turf/open/floor/city/circled,
+/obj/structure/fluff/fake_camera{
+	dir = 8
+	},
+/turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/clinic)
 "xNi" = (
 /obj/effect/decal/rugs,
@@ -29949,17 +29936,6 @@
 /obj/effect/turf_decal/floor_graffiti/random,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
-"xOv" = (
-/obj/structure/platform/lowwall/painted,
-/obj/structure/table,
-/obj/structure/vampfence/rich{
-	dir = 4;
-	pixel_y = 8;
-	name = "bars"
-	},
-/obj/effect/decal/wallpaper/light/low,
-/turf/open/floor/wood/smooth,
-/area/vtm/palm_desert/interior/clinic)
 "xOC" = (
 /obj/structure/curtain/bounty{
 	pixel_y = -24
@@ -44946,7 +44922,7 @@ kKo
 usO
 xLO
 nNp
-bFd
+xMF
 qQV
 uoj
 usO
@@ -45704,7 +45680,7 @@ kKo
 oqh
 ihi
 ihi
-nDx
+usO
 xnd
 nNp
 nNp
@@ -45865,7 +45841,7 @@ usO
 ghE
 hMs
 kaS
-mMa
+vMK
 hej
 oSq
 kKo
@@ -46009,15 +45985,15 @@ oqh
 crf
 ihi
 nDx
-dRI
-wrt
+tzF
+xme
 nNp
 nNp
 efA
 hMs
 hMs
 oRS
-mMa
+vMK
 fMT
 oSq
 kKo
@@ -46169,7 +46145,7 @@ usO
 fpT
 qQV
 jlt
-mMa
+vMK
 hej
 oSq
 kKo
@@ -46614,13 +46590,13 @@ kKo
 usO
 nNp
 nNp
-wrt
+xme
 nNp
 qQV
 qQV
 dzY
 nNp
-xfp
+plW
 usO
 usO
 usO
@@ -46776,7 +46752,7 @@ nNp
 nNp
 qQV
 sox
-bFd
+xMF
 nNp
 kiJ
 usO
@@ -47681,11 +47657,11 @@ kKo
 kKo
 cxt
 nNp
-wZa
+soh
 nNp
 dvK
 nNp
-wZa
+soh
 nNp
 twZ
 avD
@@ -47837,7 +47813,7 @@ fjv
 sli
 xDJ
 nNp
-wZa
+soh
 kiJ
 usO
 uoL
@@ -47988,8 +47964,8 @@ usO
 usO
 usO
 usO
-hDE
-wZa
+cTO
+soh
 nNp
 usO
 cqs
@@ -48141,7 +48117,7 @@ gxa
 kiJ
 jsA
 nNp
-wZa
+soh
 nNp
 usO
 usO
@@ -48287,13 +48263,13 @@ kKo
 kKo
 usO
 avE
+soh
+bzr
 wZa
-eZp
-vMK
 qQV
 dvK
 nNp
-wZa
+soh
 qQV
 usO
 qfA
@@ -48439,13 +48415,13 @@ kKo
 kKo
 cxt
 ewG
+soh
 wZa
-vMK
-vMK
+wZa
 nNp
 dvK
 nNp
-wZa
+soh
 nNp
 vEw
 nNp
@@ -48591,7 +48567,7 @@ kKo
 kKo
 cxt
 nNp
-kLI
+aLI
 ikg
 ewG
 nNp
@@ -63592,9 +63568,9 @@ sar
 qed
 pkn
 edb
-lIW
+qav
 edb
-lIW
+qav
 noI
 dqD
 vie
@@ -67288,10 +67264,10 @@ gYM
 gYM
 gYM
 gYM
-xme
+mMa
 gYM
 gYM
-xme
+mMa
 gYM
 gYM
 gYM
@@ -67440,9 +67416,9 @@ gYM
 gYM
 lzg
 tYk
-vAl
-bfq
-bfq
+wrt
+eZp
+eZp
 itn
 lzg
 lzg
@@ -67596,8 +67572,8 @@ sOp
 sOp
 sOp
 sOp
-jbD
-kQl
+hDE
+rzU
 qZS
 tOu
 tYk
@@ -67748,7 +67724,7 @@ sOp
 sOp
 sOp
 sOp
-xOv
+vAl
 qZS
 qZS
 qZS
@@ -67900,7 +67876,7 @@ sOp
 wpf
 gRf
 sOp
-soh
+tgA
 tfZ
 qZS
 fMY
@@ -68053,9 +68029,9 @@ gIG
 sOp
 sOp
 tYk
-xMF
+gRT
 qZS
-qek
+qqd
 tYk
 uzn
 qZS
@@ -68201,10 +68177,10 @@ mjO
 tYk
 qDy
 sOp
-xti
+lIW
 sOp
 sOp
-cTO
+bFd
 qZS
 qZS
 dgC
@@ -68355,9 +68331,9 @@ lzg
 lzg
 lzg
 tYk
-tXE
+uYn
 tYk
-qav
+nsE
 lzg
 lzg
 tYk
@@ -68505,8 +68481,8 @@ gYM
 jZZ
 ebs
 ebs
-imf
-sOp
+tYk
+fIB
 sOp
 sOp
 sOp
@@ -68811,7 +68787,7 @@ ebs
 ebs
 imf
 sOp
-avk
+tMA
 sOp
 tMA
 sOp
@@ -68961,8 +68937,8 @@ gYM
 lzg
 lzg
 lzg
+lzg
 tYk
-fIB
 mES
 lzg
 tYk
@@ -71639,7 +71615,7 @@ nFu
 cvD
 bbd
 nFu
-fwm
+uhY
 nFu
 cAL
 jjf
@@ -91306,9 +91282,9 @@ qhV
 jZZ
 ebs
 ebs
-imf
+tYk
+fIB
 sOp
-ewQ
 sOp
 yik
 ebs
