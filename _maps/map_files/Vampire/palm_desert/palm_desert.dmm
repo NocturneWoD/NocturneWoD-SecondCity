@@ -14764,10 +14764,6 @@
 	color = "#8080AA"
 	},
 /area/vtm/palm_desert/interior/strip_mall_arcade)
-"lQt" = (
-/obj/machinery/light/directional/east,
-/turf/open/floor/city/circled,
-/area/vtm/interior/laundromat)
 "lQx" = (
 /obj/structure/vampdoor/simple,
 /obj/effect/mapping_helpers/door/unlock,
@@ -66840,7 +66836,7 @@ dXt
 gJc
 gJc
 gJc
-lQt
+gJc
 gJc
 sfC
 nEs
