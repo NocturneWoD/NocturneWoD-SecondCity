@@ -37,19 +37,19 @@
 		obscured = holder_human.obscured_slots & HIDEFACE
 
 		var/main_flavor_text_key = EXAMINE_DNA_FLAVOR_TEXT
-		var/headshot_key = EXAMINE_DNA_HEADSHOT
+		var/headshot_key = EXAMINE_DNA_HEADSHOT // NOCTURNE ADDITION
 
 		if(iscrinos(holder))
 			main_flavor_text_key = EXAMINE_DNA_WAR_FORM_FLAVOR_TEXT
-			headshot_key = EXAMINE_DNA_WAR_FORM_HEADSHOT
+			headshot_key = EXAMINE_DNA_WAR_FORM_HEADSHOT // NOCTURNE ADDITION
 		else if(ishispo(holder) || islupus(holder))
 			main_flavor_text_key = EXAMINE_DNA_FERAL_FORM_FLAVOR_TEXT
-			headshot_key = EXAMINE_DNA_FERAL_FORM_HEADSHOT
+			headshot_key = EXAMINE_DNA_FERAL_FORM_HEADSHOT // NOCTURNE ADDITION
 
 		//Check if the mob is obscured, then continue to headshot
 		if(isobserver(user) || show_flavor_text_when_masked || !obscured)
-			headshot = holder_human.dna.features[headshot_key]
 			/* // NOCTURNE REMOVAL START
+			headshot = holder_human.dna.features[EXAMINE_DNA_HEADSHOT]
 			flavor_text = holder_human.dna.features[main_flavor_text_key]
 			flavor_text_nsfw = holder.dna.features[EXAMINE_DNA_NSFW_FLAVOR_TEXT]
 			ooc_notes = holder.dna.features[EXAMINE_DNA_OOC_NOTES]
@@ -57,6 +57,7 @@
 			*/ // NOCTURNE REMOVAL END
 
 			// NOCTURNE ADDITION START
+			headshot = holder_human.dna.features[headshot_key]
 			flavor_text = parsemarkdown_basic(html_encode(holder_human.dna.features[main_flavor_text_key]), color=TRUE)
 			flavor_text_nsfw = parsemarkdown_basic(html_encode(holder_human.dna.features[EXAMINE_DNA_NSFW_FLAVOR_TEXT]), color=TRUE)
 			ooc_notes = parsemarkdown_basic(html_encode(holder_human.dna.features[EXAMINE_DNA_OOC_NOTES]), color=TRUE)
