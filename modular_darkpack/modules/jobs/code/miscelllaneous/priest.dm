@@ -6,11 +6,11 @@
 	supervisors = "your faith"
 	config_tag = "PRIEST"
 	outfit = /datum/outfit/job/vampire/priest
-	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
+	job_flags = CITY_JOB_FLAGS
 	display_order = JOB_DISPLAY_ORDER_PRIEST
 	exp_required_type_department = EXP_TYPE_CHURCH
 	departments_list = list(
-		/datum/job_department/church,
+		/datum/job_department/city_services,
 	)
 	allowed_splats = list(SPLAT_NONE, SPLAT_GHOUL, SPLAT_KINDRED)
 	allowed_clans = list(VAMPIRE_CLAN_LASOMBRA, VAMPIRE_CLAN_CAPPADOCIAN, VAMPIRE_CLAN_BANU_HAQIM_VIZIER) //Each have pretty big religious influences, so!
