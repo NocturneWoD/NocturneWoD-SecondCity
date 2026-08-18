@@ -45,7 +45,11 @@ SUBSYSTEM_DEF(city_time)
 		to_chat(world, span_ghostalert("The sun has risen...")) // NOCTURNE EDIT - ORIGINAL: to_chat(world, span_ghostalert("THE NIGHT IS OVER."))
 		// Close enough to round end.
 		INVOKE_ASYNC(SSticker, TYPE_PROC_REF(/datum/controller/subsystem/ticker, poll_hearts))
-		INVOKE_ASYNC(SSvote, TYPE_PROC_REF(/datum/controller/subsystem/vote, initiate_vote), /datum/vote/map_vote, vote_initiator_name = "Map Rotation", forced = TRUE)
+		// INVOKE_ASYNC(SSvote, TYPE_PROC_REF(/datum/controller/subsystem/vote, initiate_vote), /datum/vote/map_vote, vote_initiator_name = "Map Rotation", forced = TRUE) // NOCTURNE REMOVAL
+		// NOCTURNE ADDITION START
+		if(CONFIG_GET(flag/allow_vote_map))
+			INVOKE_ASYNC(SSvote, TYPE_PROC_REF(/datum/controller/subsystem/vote, initiate_vote), /datum/vote/map_vote, vote_initiator_name = "Map Rotation", forced = TRUE)
+		// NOCTURNE ADDITION END
 
 	if(time_passed > time_till_roundend && !roundend_started)
 		roundend_started = TRUE
