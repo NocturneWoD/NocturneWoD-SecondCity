@@ -33,6 +33,6 @@ Now, Magazin has gained a new life as a popular party drug sold in shady gas sta
 
 /datum/chemical_reaction/magazin
 	results = list(/datum/reagent/drug/magazin = 6)
-	required_reagents = list(/datum/reagent/carbon = 2, /datum/reagent/hydrogen = 2, /datum/reagent/oxygen = 2, /datum/reagent/water = 1)
+	required_reagents = list(/datum/reagent/consumable/ethanol = 2, /datum/reagent/hydrogen = 2, /datum/reagent/oxygen = 2, /datum/reagent/water = 1)
 	required_temp = 400
 	mix_message = "The mixture boils off a pink vapor..."

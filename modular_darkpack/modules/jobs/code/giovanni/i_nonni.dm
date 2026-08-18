@@ -6,8 +6,8 @@
 	supervisors = "the Family and the Traditions"
 	config_tag = "NONNI"
 	outfit = /datum/outfit/job/vampire/nonni
-	job_flags = CITY_JOB_FLAGS
-	display_order = 2
+	job_flags = STATION_JOB_FLAGS // NOCTURNE EDIT - ORIGINAL: job_flags = CITY_JOB_FLAGS
+	display_order = JOB_DISPLAY_ORDER_I_NONNI // NOCTURNE EDIT - ORIGINAL: display_order = 2
 	exp_required_type_department = EXP_TYPE_GIOVANNI
 	departments_list = list(
 		/datum/job_department/giovanni,
