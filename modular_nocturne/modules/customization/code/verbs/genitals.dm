@@ -1,5 +1,5 @@
 GAME_VERB_DESC(/mob/living/carbon/human, toggle_genitals, "Expose/Hide genitals", "Allows you to toggle which genitals should show through clothes or not.", "IC")
-	if(stat != CONSCIOUS)
+	if(IS_UNCONSCIOUS_OR_CRIT(src))
 		to_chat(usr, span_warning("You can't do this right now..."))
 		return
 
@@ -32,7 +32,7 @@ GAME_VERB_DESC(/mob/living/carbon/human, toggle_genitals, "Expose/Hide genitals"
 
 
 GAME_VERB_DESC(/mob/living/carbon/human, toggle_arousal, "Toggle arousal", "Allows you to toggle how aroused your private parts are.", "IC")
-	if(stat != CONSCIOUS)
+	if(IS_UNCONSCIOUS_OR_CRIT(src))
 		to_chat(usr, span_warning("You can't do this right now..."))
 		return
 

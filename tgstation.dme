@@ -8425,7 +8425,6 @@
 #include "modular_nocturne\modules\decor\code\decor.dm"
 #include "modular_nocturne\modules\decor\code\flags.dm"
 #include "modular_nocturne\modules\decor\code\flora.dm"
-#include "modular_nocturne\modules\decor\code\tables.dm"
 #include "modular_nocturne\modules\doors\code\door_helpers.dm"
 #include "modular_nocturne\modules\drugs\code\_baggie.dm"
 #include "modular_nocturne\modules\drugs\code\_snortable.dm"

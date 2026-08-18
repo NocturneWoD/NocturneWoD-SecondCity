@@ -107,6 +107,13 @@
 			var/turf/join_spot = pick(GLOB.masquerade_latejoin)
 			if(join_spot)
 				source.forceMove(join_spot)
+	// NOCTURNE ADDITION START
+	else if(SScity_time.daytime_started)
+		if(length(GLOB.daytime_latejoin))
+			var/obj/effect/landmark/latejoin_daytime/latejoin_location = pick(GLOB.daytime_latejoin)
+			if(latejoin_location)
+				source.forceMove(get_turf(latejoin_location))
+	// NOCTURNE ADDITION END
 
 	if(HAS_TRAIT(source, TRAIT_MASQUERADE_VIOLATING_FACE) && !(source.obscured_slots & HIDEFACE))
 		var/obj/item/clothing/mask/vampire/venetian_mask/fancy/new_mask = new(source.loc)
@@ -120,14 +127,6 @@
 		var/obj/item/clothing/suit/hooded/robes/darkred/new_robe = new(source.loc)
 		source.equip_to_appropriate_slot(new_robe, FALSE)
 	*/
-
-	// NOCTURNE ADDITION START
-	else if(SScity_time.daytime_started)
-		if(length(GLOB.daytime_latejoin))
-			var/obj/effect/landmark/latejoin_daytime/latejoin_location = pick(GLOB.daytime_latejoin)
-			if(latejoin_location)
-				joining.forceMove(get_turf(latejoin_location))
-	// NOCTURNE ADDITION END
 
 /// effect from daimonion psychomania
 /datum/subsplat/vampire_clan/proc/psychomania_effect(mob/living/target, mob/living/owner)
