@@ -26,6 +26,11 @@
 	fire_controled = TRUE
 	show_area_name = TRUE
 
+/area/vtm/palm_desert/interior/fitness
+	name = "Fit 4 the Street Fitness Center"
+	icon_state = "shop"
+	fire_controled = TRUE
+	show_area_name = TRUE
 
 // npc stores
 
@@ -53,6 +58,10 @@
 	show_area_name = TRUE
 	domain = TRUE
 
+/area/vtm/palm_desert/interior/giovanni/mansion
+	name = "Giovanni Mansion"
+	icon_state = "giovanni"
+	ambience_index = AMBIENCE_TOWER
 
 // millenium "tower"
 
@@ -175,6 +184,13 @@
 	name = "\improper Public Restroom"
 	icon = 'modular_darkpack/modules/westfield_mall/icons/mall_areas.dmi'
 	icon_state = "pooper"
+	ambience_index = AMBIENCE_OFFICE
+	fire_controled = TRUE
+	show_area_name = TRUE
+
+/area/vtm/palm_desert/interior/rednews
+	name = "RED News Studio"
+	icon_state = "shop"
 	ambience_index = AMBIENCE_OFFICE
 	fire_controled = TRUE
 	show_area_name = TRUE

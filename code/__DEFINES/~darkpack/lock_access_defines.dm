@@ -87,4 +87,6 @@
 
 #define LOCKACCESS_TOWNHALL "townhall"
 #define LOCKACCESS_THEMAYOR "themayor"
+
+#define LOCKACCESS_REDNEWS "rednews"
 // NOCTURNE ADDITION END

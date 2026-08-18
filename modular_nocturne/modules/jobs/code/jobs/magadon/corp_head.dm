@@ -48,3 +48,30 @@
 	l_pocket = /obj/item/smartphone
 	r_pocket = /obj/item/vamp/keys/magadon/leader
 	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/darkpack/deagle=1, /obj/item/phone_book=1, /obj/item/card/credit/prince=1)
+
+/datum/memory/key/magadon_vault_code
+	var/remembered_code
+
+/datum/memory/key/magadon_vault_code/New(
+	datum/mind/memorizer_mind,
+	atom/protagonist,
+	atom/deuteragonist,
+	atom/antagonist,
+	remembered_code,
+)
+	src.remembered_code = remembered_code
+	return ..()
+
+/datum/memory/key/magadon_vault_code/get_names()
+	return list("The vault code to the underground Magadon facility is [remembered_code].")
+
+/datum/memory/key/magadon_vault_code/get_starts()
+	return list(
+		"[protagonist_name] blurts out [remembered_code], then looks nervous. Were they supposed to say that...?"
+	)
+
+/datum/job/vampire/magadon_corp_head/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	var/obj/structure/vaultdoor/pincode/magadon/door = locate() in GLOB.vault_doors
+	if(door)
+		spawned.mind.add_memory(/datum/memory/key/magadon_vault_code, remembered_code = door.pincode)
