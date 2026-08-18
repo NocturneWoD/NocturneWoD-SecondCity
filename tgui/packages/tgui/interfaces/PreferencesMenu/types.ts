@@ -317,6 +317,7 @@ export type ServerData = {
   jobs: {
     departments: Record<string, Department>;
     jobs: Record<string, Job>;
+    jobs_sorted: string[];
   };
   names: {
     types: Record<string, Name>;
