@@ -633,7 +633,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			continue
 		// DARKPACK EDIT ADD END - TTRPG preferences
 
-		preference.apply_to_human(character, read_preference(preference.type))
+		preference.apply_to_human(character, read_preference(preference.type), src)
 
 		// NOCTURNE EDIT START - middleware apply human prefs
 		for (var/datum/preference_middleware/preference_middleware as anything in middleware)
