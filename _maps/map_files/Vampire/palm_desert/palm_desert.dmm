@@ -6111,6 +6111,10 @@
 	},
 /turf/open/floor/city/industrial/large,
 /area/vtm/palm_desert/interior/giovanni/mansion)
+"eXP" = (
+/obj/effect/decal/wallpaper/paper/darkred,
+/turf/closed/wall/vampwall/city,
+/area/vtm/interior/library)
 "eXR" = (
 /obj/structure/railing{
 	dir = 9
@@ -8514,6 +8518,7 @@
 /obj/effect/turf_decal/siding/wood/dark{
 	dir = 8
 	},
+/obj/effect/decal/wallpaper/paper/rich,
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/library)
 "gLQ" = (
@@ -39938,7 +39943,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 edb
 edb
@@ -40090,7 +40095,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 edb
 jpc
 jpc
@@ -40394,7 +40399,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 edb
 jpc
 jpc
@@ -40546,7 +40551,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 edb
 edb
@@ -40850,7 +40855,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 cIw
 edb
 noI
@@ -41002,7 +41007,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 sYr
 edb
 noI
@@ -41154,7 +41159,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 aGn
 edb
 nkc
@@ -41306,7 +41311,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 edb
 noI
@@ -41609,7 +41614,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 edb
 edb
@@ -41761,7 +41766,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 edb
 pCe
 edb
@@ -41913,7 +41918,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 pCe
 edb
@@ -42065,7 +42070,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 dVa
 kUj
 edb
@@ -42217,7 +42222,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 dVa
 edb
 edb
@@ -42369,7 +42374,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 pCe
 edb
@@ -42521,7 +42526,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 edb
 pCe
 edb
@@ -42673,7 +42678,7 @@ kKo
 kKo
 kKo
 kKo
-noI
+eXP
 rDB
 edb
 edb
@@ -84789,7 +84794,7 @@ aPW
 pci
 dby
 dEM
-noI
+aPW
 jhk
 rfG
 iJI
@@ -85244,7 +85249,7 @@ nTX
 tax
 eDJ
 owH
-noI
+aPW
 qsv
 qsv
 lOv
@@ -85396,7 +85401,7 @@ nTX
 aPW
 owH
 owH
-noI
+aPW
 qsv
 qsv
 aTI
