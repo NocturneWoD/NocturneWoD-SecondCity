@@ -646,7 +646,7 @@
 /area/vtm/interior/police)
 "aCJ" = (
 /obj/structure/chair/pew{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/wood/herring,
 /area/vtm/interior/church)
@@ -4118,7 +4118,7 @@
 /obj/structure/vampdoor/prison,
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/obj/effect/mapping_helpers/door/access/magadon,
+/obj/effect/mapping_helpers/door/access/magadon_security,
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/clinic)
 "dvQ" = (
@@ -4164,6 +4164,9 @@
 	pixel_y = 9
 	},
 /obj/structure/table/no_smooth/modular_desk/right,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
 /turf/open/floor/plating/granite/black,
 /area/vtm/palm_desert/interior/millennium)
 "dxL" = (
@@ -5762,12 +5765,11 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/door/access/clinic,
-/obj/effect/mapping_helpers/door/lock,
-/obj/effect/mapping_helpers/door/lock_difficulty/six,
 /obj/effect/turf_decal/siding/white{
 	dir = 4
 	},
 /obj/effect/mapping_helpers/door/deadbolt/west,
+/obj/effect/mapping_helpers/door/unlock,
 /turf/open/floor/carpet/darkpack/cyan,
 /area/vtm/palm_desert/interior/clinic)
 "eHR" = (
@@ -6111,10 +6113,6 @@
 	},
 /turf/open/floor/city/industrial/large,
 /area/vtm/palm_desert/interior/giovanni/mansion)
-"eXP" = (
-/obj/effect/decal/wallpaper/paper/darkred,
-/turf/closed/wall/vampwall/city,
-/area/vtm/interior/library)
 "eXR" = (
 /obj/structure/railing{
 	dir = 9
@@ -7281,11 +7279,6 @@
 	},
 /turf/open/floor/plating/stone,
 /area/vtm/interior/caves)
-"fQe" = (
-/obj/effect/decal/wallpaper/paper/darkred,
-/obj/structure/sign/painting/large/library,
-/turf/closed/wall/vampwall/junk,
-/area/vtm/interior/ghetto)
 "fQB" = (
 /obj/structure/table/wood,
 /obj/item/storage/bag/books,
@@ -9892,6 +9885,9 @@
 /area/vtm/palm_desert/outside/commercial)
 "hUJ" = (
 /obj/machinery/bookbinder,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/library)
 "hUK" = (
@@ -10213,11 +10209,6 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/wood/old,
 /area/vtm/palm_desert/interior/strip_mall)
-"ilc" = (
-/obj/effect/decal/wallpaper/paper/darkgreen,
-/obj/structure/sign/painting/large/library,
-/turf/closed/wall/vampwall/junk,
-/area/vtm/interior/ghetto)
 "ilh" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 1
@@ -12579,7 +12570,7 @@
 	},
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/lock_difficulty/eight,
-/obj/effect/mapping_helpers/door/access/magadon,
+/obj/effect/mapping_helpers/door/access/magadon_security,
 /turf/open/floor/city/factory,
 /area/vtm/palm_desert/interior/clinic)
 "jZI" = (
@@ -13691,10 +13682,11 @@
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/anarch)
 "kLw" = (
-/obj/effect/decal/wallpaper/paper/stripe,
-/obj/structure/sign/painting/large/library,
-/turf/closed/wall/vampwall/junk,
-/area/vtm/interior/ghetto)
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
+/turf/open/openspace,
+/area/vtm/interior/library)
 "kLZ" = (
 /obj/effect/decal/cleanable/gasoline,
 /obj/item/clothing/mask/gas/vampire,
@@ -14960,9 +14952,13 @@
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/rednews)
 "lKs" = (
-/obj/structure/sign/painting/large/library,
-/turf/closed/wall/vampwall/junk,
-/area/vtm/interior/ghetto)
+/obj/structure/hedge,
+/obj/structure/flora/bush/flowers_br/style_random,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
+/turf/open/floor/city/gummaguts,
+/area/vtm/palm_desert/interior/millennium)
 "lKx" = (
 /obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/old,
@@ -17485,10 +17481,6 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/anarch)
-"nQa" = (
-/obj/structure/sign/painting/large/library,
-/turf/closed/wall/vampwall/rich,
-/area/vtm/palm_desert/interior/millennium)
 "nQF" = (
 /obj/structure/table/countertop/purple,
 /obj/item/storage/fancy/coffee_condi_display{
@@ -19192,6 +19184,9 @@
 "pci" = (
 /obj/structure/table/countertop/red,
 /obj/machinery/coffeemaker,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
 "pcD" = (
@@ -24379,8 +24374,7 @@
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
 "tax" = (
-/obj/effect/decal/wallpaper/paper/rich,
-/obj/structure/sign/painting/large/library,
+/obj/effect/decal/wallpaper/paper/darkred,
 /turf/closed/wall/vampwall/city,
 /area/vtm/interior/library)
 "tay" = (
@@ -39943,7 +39937,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 edb
 edb
@@ -40095,7 +40089,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 edb
 jpc
 jpc
@@ -40399,7 +40393,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 edb
 jpc
 jpc
@@ -40551,7 +40545,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 edb
 edb
@@ -40855,7 +40849,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 cIw
 edb
 noI
@@ -41007,7 +41001,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 sYr
 edb
 noI
@@ -41159,7 +41153,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 aGn
 edb
 nkc
@@ -41311,7 +41305,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 edb
 noI
@@ -41614,7 +41608,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 edb
 edb
@@ -41766,7 +41760,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 edb
 pCe
 edb
@@ -41918,7 +41912,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 pCe
 edb
@@ -42070,7 +42064,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 dVa
 kUj
 edb
@@ -42222,7 +42216,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 dVa
 edb
 edb
@@ -42374,7 +42368,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 pCe
 edb
@@ -42526,7 +42520,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 edb
 pCe
 edb
@@ -42678,7 +42672,7 @@ kKo
 kKo
 kKo
 kKo
-eXP
+tax
 rDB
 edb
 edb
@@ -62900,7 +62894,7 @@ hEN
 nuT
 wNJ
 dqD
-tax
+aPW
 rxC
 owH
 jjl
@@ -63365,8 +63359,8 @@ jjl
 jjl
 xhM
 jjl
-uln
-uln
+acn
+acn
 noI
 dqD
 qlq
@@ -63692,7 +63686,7 @@ eHR
 jjf
 nEs
 nEs
-nQa
+xxv
 eoh
 wkl
 wkl
@@ -63845,7 +63839,7 @@ jjf
 nEs
 nEs
 xxv
-jye
+lKs
 wkl
 wkl
 wkl
@@ -85246,11 +85240,11 @@ mQn
 hFq
 qhV
 nTX
-tax
+aPW
 eDJ
 owH
 aPW
-qsv
+kLw
 qsv
 lOv
 owH
@@ -85399,10 +85393,10 @@ hFq
 qhV
 nTX
 aPW
-owH
+avf
 owH
 aPW
-qsv
+kLw
 qsv
 aTI
 owH
@@ -87985,7 +87979,7 @@ qhV
 qhV
 nTX
 vto
-kLw
+rhf
 iZd
 uij
 uij
@@ -87997,7 +87991,7 @@ gzP
 gzP
 gzP
 gzP
-ilc
+xoq
 gED
 gED
 gED
@@ -88143,7 +88137,7 @@ uij
 duw
 uij
 pbR
-fQe
+nUW
 gzP
 gzP
 gRv
@@ -89961,7 +89955,7 @@ qhV
 qhV
 nTX
 qze
-lKs
+gpM
 uij
 uij
 alY
@@ -89973,7 +89967,7 @@ gED
 ieM
 gED
 dPC
-kLw
+rhf
 jCp
 uij
 ufE
