@@ -706,6 +706,7 @@
 	dir = 1
 	},
 /obj/structure/chair/comfy/darkpack/red,
+/obj/effect/landmark/start/darkpack/camarilla/prince,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
 "aFg" = (
@@ -1746,6 +1747,7 @@
 	pixel_y = -1
 	},
 /obj/machinery/light/small/directional/east,
+/obj/machinery/light/directional/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
 "bxO" = (
@@ -2058,6 +2060,13 @@
 /obj/effect/landmark/npcability,
 /turf/open/floor/plating/sidewalk,
 /area/vtm/palm_desert/outside/residential)
+"bMl" = (
+/obj/structure/chair/wood/darkpack/red{
+	dir = 1
+	},
+/obj/effect/landmark/start/darkpack/camarilla/hound,
+/turf/open/floor/city/plating_stone,
+/area/vtm/palm_desert/interior/millennium)
 "bMs" = (
 /obj/structure/vampipe{
 	icon_state = "piping41"
@@ -2088,6 +2097,7 @@
 /obj/item/cultivator/rake{
 	pixel_x = 6
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
 "bNU" = (
@@ -3461,9 +3471,10 @@
 /turf/open/floor/city/industrial/large,
 /area/vtm/palm_desert/interior/strip_mall_arcade)
 "cVs" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/wood/smooth/old,
-/area/vtm/palm_desert/interior/farm)
+/obj/structure/hedge,
+/obj/structure/flora/bush/flowers_yw/style_random,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/palm_desert/interior/millennium)
 "cVA" = (
 /obj/structure/railing{
 	dir = 4
@@ -4975,6 +4986,7 @@
 	pixel_y = 7;
 	pixel_x = 8
 	},
+/obj/machinery/light/directional/west,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
 "ecQ" = (
@@ -6431,6 +6443,9 @@
 	name = "Sheriff's special";
 	pixel_y = 9
 	},
+/obj/item/radio/headset/darkpack,
+/obj/item/radio/headset/darkpack,
+/obj/item/radio/headset/darkpack,
 /turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
 "fiU" = (
@@ -6618,6 +6633,7 @@
 /obj/structure/chair/comfy/darkpack/red{
 	dir = 8
 	},
+/obj/effect/landmark/start/darkpack/camarilla/prince,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
 "foL" = (
@@ -6925,6 +6941,12 @@
 /obj/effect/mapping_helpers/door/access/church,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/interior/church)
+"fAj" = (
+/obj/machinery/light/prince/directional/north,
+/obj/structure/hedge,
+/obj/structure/flora/bush/flowers_yw/style_random,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/palm_desert/interior/millennium)
 "fAC" = (
 /obj/structure/railing{
 	dir = 8
@@ -10735,6 +10757,11 @@
 	},
 /turf/open/floor/city/toilet,
 /area/vtm/interior)
+"iEN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/farm)
 "iFe" = (
 /obj/effect/turf_decal/darkpack/dirt{
 	dir = 4
@@ -10845,6 +10872,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/hydroponics/simple/plastic,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/farm)
 "iJI" = (
@@ -11717,6 +11745,13 @@
 /obj/effect/mapping_helpers/door/unlock,
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/fitness)
+"jvw" = (
+/obj/structure/chair/sofa/city_bench/wood{
+	dir = 8
+	},
+/obj/effect/landmark/start/darkpack/camarilla/towerwork,
+/turf/open/floor/city/plating_stone,
+/area/vtm/palm_desert/interior/millennium)
 "jvQ" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
@@ -16176,6 +16211,11 @@
 /obj/effect/mapping_helpers/door/lock_difficulty/seven,
 /turf/open/floor/carpet/darkpack/blackgold,
 /area/vtm/palm_desert/interior/giovanni)
+"mOL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sink/kitchen/directional,
+/turf/open/floor/plating/concrete,
+/area/vtm/palm_desert/interior/farm)
 "mOU" = (
 /obj/structure/table/no_smooth/large/wood/stand/alt{
 	dir = 1
@@ -17547,6 +17587,7 @@
 /obj/structure/chair/comfy/darkpack/blue{
 	dir = 8
 	},
+/obj/effect/landmark/start/darkpack/camarilla/sheriff,
 /turf/open/floor/carpet/royalblack,
 /area/vtm/palm_desert/interior/millennium)
 "nVM" = (
@@ -18824,6 +18865,7 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
+/obj/effect/landmark/start/darkpack/camarilla/towerwork,
 /turf/open/floor/carpet/red,
 /area/vtm/palm_desert/interior/millennium)
 "oWa" = (
@@ -19627,6 +19669,13 @@
 /obj/effect/landmark/latejoin,
 /turf/open/floor/plating/sidewalk/poor,
 /area/vtm/palm_desert/outside/industrial)
+"pwP" = (
+/obj/structure/chair/wood/darkpack/red{
+	dir = 1
+	},
+/obj/effect/landmark/start/darkpack/camarilla/hound,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/millennium)
 "pwT" = (
 /obj/effect/turf_decal/bordur/corner{
 	dir = 8
@@ -20160,6 +20209,7 @@
 	name = "money printer";
 	desc = "A machine that is designed to print counterfeit currency with impeccable accuracy, with a monitor connected to it.\nIt has an output for withdrawing the cash obtained from printing, somehow."
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/millennium)
 "pSr" = (
@@ -22556,6 +22606,11 @@
 	},
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
+"rAh" = (
+/obj/structure/chair/wood/darkpack/red,
+/obj/effect/landmark/start/darkpack/camarilla/hound,
+/turf/open/floor/wood/smooth,
+/area/vtm/palm_desert/interior/millennium)
 "rAL" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 1
@@ -23576,6 +23631,12 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/darkpack/bluegold,
 /area/vtm/interior/theatre)
+"syY" = (
+/obj/machinery/light/prince/directional/south,
+/obj/structure/hedge,
+/obj/structure/flora/bush/flowers_yw/style_random,
+/turf/open/floor/mineral/plastitanium,
+/area/vtm/palm_desert/interior/millennium)
 "sze" = (
 /obj/structure/toilet{
 	dir = 8;
@@ -24026,7 +24087,6 @@
 "sWu" = (
 /obj/machinery/hydroponics/simple/plastic,
 /obj/effect/decal/pallet,
-/obj/machinery/light/small/directional/west,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
 "sXe" = (
@@ -25390,6 +25450,11 @@
 /obj/effect/decal/wallpaper/grey,
 /turf/closed/wall/vampwall/redbrick,
 /area/vtm/palm_desert/interior/giovanni/mansion)
+"tZQ" = (
+/obj/machinery/hydroponics/simple/plastic,
+/obj/machinery/light/directional/north,
+/turf/open/floor/wood/smooth/old,
+/area/vtm/palm_desert/interior/farm)
 "uaw" = (
 /obj/item/flashlight/flare/candle/infinite{
 	anchored = 1;
@@ -25658,6 +25723,7 @@
 	dir = 8
 	},
 /obj/machinery/light/prince/directional/east,
+/obj/effect/landmark/start/darkpack/camarilla/towerwork,
 /turf/open/floor/city/plating_stone,
 /area/vtm/palm_desert/interior/millennium)
 "ukI" = (
@@ -26246,6 +26312,7 @@
 	density = 0
 	},
 /obj/machinery/hydroponics/simple/plastic,
+/obj/machinery/light/directional/north,
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/farm)
 "uMt" = (
@@ -30070,6 +30137,10 @@
 /obj/machinery/light/directional/south,
 /turf/open/misc/dirt,
 /area/vtm/palm_desert/interior/supply)
+"ycR" = (
+/obj/machinery/vending/hydroseeds,
+/turf/open/floor/plating/sidewalk/poor,
+/area/vtm/palm_desert/outside/commercial)
 "ycU" = (
 /obj/machinery/defibrillator_mount/charging{
 	pixel_y = -28
@@ -56722,7 +56793,7 @@ iJz
 dvu
 dvu
 qZP
-cVs
+dvu
 dvu
 dvu
 dvu
@@ -56876,7 +56947,7 @@ but
 but
 but
 qHD
-mhH
+iEN
 shc
 but
 eSf
@@ -57478,12 +57549,12 @@ kSS
 htC
 htC
 qHD
-cWp
+tZQ
 vEt
 kdW
 bwU
 feg
-mhH
+mOL
 dvu
 hws
 but
@@ -57626,7 +57697,7 @@ vBq
 vBq
 vBq
 oIO
-dqD
+ycR
 dqD
 dqD
 but
@@ -63259,7 +63330,7 @@ wfF
 kNC
 wkl
 bZs
-bZs
+jvw
 dwi
 kNC
 bUf
@@ -63865,7 +63936,7 @@ xRZ
 qOl
 qOl
 xRZ
-xRZ
+bMl
 xRZ
 cTX
 rRI
@@ -65076,13 +65147,13 @@ tqX
 ylR
 cTX
 xRZ
-xRZ
+bMl
 xRZ
 qOl
 qOl
 xRZ
 xRZ
-xRZ
+bMl
 cTX
 cTX
 rrL
@@ -85600,10 +85671,10 @@ uGc
 wLN
 muU
 cql
-oAK
+syY
 lil
 mEj
-iSq
+rAh
 kmX
 fjC
 uGc
@@ -85750,14 +85821,14 @@ ldV
 krU
 hdR
 wLN
-cql
+cVs
 cql
 cql
 ltN
 hdR
 iSq
 hdR
-fjC
+pwP
 efs
 xxv
 qhV
@@ -86054,9 +86125,9 @@ ldV
 krU
 hdR
 wLN
+cVs
 cql
-cql
-cql
+cVs
 lil
 mEj
 hdR
@@ -86358,7 +86429,7 @@ ldV
 hyH
 hdR
 wLN
-muU
+fAj
 cql
 oAK
 xxv
@@ -86666,7 +86737,7 @@ cql
 cql
 cql
 lil
-hdR
+miN
 hdR
 hdR
 hdR
@@ -86816,7 +86887,7 @@ xxv
 wLN
 muU
 cql
-oAK
+syY
 lil
 hdR
 hdR
@@ -87120,7 +87191,7 @@ rvQ
 wLN
 svq
 cql
-cql
+cVs
 lil
 hdR
 rEg
@@ -87270,11 +87341,11 @@ otb
 skJ
 xUf
 wLN
-muU
+fAj
 cql
 oAK
 lil
-hdR
+miN
 hdR
 nVL
 bMG
@@ -87726,7 +87797,7 @@ eWo
 skJ
 xUf
 wLN
-cql
+cVs
 cql
 cql
 cql
