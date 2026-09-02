@@ -1746,7 +1746,6 @@
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/machinery/light/small/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/wood/smooth/old,
 /area/vtm/palm_desert/interior/farm)
