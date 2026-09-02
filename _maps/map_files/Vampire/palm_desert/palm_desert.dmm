@@ -2046,7 +2046,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "bLr" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/sidewalk/poor,
@@ -3804,7 +3804,7 @@
 "dle" = (
 /obj/machinery/light/prince/directional/south,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "dlq" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood/smooth,
@@ -5849,7 +5849,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "eOa" = (
 /obj/structure/chair/sofa/city_bench/metal/left,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7260,11 +7260,8 @@
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
 "fQT" = (
-/obj/structure/platform/lowwall/rich/window/reinforced,
-/obj/structure/curtain/bounty{
-	pixel_y = 15
-	},
-/turf/open/space/basic,
+/obj/structure/railing,
+/turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/interior/millennium)
 "fRs" = (
 /turf/closed/wall/vampwall/junk,
@@ -9747,7 +9744,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "hQn" = (
 /obj/structure/curtain/bounty{
 	pixel_y = 38
@@ -11768,7 +11765,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating/asphalt,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "jyo" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 9
@@ -15699,11 +15696,10 @@
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/interior/library)
 "mtN" = (
-/obj/structure/platform/lowwall/rich/window/reinforced,
-/obj/structure/curtain/bounty{
-	pixel_y = 15
+/obj/structure/railing{
+	dir = 8
 	},
-/turf/closed/wall/vampwall/rich,
+/turf/open/floor/plating/asphalt,
 /area/vtm/palm_desert/interior/millennium)
 "mtP" = (
 /obj/structure/railing{
@@ -16295,8 +16291,9 @@
 /turf/open/floor/plating/concrete,
 /area/vtm/palm_desert/interior/motel)
 "mUO" = (
-/turf/closed/wall/vampwall/rich,
-/area/vtm/palm_desert)
+/obj/effect/turf_decal/trimline/white/warning,
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/millennium)
 "mUT" = (
 /obj/effect/decal/fakelattice{
 	density = 0
@@ -16387,7 +16384,7 @@
 /obj/effect/mapping_helpers/door/lock,
 /obj/effect/mapping_helpers/door/access/camarilla,
 /turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/area/vtm/palm_desert/interior/millennium)
 "mZd" = (
 /turf/closed/wall/vampwall/painted,
 /area/vtm/palm_desert/outside/industrial)
@@ -20587,7 +20584,7 @@
 "qkJ" = (
 /obj/structure/platform/lowwall/rich/window/reinforced,
 /obj/structure/curtain/bounty/start_closed,
-/turf/open/space/basic,
+/turf/open/floor/wood/smooth,
 /area/vtm/palm_desert/interior/millennium)
 "qkP" = (
 /obj/effect/turf_decal/bordur{
@@ -21015,6 +21012,12 @@
 	},
 /turf/open/floor/wood/old,
 /area/vtm/palm_desert/interior/clinic)
+"qzK" = (
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 8
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/millennium)
 "qzU" = (
 /obj/structure/table/countertop,
 /obj/effect/turf_decal/siding/wood/light{
@@ -21562,8 +21565,11 @@
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
 "qMS" = (
-/turf/open/floor/city/plating_mono,
-/area/vtm/palm_desert)
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/millennium)
 "qNu" = (
 /obj/structure/chair/darkpack/green,
 /obj/effect/landmark/start/darkpack/law_enforcement/sergeant,
@@ -22526,6 +22532,12 @@
 	},
 /turf/open/floor/city/circled,
 /area/vtm/palm_desert/interior/clinic)
+"rAb" = (
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 1
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/millennium)
 "rAL" = (
 /obj/structure/chair/office/darkpack/red{
 	dir = 1
@@ -28193,6 +28205,12 @@
 	},
 /turf/open/floor/carpet/darkpack/redsilver,
 /area/vtm/palm_desert/interior/giovanni/mansion)
+"wyH" = (
+/obj/effect/turf_decal/trimline/white/warning{
+	dir = 4
+	},
+/turf/open/floor/plating/asphalt,
+/area/vtm/palm_desert/interior/millennium)
 "wzc" = (
 /obj/structure/chair/stool/bar/darkpack/red,
 /turf/open/floor/city/plating_mono,
@@ -86165,7 +86183,7 @@ qhV
 qhV
 qhV
 qhV
-mtN
+uyU
 hdR
 ebZ
 ldV
@@ -86334,10 +86352,10 @@ xxv
 xxv
 xxv
 wla
-eaj
-eaj
-eaj
-bsj
+mtN
+mtN
+mtN
+qMS
 qhV
 qhV
 qhV
@@ -86486,10 +86504,10 @@ pQO
 uGc
 xxv
 wla
-sNF
-sNF
-sNF
-rpg
+wla
+wla
+wla
+fQT
 qhV
 qhV
 qhV
@@ -86636,12 +86654,12 @@ hdR
 hdR
 hdR
 hdR
-fQT
+uyU
 wla
 hPJ
-msc
+qzK
 jye
-rpg
+fQT
 qhV
 qhV
 qhV
@@ -86790,10 +86808,10 @@ ppE
 ppE
 xxv
 wla
-kGH
-sNF
-cxx
-rpg
+rAb
+wla
+mUO
+fQT
 qhV
 qhV
 qhV
@@ -86940,12 +86958,12 @@ hdR
 hdR
 pel
 mss
-mtN
+uyU
 wla
 eNZ
-jUy
+wyH
 bLb
-rpg
+fQT
 qhV
 qhV
 qhV
@@ -87094,10 +87112,10 @@ dwD
 kOy
 xxv
 wla
-sNF
-sNF
-sNF
-rpg
+wla
+wla
+wla
+fQT
 qhV
 qhV
 qhV
@@ -87246,10 +87264,10 @@ nVL
 bMG
 xxv
 xxv
-mUO
+xxv
 mYW
 mYW
-mUO
+xxv
 qhV
 qhV
 qhV
@@ -87398,10 +87416,10 @@ fiI
 sDt
 sOR
 sGP
-qMS
-qMS
-qMS
-mUO
+pmu
+pmu
+pmu
+xxv
 qhV
 qhV
 qhV
@@ -87550,10 +87568,10 @@ xxv
 xxv
 sOR
 oWg
-qhV
-qMS
+oWg
+pmu
 dle
-mUO
+xxv
 qhV
 qhV
 qhV
@@ -87702,10 +87720,10 @@ cql
 cql
 sOR
 oWg
-qhV
-qMS
-qMS
-mUO
+oWg
+pmu
+pmu
+xxv
 qhV
 qhV
 qhV
@@ -87854,10 +87872,10 @@ cql
 cql
 rrL
 pmu
-qMS
-qMS
+pmu
+pmu
 dle
-mUO
+xxv
 qhV
 qhV
 qhV
@@ -88006,10 +88024,10 @@ cql
 cql
 sOR
 sGP
-qMS
-qMS
-qMS
-mUO
+pmu
+pmu
+pmu
+xxv
 qhV
 qhV
 qhV
@@ -88158,10 +88176,10 @@ xxv
 xxv
 xxv
 xxv
-mUO
-mUO
-mUO
-mUO
+xxv
+xxv
+xxv
+xxv
 qhV
 qhV
 qhV
