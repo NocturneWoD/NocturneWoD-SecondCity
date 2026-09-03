@@ -21,6 +21,7 @@
 		new /datum/data/vending_product("apple", /obj/item/food/grown/apple),
 		new /datum/data/vending_product("berries", /obj/item/food/grown/berries),
 		new /datum/data/vending_product("banana", /obj/item/food/grown/banana),
+		new /datum/data/vending_product("seaweed", /obj/item/food/seaweedsheet, 2),
 		new /datum/data/vending_product("cooking enzymes", /obj/item/reagent_containers/condiment/enzyme, 12),
 		new /datum/data/vending_product("salt shaker", /obj/item/reagent_containers/condiment/saltshaker, 3),
 		new /datum/data/vending_product("pepper mill", /obj/item/reagent_containers/condiment/peppermill, 3),
